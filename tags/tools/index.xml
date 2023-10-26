@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>tools - 标签 - aymwoo</title>
+        <link>http://aymwoo.gitee.io/tags/tools/</link>
+        <description>tools - 标签 - aymwoo</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 12 Jan 2022 09:14:46 &#43;0800</lastBuildDate><atom:link href="http://aymwoo.gitee.io/tags/tools/" rel="self" type="application/rss+xml" /><item>
+    <title>RustDesk</title>
+    <link>http://aymwoo.gitee.io/posts/rustdesk/</link>
+    <pubDate>Wed, 12 Jan 2022 09:14:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/posts/rustdesk/</guid>
+    <description><![CDATA[RustDesk&ndash;开源远程桌面 github上14.4k star的开源跨平台远程桌面,目前提供三个免费的公共服务器,但都在境外(首]]></description>
+</item><item>
+    <title>Ranger</title>
+    <link>http://aymwoo.gitee.io/posts/ranger/</link>
+    <pubDate>Sun, 09 Jan 2022 15:28:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/posts/ranger/</guid>
+    <description><![CDATA[Ranger ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式. 安装 安装 ranger 包,以 Arch 为例： # pacman -S ranger 使用 快捷键 命令 ? 帮助 l,Enter 打开文件 j,k 在文件列表中上下]]></description>
+</item></channel>
+</rss>

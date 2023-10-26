@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>GPT4All - aymwoo</title><meta name="Description" content="GPT4All初步"><meta property="og:title" content="GPT4All" />
+<meta property="og:description" content="GPT4All初步" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://aymwoo.gitee.io/posts/gpt4all/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-26T15:32:19+08:00" />
+<meta property="article:modified_time" content="2023-10-26T15:32:19+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GPT4All"/>
+<meta name="twitter:description" content="GPT4All初步"/>
+<meta name="application-name" content="aymwoo">
+<meta name="apple-mobile-web-app-title" content="aymwoo"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://aymwoo.gitee.io/posts/gpt4all/" /><link rel="prev" href="http://aymwoo.gitee.io/posts/%E6%95%99%E8%82%B2%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84%E6%95%99%E8%82%B2%E5%8F%98%E9%9D%A9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "GPT4All",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/aymwoo.gitee.io\/posts\/gpt4all\/"
+        },"genre": "posts","keywords": "AI, GPT4All","wordcount":  1294 ,
+        "url": "http:\/\/aymwoo.gitee.io\/posts\/gpt4all\/","datePublished": "2023-10-26T15:32:19+08:00","dateModified": "2023-10-26T15:32:19+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": "GPT4All初步"
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="aymwoo">aymwoo</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="aymwoo">aymwoo</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">GPT4All</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-10-26">2023-10-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1294 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">GPT4All简介</a>
+</li>
+<li><a href="#headline-2">使用</a>
+<ul>
+<li><a href="#headline-3">安装</a>
+</li>
+<li><a href="#headline-4">使用</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-5">GPT4All Chat UI</a>
+</li>
+<li><a href="#headline-6">GPT4All CLI</a>
+<ul>
+<li><a href="#headline-7">开始体验</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-8">GPT4All Chat UI</a>
+</li>
+<li><a href="#headline-9">浏览模型内容</a>
+</li>
+<li><a href="#headline-10">小结</a>
+<ul>
+<li><a href="#headline-11">数据来源</a>
+</li>
+<li><a href="#headline-12">训练费用</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav></div>
+            </div><div class="content" id="content">
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+GPT4All简介
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>GPT4All 是一个生态系统，用于训练和部署在消费级 CPU 上本地运行的强大且定制的大型语言模型。目标很简单——成为任何个人或企业都可以自由使用、分发和构建的最佳指令调整助理式语言模型。GPT4All 模型是一个 3GB - 8GB 文件，您可以下载该文件并将其插入 GPT4All 开源生态系统软件中。 Nomic AI 支持并维护这个软件生态系统，以加强质量和安全性，同时带头让任何个人或企业轻松训练和部署自己的边缘大型语言模型。</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+使用
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+安装
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  pip install gpt4all</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+使用
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>调用比较简单，但根据你的计算机的性能，运行时间可能会比较长</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">from</span> <span class="nn">gpt4all</span> <span class="kn">import</span> <span class="n">GPT4All</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 如果allow_download为True</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># 当你下载的model文件路径不对时则会尝试，不建议打开，可以通过其他工具下载你需要的模型文件</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># 如果allow_download为False</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># 当你下载的model文件路径不对时则会提示一个错误</span>
+</span></span><span class="line"><span class="cl">  <span class="n">model</span> <span class="o">=</span> <span class="n">GPT4All</span><span class="p">(</span><span class="s2">&#34;orca-mini-3b-gguf2-q4_0.gguf&#34;</span><span class="p">,</span><span class="n">allow_download</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s2">&#34;The capital of France is &#34;</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span></span></span></code></pre></div>
+</div>
+<p>程序会输出: <code>Paris</code></p>
+<p><img src="/posts/gpt4all/使用/2023-10-26_14-30-20_screenshot.png" alt="/posts/gpt4all/使用/2023-10-26_14-30-20_screenshot.png" title="/posts/gpt4all/使用/2023-10-26_14-30-20_screenshot.png" /></p>
+<p>
+🛟 <strong>提示</strong>: Model下载的地址为<a href="https://gpt4all.io/index.html">gpt4all.io</a>,如果你的网速过慢也可以在城域网下载,地址是:</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+GPT4All Chat UI
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p><code>GPT4All Chat Client</code> 使您可以轻松地与任何本地大型语言模型进行交互。
+它经过优化，可以在任何运行OSX/Windows/Linux的计算机的CPU上运行7-13B参数LLMs。
+下载地址：<a href="https://gpt4all.io/">gpt4all.io</a></p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+GPT4All CLI
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>GPT4All CLI (command-line interface) 是一个python脚本，提供了一个REPL(Read-Eval-Print-Loop)环境来使用GPT4All。</p>
+<p>
+你可以点击链接下载这个文件：<a href="http://10.80.73.225:8888/s/5o8bYintB8n65Dk">app.py</a> (城域网)</p>
+<p>
+如果你克隆了GPT4All的仓库,此脚本的位置是/GPT4All仓库/gpt4all-bindings/cli/app.py</p>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+开始体验
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  pip install gpt4all typer
+</span></span><span class="line"><span class="cl">  python app.py repl</span></span></code></pre></div>
+</div>
+<p>
+🛟 <strong>提示</strong>: app.py 默认的模型是 <code>mistral-7b-openorca.Q4_0.gguf</code> 如果你下载了其他的模型，可以在代码中替换，如果本地没有此模型将会在运行时下载。</p>
+<p><img src="/posts/gpt4all/GPT4All_CLI/2023-10-26_14-14-11_screenshot.png" alt="/posts/gpt4all/GPT4All_CLI/2023-10-26_14-14-11_screenshot.png" title="/posts/gpt4all/GPT4All_CLI/2023-10-26_14-14-11_screenshot.png" /></p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+GPT4All Chat UI
+</h2>
+<div id="outline-text-headline-8" class="outline-text-2">
+<p>GPT4all 官网上有windows,mac,ubuntu三个系统下的UI下载，我并没有以上三个系统，所以没法体验，感兴趣的小伙伴可以自己去下载安装。</p>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
+<h2 id="headline-9">
+浏览模型内容&#xa0;&#xa0;&#xa0;<span class="tags"><span class="tag-attach">ATTACH</span></span>
+</h2>
+<div id="outline-text-headline-9" class="outline-text-2">
+<p>
+<a href="https://gpt4all.io/">gpt4all.io</a> 的网页中有个浏览模型的部分，可以查看模型内容，如下图所示：</p>
+<p><img src="/posts/gpt4all/浏览模型内容/2023-10-25_23-02-43_screenshot.png" alt="/posts/gpt4all/浏览模型内容/2023-10-25_23-02-43_screenshot.png" title="/posts/gpt4all/浏览模型内容/2023-10-25_23-02-43_screenshot.png" /></p>
+<p>
+我们可以把把图放到，可以看到一个一个的点，就是一个知识点</p>
+<p><img src="/posts/gpt4all/浏览模型内容/2023-10-26_14-35-48_screenshot.png" alt="/posts/gpt4all/浏览模型内容/2023-10-26_14-35-48_screenshot.png" title="/posts/gpt4all/浏览模型内容/2023-10-26_14-35-48_screenshot.png" /></p>
+<p>
+还可以放到更大</p>
+<p><img src="/posts/gpt4all/浏览模型内容/2023-10-26_14-38-42_screenshot.png" alt="/posts/gpt4all/浏览模型内容/2023-10-26_14-38-42_screenshot.png" title="/posts/gpt4all/浏览模型内容/2023-10-26_14-38-42_screenshot.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
+<h2 id="headline-10">
+小结
+</h2>
+<div id="outline-text-headline-10" class="outline-text-2">
+<div id="outline-container-headline-11" class="outline-3">
+<h3 id="headline-11">
+数据来源
+</h3>
+<div id="outline-text-headline-11" class="outline-text-3">
+<p>GPT4All 在2023 3月20日至2023 3月26日之间使用GPT-3.5-Turbo的OpenAI的API收集了大约100万个即时响应对。首先利用三个公开可用的数据集收集了各种各样的问题/提示:
+•LAION OIG的统一chip2子集。
+•使用Stackoverflow问题的随机子样本编码问题
+•使用大科学/P3的子样本进行指令调整
+根据斯坦福Alpaca项目的评论，对数据准备和管理给予大量关注。在收集提示生成对的初始数据集后，将数据加载到Atlas中以进行数据整理和清理。</p>
+</div>
+</div>
+<div id="outline-container-headline-12" class="outline-3">
+<h3 id="headline-12">
+训练费用
+</h3>
+<div id="outline-text-headline-12" class="outline-text-3">
+<p>大约四天的工作，800美元的GPU成本 (从Lambda实验室和Paperspace租用)，包括几个失败的训练，以及500美元的OpenAI API支出来生产这些模型。gpt4all-lora，GPT4All发布的模型可以在Lambda Labs DGX A100 8x 80GB   上进行大约8个小时的训练，总费用为100美元。</p>
+<p>
+我能看懂的部分就这些了，:)</p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-10-26</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/gpt4all/">GPT4All</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E6%95%99%E8%82%B2%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84%E6%95%99%E8%82%B2%E5%8F%98%E9%9D%A9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="prev" rel="prev" title="《教育的未来：人工智能时代的教育变革》读书笔记"><i class="fas fa-angle-left fa-fw"></i>《教育的未来：人工智能时代的教育变革》读书笔记</a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?3508d9f941c446dcf5e14d1e77231e51";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></body>
+</html>

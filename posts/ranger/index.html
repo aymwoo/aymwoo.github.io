@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Ranger - aymwoo</title><meta name="Description" content=""><meta property="og:title" content="Ranger" />
+<meta property="og:description" content="Ranger ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式. 安装 安装 ranger 包,以 Arch 为例： # pacman -S ranger 使用 快捷键 命令 ? 帮助 l,Enter 打开文件 j,k 在文件列表中上下" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://aymwoo.gitee.io/posts/ranger/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-09T15:28:34+08:00" />
+<meta property="article:modified_time" content="2022-01-09T15:28:34+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ranger"/>
+<meta name="twitter:description" content="Ranger ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式. 安装 安装 ranger 包,以 Arch 为例： # pacman -S ranger 使用 快捷键 命令 ? 帮助 l,Enter 打开文件 j,k 在文件列表中上下"/>
+<meta name="application-name" content="aymwoo">
+<meta name="apple-mobile-web-app-title" content="aymwoo"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://aymwoo.gitee.io/posts/ranger/" /><link rel="prev" href="http://aymwoo.gitee.io/posts/hello/" /><link rel="next" href="http://aymwoo.gitee.io/posts/vim%E5%A4%9A%E8%A1%8C%E6%B7%BB%E5%8A%A0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Ranger",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/aymwoo.gitee.io\/posts\/ranger\/"
+        },"genre": "posts","keywords": "tools","wordcount":  347 ,
+        "url": "http:\/\/aymwoo.gitee.io\/posts\/ranger\/","datePublished": "2022-01-09T15:28:34+08:00","dateModified": "2022-01-09T15:28:34+08:00","publisher": {
+            "@type": "Organization",
+            "name": "wuxf"},"author": {
+                "@type": "Person",
+                "name": "wuxf"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="aymwoo">aymwoo</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="aymwoo">aymwoo</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Ranger</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>wuxf</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-09">2022-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 347 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#使用">使用</a></li>
+    <li><a href="#配置">配置</a>
+      <ul>
+        <li><a href="#生成配置文件">生成配置文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#其他">其他</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="ranger">Ranger</h1>
+<p>ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式.
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="ranger.png"
+        data-srcset="ranger.png, ranger.png 1.5x, ranger.png 2x"
+        data-sizes="auto"
+        alt="ranger.png"
+        title="ranger 截图" /></p>
+<h2 id="安装">安装</h2>
+<p>安装 ranger 包,以 Arch 为例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="c"># pacman -S ranger
+</span></span></span></code></pre></div><h2 id="使用">使用</h2>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?</td>
+<td>帮助</td>
+</tr>
+<tr>
+<td>l,Enter</td>
+<td>打开文件</td>
+</tr>
+<tr>
+<td>j,k</td>
+<td>在文件列表中上下移动</td>
+</tr>
+<tr>
+<td>h,l</td>
+<td>在上一级和下一级目录间移动</td>
+</tr>
+<tr>
+<td>blank</td>
+<td>选中文件</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出</td>
+</tr>
+</tbody>
+</table>
+<p>如果您熟悉 vim，那么应该熟悉 ranger 的 UI 规范。Ranger 使用 HJKL 键进行导航，并从 vim 借鉴了许多习惯用法。例如:yy (vim 中的复制行)复制一个文件，pp 粘贴它，dd 剪切文件。更复杂的函数可以从命令行调用:(冒号)。</p>
+<h2 id="配置">配置</h2>
+<h3 id="生成配置文件">生成配置文件</h3>
+<p>第一次运行 ranger,会创建<code>~/.config/ranger</code>文件夹,如果要自定义 ranger 的配置,你首先需要在你的<code>～/.config</code> 文件夹中生成 ranger 的配置文件.
+ranger 使用 4 个主要的配置文件:</p>
+<pre tabindex="0"><code>$ ranger --copy-config=all
+</code></pre><ul>
+<li>rc.conf - 选项设置和快捷键</li>
+<li>commands.py - 能通过 : 执行的命令</li>
+<li>rifle.conf - 指定不同类型的文件的默认打开程序。</li>
+<li>scope.sh - 文件预览相关配置</li>
+</ul>
+<h2 id="其他">其他</h2>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-01-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/tools/">tools</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/hello/" class="prev" rel="prev" title="Hello"><i class="fas fa-angle-left fa-fw"></i>Hello</a>
+            <a href="/posts/vim%E5%A4%9A%E8%A1%8C%E6%B7%BB%E5%8A%A0/" class="next" rel="next" title="Vim多行插入">Vim多行插入<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?3508d9f941c446dcf5e14d1e77231e51";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></body>
+</html>

@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - 标签 - aymwoo</title>
+        <link>http://aymwoo.gitee.io/tags/</link>
+        <description>Tags - 标签 - aymwoo</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 26 Oct 2023 15:32:19 &#43;0800</lastBuildDate><atom:link href="http://aymwoo.gitee.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>AI</title>
+    <link>http://aymwoo.gitee.io/tags/ai/</link>
+    <pubDate>Thu, 26 Oct 2023 15:32:19 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/ai/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>GPT4All</title>
+    <link>http://aymwoo.gitee.io/tags/gpt4all/</link>
+    <pubDate>Thu, 26 Oct 2023 15:32:19 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/gpt4all/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>教育</title>
+    <link>http://aymwoo.gitee.io/tags/%E6%95%99%E8%82%B2/</link>
+    <pubDate>Tue, 03 Oct 2023 13:39:19 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/%E6%95%99%E8%82%B2/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>org</title>
+    <link>http://aymwoo.gitee.io/tags/org/</link>
+    <pubDate>Tue, 03 Oct 2023 13:16:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/org/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>other</title>
+    <link>http://aymwoo.gitee.io/tags/other/</link>
+    <pubDate>Tue, 03 Oct 2023 13:08:50 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/other/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>linux</title>
+    <link>http://aymwoo.gitee.io/tags/linux/</link>
+    <pubDate>Sun, 16 Jan 2022 08:29:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>fish</title>
+    <link>http://aymwoo.gitee.io/tags/fish/</link>
+    <pubDate>Sat, 15 Jan 2022 10:48:21 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/fish/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>markdown</title>
+    <link>http://aymwoo.gitee.io/tags/markdown/</link>
+    <pubDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/markdown/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>PlantUML</title>
+    <link>http://aymwoo.gitee.io/tags/plantuml/</link>
+    <pubDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/plantuml/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>tools</title>
+    <link>http://aymwoo.gitee.io/tags/tools/</link>
+    <pubDate>Wed, 12 Jan 2022 09:14:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/tags/tools/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

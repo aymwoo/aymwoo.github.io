@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>web - 标签 - aymwoo</title>
+        <link>http://aymwoo.gitee.io/tags/web/</link>
+        <description>web - 标签 - aymwoo</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 11 Jan 2022 10:54:56 &#43;0800</lastBuildDate><atom:link href="http://aymwoo.gitee.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo</title>
+    <link>http://aymwoo.gitee.io/posts/hugo/</link>
+    <pubDate>Tue, 11 Jan 2022 10:54:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/posts/hugo/</guid>
+    <description><![CDATA[Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。 常用命令 添加站点]]></description>
+</item></channel>
+</rss>
