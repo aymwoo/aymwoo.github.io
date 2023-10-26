@@ -34,13 +34,6 @@
     <guid>http://aymwoo.gitee.io/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</guid>
     <description><![CDATA[因为一些原因暂停了日常的记录,现在从nvim切换到了emacs,又准备重新来记录一下日常。]]></description>
 </item><item>
-    <title>添加用户到wheel组</title>
-    <link>http://aymwoo.gitee.io/posts/%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E5%88%B0wheel%E7%BB%84/</link>
-    <pubDate>Sun, 16 Jan 2022 08:29:46 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://aymwoo.gitee.io/posts/%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E5%88%B0wheel%E7%BB%84/</guid>
-    <description><![CDATA[用户加入到wheel之后再执行sudo的时候无需输入密码. 使用usermod命令 # usermod -a -G wheel username 使用gpasswd命令 # gpasswd -a username wheel]]></description>
-</item><item>
     <title>Fish Add Path</title>
     <link>http://aymwoo.gitee.io/posts/fish-add-path/</link>
     <pubDate>Sat, 15 Jan 2022 10:48:21 &#43;0800</pubDate>
@@ -69,11 +62,18 @@
     <guid>http://aymwoo.gitee.io/posts/hugo/</guid>
     <description><![CDATA[Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。 常用命令 添加站点]]></description>
 </item><item>
-    <title>Vim多行插入</title>
-    <link>http://aymwoo.gitee.io/posts/vim%E5%A4%9A%E8%A1%8C%E6%B7%BB%E5%8A%A0/</link>
-    <pubDate>Sun, 09 Jan 2022 22:36:59 &#43;0800</pubDate>
+    <title>Ranger</title>
+    <link>http://aymwoo.gitee.io/posts/ranger/</link>
+    <pubDate>Sun, 09 Jan 2022 15:28:34 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://aymwoo.gitee.io/posts/vim%E5%A4%9A%E8%A1%8C%E6%B7%BB%E5%8A%A0/</guid>
-    <description><![CDATA[有时候需要在多个行的开头添加相同的内容，可以进行如下操作: Normal 模式下按ctrl+v进入可视化模式(矩阵选择),然后上下选择需要插入的行 按下I,]]></description>
+    <guid>http://aymwoo.gitee.io/posts/ranger/</guid>
+    <description><![CDATA[Ranger ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式. 安装 安装 ranger 包,以 Arch 为例： # pacman -S ranger 使用 快捷键 命令 ? 帮助 l,Enter 打开文件 j,k 在文件列表中上下]]></description>
+</item><item>
+    <title>Hello</title>
+    <link>http://aymwoo.gitee.io/posts/hello/</link>
+    <pubDate>Sun, 02 Jan 2022 02:30:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://aymwoo.gitee.io/posts/hello/</guid>
+    <description><![CDATA[Hello World Hello Kitty]]></description>
 </item></channel>
 </rss>
