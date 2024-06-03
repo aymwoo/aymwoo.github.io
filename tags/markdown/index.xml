@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>markdown - 标签 - aymwoo</title>
-        <link>http://aymwoo.gitee.io/tags/markdown/</link>
-        <description>markdown - 标签 - aymwoo</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</lastBuildDate><atom:link href="http://aymwoo.gitee.io/tags/markdown/" rel="self" type="application/rss+xml" /><item>
+        <title>Markdown - 标签 - XF21</title>
+        <link>https://xf21.dev/tags/markdown/</link>
+        <description>Markdown - 标签 - XF21</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/markdown/" rel="self" type="application/rss+xml" /><item>
     <title>Markdown PlantUML</title>
-    <link>http://aymwoo.gitee.io/posts/markdown-plantuml/</link>
+    <link>https://xf21.dev/posts/markdown-plantuml/</link>
     <pubDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://aymwoo.gitee.io/posts/markdown-plantuml/</guid>
+    <author>wuxf</author>
+    <guid>https://xf21.dev/posts/markdown-plantuml/</guid>
     <description><![CDATA[Markdown搭配PlantUML画各种图 PlantUML的安装 包管理工具安装 PlantUML的运行需要Java环境,如果是用pacman]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>emacs - 分类 - aymwoo</title>
-        <link>http://aymwoo.gitee.io/categories/emacs/</link>
-        <description>emacs - 分类 - aymwoo</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 Oct 2023 13:16:41 &#43;0800</lastBuildDate><atom:link href="http://aymwoo.gitee.io/categories/emacs/" rel="self" type="application/rss+xml" /><item>
+        <title>Emacs - 分类 - XF21</title>
+        <link>https://xf21.dev/categories/emacs/</link>
+        <description>Emacs - 分类 - XF21</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 Oct 2023 13:16:41 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/categories/emacs/" rel="self" type="application/rss+xml" /><item>
     <title>使用Easy hugo部署到github</title>
-    <link>http://aymwoo.gitee.io/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
+    <link>https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
     <pubDate>Tue, 03 Oct 2023 13:16:41 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://aymwoo.gitee.io/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
+    <guid>https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
     <description><![CDATA[需要自己写一个 deploy.sh ##!/bin/bash # 将public目录中的所有文件提交到GitHub Pages的特定分支 # 清除并重新生成Hugo站点 hugo -d ./public # 进入public]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

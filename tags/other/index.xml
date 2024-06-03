@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>other - 标签 - aymwoo</title>
-        <link>http://aymwoo.gitee.io/tags/other/</link>
-        <description>other - 标签 - aymwoo</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 Oct 2023 13:08:50 &#43;0800</lastBuildDate><atom:link href="http://aymwoo.gitee.io/tags/other/" rel="self" type="application/rss+xml" /><item>
+        <title>Other - 标签 - XF21</title>
+        <link>https://xf21.dev/tags/other/</link>
+        <description>Other - 标签 - XF21</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 Oct 2023 13:08:50 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/other/" rel="self" type="application/rss+xml" /><item>
     <title>新的开始</title>
-    <link>http://aymwoo.gitee.io/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</link>
+    <link>https://xf21.dev/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</link>
     <pubDate>Tue, 03 Oct 2023 13:08:50 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://aymwoo.gitee.io/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</guid>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</guid>
     <description><![CDATA[因为一些原因暂停了日常的记录,现在从nvim切换到了emacs,又准备重新来记录一下日常。]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>
