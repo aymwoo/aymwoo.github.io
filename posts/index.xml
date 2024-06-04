@@ -3,7 +3,15 @@
         <title>所有文章 - XF21</title>
         <link>https://xf21.dev/posts/</link>
         <description>所有文章 | XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 26 Oct 2023 15:32:19 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 03 Jun 2024 15:46:49 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Emacs下easy-hugo键绑定和evil冲突的解决办法</title>
+    <link>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+    <pubDate>Mon, 03 Jun 2024 15:46:49 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+    <description><![CDATA[运行 easy-hugo 之后发现顶部导航的快捷键无法使用，应该是与 evil 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 buffer 的下面将会出现一个菜单，]]></description>
+</item>
+<item>
     <title>GPT4All</title>
     <link>https://xf21.dev/posts/gpt4all/</link>
     <pubDate>Thu, 26 Oct 2023 15:32:19 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/hello/</guid>
     <description><![CDATA[Hello World Hello Kitty]]></description>
-</item>
-<item>
-    <title></title>
-    <link>https://xf21.dev/posts/%E6%95%99%E8%82%B2%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84%E6%95%99%E8%82%B2%E5%8F%98%E9%9D%A9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://xf21.dev/posts/%E6%95%99%E8%82%B2%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84%E6%95%99%E8%82%B2%E5%8F%98%E9%9D%A9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[《教育的未来：人工智能时代的教育变革》读书笔记 其他-教育的未来：人工智能时代的教育变革 全面的系统性思维 全面的系统性思维是任何复杂操作都需要的]]></description>
 </item>
 </channel>
 </rss>
