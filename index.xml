@@ -3,9 +3,17 @@
         <title>XF21</title>
         <link>https://xf21.dev/</link>
         <description>好记性不如烂笔头🖊️</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 04 Jun 2024 16:39:56 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 05 Jun 2024 10:44:03 &#43;0800</lastBuildDate>
             <atom:link href="https://xf21.dev/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>50个成为优秀程序员的法则[1-10]</title>
+    <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/</link>
+    <pubDate>Wed, 05 Jun 2024 10:44:03 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/</guid>
+    <description><![CDATA[原文链接: 50 Coding Laws That Would Make You A Decent Programmer. 1. 不惜一切代价避免注释 开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写]]></description>
+</item>
+<item>
     <title>Jupyterlab中显示Plotly的图形</title>
     <link>https://xf21.dev/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/</link>
     <pubDate>Tue, 04 Jun 2024 16:39:56 &#43;0800</pubDate>
@@ -76,14 +84,6 @@
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/hugo/</guid>
     <description><![CDATA[Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。 常用命令 添加站点]]></description>
-</item>
-<item>
-    <title>Ranger</title>
-    <link>https://xf21.dev/posts/ranger/</link>
-    <pubDate>Sun, 09 Jan 2022 15:28:34 &#43;0800</pubDate>
-    <author>wuxf</author>
-    <guid>https://xf21.dev/posts/ranger/</guid>
-    <description><![CDATA[Ranger ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式. 安装 安装 ranger 包,以 Arch 为例： # pacman -S ranger 使用 快捷键 命令 ? 帮助 l,Enter 打开文件 j,k 在文件列表中上下]]></description>
 </item>
 </channel>
 </rss>
