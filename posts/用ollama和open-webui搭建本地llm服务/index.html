@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>用ollama和open-webui搭建本地LLM服务 - XF21</title><meta name="Description" content="Short description"><meta property="og:url" content="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/">
+  <meta property="og:site_name" content="XF21">
+  <meta property="og:title" content="用ollama和open-webui搭建本地LLM服务">
+  <meta property="og:description" content="Short description">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-06T16:46:09+08:00">
+    <meta property="article:modified_time" content="2024-06-06T16:46:09+08:00">
+    <meta property="article:tag" content="Ollama">
+    <meta property="article:tag" content="LLM">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="用ollama和open-webui搭建本地LLM服务">
+  <meta name="twitter:description" content="Short description">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/" /><link rel="prev" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "用ollama和open-webui搭建本地LLM服务",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xf21.dev\/posts\/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1\/"
+        },"genre": "posts","keywords": "Ollama, LLM","wordcount":  455 ,
+        "url": "https:\/\/xf21.dev\/posts\/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1\/","datePublished": "2024-06-06T16:46:09+08:00","dateModified": "2024-06-06T16:46:09+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Wuxf"
+            },"description": "Short description"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="XF21">XF21</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="XF21">XF21</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">用ollama和open-webui搭建本地LLM服务</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-06-06">2024-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 455 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">搭建服务</a>
+</li>
+<li><a href="#headline-2">添加模型</a>
+<ul>
+<li><a href="#headline-3">通过网页添加</a>
+</li>
+<li><a href="#headline-4">docker命令进入容器内部添加</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-5">使用</a>
+</li>
+</ul>
+</nav></div>
+            </div><div class="content" id="content">
+<p>
+我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 <a href="https://github.com/ollama/ollama">Ollama</a> 结合 <a href="https://github.com/QwenLM/Qwen">qwen</a> 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+搭建服务
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div class="src src-docker">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">services:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ollama:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    image: ollama/ollama<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    container_name: ollama<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    ports:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s2">&#34;11434:11434&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    volumes:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - ollama:/root/.ollama<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    restart: unless-stopped<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  open-webui:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    image: ghcr.io/open-webui/open-webui:main<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    container_name: open-webui<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    ports:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s2">&#34;8080:8080&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    volumes:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - open-webui:/app/backend/data<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    extra_hosts:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s2">&#34;host.docker.internal:host-gateway&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    restart: unless-stopped<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>volumes:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ollama:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  open-webui:</span></span></code></pre></div>
+</div>
+<p>
+之后可以通过 <code>docker compose up -d</code> 命令启动服务, <a href="http://localhost:8080">http://localhost:8080</a> 可以看到Open-WebUI的服务,第一个注册的用户将会被自动赋予管理员的权限.接下来就可以选择左下角的菜单中的设置添加模型.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+添加模型
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+通过网页添加
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p><img src="/images/2024-06-06_17-07-23_screenshot.png" alt="/images/2024-06-06_17-07-23_screenshot.png" title="/images/2024-06-06_17-07-23_screenshot.png" /></p>
+<p>
+所有可用的模型可以在 <a href="https://ollama.com/library">https://ollama.com/library</a> 这里查看,在拉取模型那里输入名称就可以拉取下来.因为我的需求,我主要选择了 <code>qwen</code> 和~codeqwen~ ,版本自然比当前通义千问的官网的版本低一些,但对于我的需求来说够用了.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+docker命令进入容器内部添加
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>
+或者,你也可以通过docker命令进入容器内部用如下命令抓取.</p>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  docker <span class="nb">exec</span> -it open-webui bash
+</span></span><span class="line"><span class="cl">  ollama pull qwen:latest</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+使用
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>
+除了基本的问答之外,Open-WebUI 也可以运行提示的代码</p>
+<p><img src="/images/2024-06-06_17-26-11_screenshot.png" alt="/images/2024-06-06_17-26-11_screenshot.png" title="/images/2024-06-06_17-26-11_screenshot.png" /></p>
+<p>
+还有更多功能正在摸索中…</p>
+</div>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-06-06</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/" data-title="用ollama和open-webui搭建本地LLM服务" data-hashtags="Ollama,LLM"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/" data-hashtag="Ollama"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/" data-title="用ollama和open-webui搭建本地LLM服务"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/" data-title="用ollama和open-webui搭建本地LLM服务"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/" data-title="用ollama和open-webui搭建本地LLM服务"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ollama/">Ollama</a>,&nbsp;<a href="/tags/llm/">LLM</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/" class="prev" rel="prev" title="50个成为优秀程序员的法则[1-10]"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>50个成为优秀程序员的法则[1-10]</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://xf21.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-H0THCDBDY4', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-H0THCDBDY4" async></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?3508d9f941c446dcf5e14d1e77231e51";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></body>
+</html>

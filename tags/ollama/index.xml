@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ollama - 标签 - XF21</title>
+        <link>https://xf21.dev/tags/ollama/</link>
+        <description>Ollama - 标签 - XF21</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 06 Jun 2024 16:46:09 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/ollama/" rel="self" type="application/rss+xml" /><item>
+    <title>用ollama和open-webui搭建本地LLM服务</title>
+    <link>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</link>
+    <pubDate>Thu, 06 Jun 2024 16:46:09 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</guid>
+    <description><![CDATA[我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 Ollama 结合 qwen 模型能够在CPU下提供比较不错的反应速度]]></description>
+</item>
+</channel>
+</rss>
