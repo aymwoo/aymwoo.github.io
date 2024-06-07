@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>编码 - 标签 - XF21</title>
+        <link>https://xf21.dev/tags/%E7%BC%96%E7%A0%81/</link>
+        <description>编码 - 标签 - XF21</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 07 Jun 2024 10:59:46 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/%E7%BC%96%E7%A0%81/" rel="self" type="application/rss+xml" /><item>
+    <title>Python中的bytes对象以及UTF-8编码</title>
+    <link>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</link>
+    <pubDate>Fri, 07 Jun 2024 10:59:46 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</guid>
+    <description><![CDATA[看了 `bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding 之后自己尝试了一下中文,加深了对UTF-8的一点点理解. Python的bytes对象 bytes 是由单个字节构成的不可变整数]]></description>
+</item>
+</channel>
+</rss>

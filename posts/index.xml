@@ -3,7 +3,15 @@
         <title>所有文章 - XF21</title>
         <link>https://xf21.dev/posts/</link>
         <description>所有文章 | XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 06 Jun 2024 16:46:09 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 07 Jun 2024 10:59:46 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Python中的bytes对象以及UTF-8编码</title>
+    <link>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</link>
+    <pubDate>Fri, 07 Jun 2024 10:59:46 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</guid>
+    <description><![CDATA[看了 `bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding 之后自己尝试了一下中文,加深了对UTF-8的一点点理解. Python的bytes对象 bytes 是由单个字节构成的不可变整数]]></description>
+</item>
+<item>
     <title>用ollama和open-webui搭建本地LLM服务</title>
     <link>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</link>
     <pubDate>Thu, 06 Jun 2024 16:46:09 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/markdown-plantuml/</guid>
     <description><![CDATA[Markdown搭配PlantUML画各种图 PlantUML的安装 包管理工具安装 PlantUML的运行需要Java环境,如果是用pacman]]></description>
-</item>
-<item>
-    <title>RustDesk</title>
-    <link>https://xf21.dev/posts/rustdesk/</link>
-    <pubDate>Wed, 12 Jan 2022 09:14:46 &#43;0800</pubDate>
-    <author>wuxf</author>
-    <guid>https://xf21.dev/posts/rustdesk/</guid>
-    <description><![CDATA[RustDesk&ndash;开源远程桌面 github上14.4k star的开源跨平台远程桌面,目前提供三个免费的公共服务器,但都在境外(首]]></description>
 </item>
 </channel>
 </rss>
