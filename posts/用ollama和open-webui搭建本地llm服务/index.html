@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xf21.dev\/posts\/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1\/"
-        },"genre": "posts","keywords": "Ollama, LLM","wordcount":  455 ,
+        },"genre": "posts","keywords": "Ollama, LLM","wordcount":  446 ,
         "url": "https:\/\/xf21.dev\/posts\/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1\/","datePublished": "2024-06-06T16:46:09+08:00","dateModified": "2024-06-06T16:46:09+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -75,7 +75,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">用ollama和open-webui搭建本地LLM服务</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-06-06">2024-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 455 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-06-06">2024-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 446 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -148,7 +148,7 @@
 <div id="outline-text-headline-3" class="outline-text-3">
 <p><img src="/images/2024-06-06_17-07-23_screenshot.png" alt="/images/2024-06-06_17-07-23_screenshot.png" title="/images/2024-06-06_17-07-23_screenshot.png" /></p>
 <p>
-所有可用的模型可以在 <a href="https://ollama.com/library">https://ollama.com/library</a> 这里查看,在拉取模型那里输入名称就可以拉取下来.因为我的需求,我主要选择了 <code>qwen</code> 和~codeqwen~ ,版本自然比当前通义千问的官网的版本低一些,但对于我的需求来说够用了.</p>
+所有可用的模型可以在 <a href="https://ollama.com/library">https://ollama.com/library</a> 这里查看,在拉取模型那里输入名称就可以拉取下来.因为我的需求,我主要选择了 <code>qwen</code> 和 <code>codeqwen</code> ,版本自然比当前通义千问的官网的版本低一些,但对于我的需求来说够用了.</p>
 </div>
 </div>
 <div id="outline-container-headline-4" class="outline-3">
@@ -159,7 +159,7 @@ docker命令进入容器内部添加
 <p>
 或者,你也可以通过docker命令进入容器内部用如下命令抓取.</p>
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  docker <span class="nb">exec</span> -it open-webui bash
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  docker <span class="nb">exec</span> -it ollama bash
 </span></span><span class="line"><span class="cl">  ollama pull qwen:latest</span></span></code></pre></div>
 </div>
 </div>
