@@ -3,9 +3,17 @@
         <title>XF21</title>
         <link>https://xf21.dev/</link>
         <description>好记性不如烂笔头🖊️</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 07 Jun 2024 10:59:46 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 14 Jun 2024 14:07:34 &#43;0800</lastBuildDate>
             <atom:link href="https://xf21.dev/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Debian系安装ping</title>
+    <link>https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/</link>
+    <pubDate>Fri, 14 Jun 2024 14:07:34 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/</guid>
+    <description><![CDATA[很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 ping 的时候经常找不到 ping ，需要安装，安装的命令如下： apt install iputils-ping 有时候还需]]></description>
+</item>
+<item>
     <title>Python中的bytes对象以及UTF-8编码</title>
     <link>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</link>
     <pubDate>Fri, 07 Jun 2024 10:59:46 &#43;0800</pubDate>
@@ -76,14 +84,6 @@
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/fish-add-path/</guid>
     <description><![CDATA[fish 添加路径到PATH 相对与bash,zsh来说更直观,比如要全局添加~/.local/bin到PATH中,就可以在你的fish的配置文件中加]]></description>
-</item>
-<item>
-    <title>Markdown PlantUML</title>
-    <link>https://xf21.dev/posts/markdown-plantuml/</link>
-    <pubDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</pubDate>
-    <author>wuxf</author>
-    <guid>https://xf21.dev/posts/markdown-plantuml/</guid>
-    <description><![CDATA[Markdown搭配PlantUML画各种图 PlantUML的安装 包管理工具安装 PlantUML的运行需要Java环境,如果是用pacman]]></description>
 </item>
 </channel>
 </rss>
