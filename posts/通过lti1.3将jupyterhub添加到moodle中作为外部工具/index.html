@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>通过lti1.3将jupyterhub添加到moodle中作为外部工具 - XF21</title><meta name="Description" content="Short description"><meta property="og:url" content="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/">
+  <meta property="og:site_name" content="XF21">
+  <meta property="og:title" content="通过lti1.3将jupyterhub添加到moodle中作为外部工具">
+  <meta property="og:description" content="Short description">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-19T18:04:21+08:00">
+    <meta property="article:modified_time" content="2024-06-19T18:04:21+08:00">
+    <meta property="article:tag" content="Jupyterhub">
+    <meta property="article:tag" content="Moodle">
+    <meta property="article:tag" content="Lms">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="通过lti1.3将jupyterhub添加到moodle中作为外部工具">
+  <meta name="twitter:description" content="Short description">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/" /><link rel="prev" href="https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "通过lti1.3将jupyterhub添加到moodle中作为外部工具",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xf21.dev\/posts\/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7\/"
+        },"genre": "posts","keywords": "jupyterhub, moodle, lms","wordcount":  1479 ,
+        "url": "https:\/\/xf21.dev\/posts\/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7\/","datePublished": "2024-06-19T18:04:21+08:00","dateModified": "2024-06-19T18:04:21+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Wuxf"
+            },"description": "Short description"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="XF21">XF21</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="XF21">XF21</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">通过lti1.3将jupyterhub添加到moodle中作为外部工具</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-06-19">2024-06-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1479 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">基本概念</a>
+<ul>
+<li><a href="#headline-2">LTI是一种标准，LTI1.3是目前这一标准的最新版本之一。</a>
+</li>
+<li><a href="#headline-3">学习工具（Tools）</a>
+</li>
+<li><a href="#headline-4">平台</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-5">安装Moodle</a>
+<ul>
+<li><a href="#headline-6">安装</a>
+</li>
+<li><a href="#headline-7">配置</a>
+<ul>
+<li><a href="#headline-8">创建外部工具</a>
+</li>
+<li><a href="#headline-9">填写jupyterhub服务相关信息（待Jupyterhub环境配置好后）</a>
+</li>
+<li><a href="#headline-10">查看工具信息</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#headline-11">Jupyterhub</a>
+<ul>
+<li><a href="#headline-12">安装</a>
+</li>
+<li><a href="#headline-13">配置</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-14">Moodle的课程中添加Jupyterhub外部工具</a>
+</li>
+</ul>
+</nav></div>
+            </div><div class="content" id="content">
+<p>
+这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方便的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+基本概念
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+LTI是一种标准，LTI1.3是目前这一标准的最新版本之一。
+</h3>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+学习工具（Tools）
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>
+LTI标准中外部应用程序或服务的统称，如在线测验工具、互动内容平台等，这里Jupyterhub就是学习工具。</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+平台
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>
+提供课程管理、内容管理或学习管理的系统，如LMS（Learning Management System，学习管理系统）,这里Moodle就是平台。</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+安装Moodle
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+安装
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>
+Moodle我使用的是 <a href="https://github.com/bitnami/containers/tree/main/bitnami/moodle">bitnami提供的Moodle容器(docker)</a> ,直接把 docker-compose.yml 下到本地，安装好docker环境之后，启动服务即可。</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># Copyright Broadcom, Inc. All Rights Reserved.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># SPDX-License-Identifier: APACHE-2.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mariadb</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/bitnami/mariadb:11.3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># ALLOW_EMPTY_PASSWORD is recommended only for development.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">ALLOW_EMPTY_PASSWORD=yes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MARIADB_USER=bn_moodle</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MARIADB_DATABASE=bitnami_moodle</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MARIADB_CHARACTER_SET=utf8mb4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MARIADB_COLLATE=utf8mb4_unicode_ci</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;mariadb_data:/bitnami/mariadb&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">moodle</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/bitnami/moodle:4.4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;80:8080&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;443:8443&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MOODLE_DATABASE_HOST=mariadb</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MOODLE_DATABASE_PORT_NUMBER=3306</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MOODLE_DATABASE_USER=bn_moodle</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MOODLE_DATABASE_NAME=bitnami_moodle</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># ALLOW_EMPTY_PASSWORD is recommended only for development.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">ALLOW_EMPTY_PASSWORD=yes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;moodle_data:/bitnami/moodle&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;moodledata_data:/bitnami/moodledata&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">mariadb</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mariadb_data</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">moodle_data</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">moodledata_data</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span></span></span></code></pre></div>
+</div>
+<p>
+在docker-compose.yml目录下启动服务</p>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  docker compose up -d</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+配置
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<p>
+Moodle中的配置主要是创建一个外部工具，通过这个外部工具调用jupyterhub，可以把用户信息等数据一并传递过去供jupyterhub使用。</p>
+<div id="outline-container-headline-8" class="outline-4">
+<h4 id="headline-8">
+创建外部工具
+</h4>
+<div id="outline-text-headline-8" class="outline-text-4">
+<p>
+选择 <code>站点管理-&gt;插件-&gt;活动模块-&gt;外部工具-&gt;管理</code> ，点击 &#34;手动配置一个工具&#34;:</p>
+<p><img src="/images/2024-06-19_11-39-19_screenshot.png" alt="/images/2024-06-19_11-39-19_screenshot.png" title="/images/2024-06-19_11-39-19_screenshot.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-4">
+<h4 id="headline-9">
+填写jupyterhub服务相关信息（待Jupyterhub环境配置好后）
+</h4>
+<div id="outline-text-headline-9" class="outline-text-4">
+<p>
+客户端ID在创建的时候自动生成，无需填写。注意下面红框中的内容需要选择相应的选项开启才能共享用户信息。注意默认启动容器要选择新窗口，因为Jupyterhub的安全设置似乎不允许嵌入方式。</p>
+<p><img src="/images/2024-06-19_11-42-53_screenshot.png" alt="/images/2024-06-19_11-42-53_screenshot.png" title="/images/2024-06-19_11-42-53_screenshot.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-4">
+<h4 id="headline-10">
+查看工具信息
+</h4>
+<div id="outline-text-headline-10" class="outline-text-4">
+<p>
+回到 <code>站点管理-&gt;插件-&gt;活动模块-&gt;外部工具-&gt;管理</code> ，会有一个工具列表看到刚刚创建的外部工具，点击其&#34;工具配置细节&#34;</p>
+<p><img src="/images/2024-06-19_17-57-37_screenshot.png" alt="/images/2024-06-19_17-57-37_screenshot.png" title="/images/2024-06-19_17-57-37_screenshot.png" /></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-2">
+<h2 id="headline-11">
+Jupyterhub
+</h2>
+<div id="outline-text-headline-11" class="outline-text-2">
+<div id="outline-container-headline-12" class="outline-3">
+<h3 id="headline-12">
+安装
+</h3>
+<div id="outline-text-headline-12" class="outline-text-3">
+<p>
+和Moodle整合需要使用jupyterhub的<a href="https://github.com/jupyterhub/ltiauthenticator/">ltiauthenticator</a>认证器，安装的时候一并安装</p>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  mkdir jupyterhub
+</span></span><span class="line"><span class="cl">  <span class="nb">cd</span> jupyterhub
+</span></span><span class="line"><span class="cl">  <span class="c1"># 创建python虚拟环境</span>
+</span></span><span class="line"><span class="cl">  python -m venv .venv
+</span></span><span class="line"><span class="cl">  <span class="nb">source</span> .venv/bin/activate
+</span></span><span class="line"><span class="cl">  pip install jupyterhub jupyterlab jupyterhub-ltiauthenticator</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-3">
+<h3 id="headline-13">
+配置
+</h3>
+<div id="outline-text-headline-13" class="outline-text-3">
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  <span class="nb">cd</span> jupyterhub
+</span></span><span class="line"><span class="cl">  <span class="c1"># 编辑jupyterhub配置文件</span>
+</span></span><span class="line"><span class="cl">  vim jupyterhub_config.py</span></span></code></pre></div>
+</div>
+<p>
+相关配置内容如下:</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">pwd</span>
+</span></span><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">subprocess</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">c</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>  <span class="c1"># noqa</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># LTI13AUTHENTICATOR configuration for Moodle</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">authenticator_class</span> <span class="o">=</span> <span class="s2">&#34;ltiauthenticator.lti13.auth.LTI13Authenticator&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">LTI13Authenticator</span><span class="o">.</span><span class="n">issuer</span> <span class="o">=</span> <span class="s2">&#34;http://10.80.73.225:13080&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">LTI13Authenticator</span><span class="o">.</span><span class="n">client_id</span> <span class="o">=</span> <span class="s2">&#34;ty3IkxZtqgrJotg&#34;</span> <span class="c1">#Moodle当中的外部工具ID</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">LTI13Authenticator</span><span class="o">.</span><span class="n">authorize_url</span> <span class="o">=</span> <span class="s2">&#34;http://10.80.73.225:13080/mod/lti/auth.php&#34;</span> <span class="c1">#Moodle的外部工具的身份验证请求URL</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">LTI13Authenticator</span><span class="o">.</span><span class="n">jwks_endpoint</span> <span class="o">=</span> <span class="s2">&#34;http://10.80.73.225:13080/mod/lti/certs.php&#34;</span> <span class="c1">#Moodle的外部工具的公钥集URL</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">LTI13Authenticator</span><span class="o">.</span><span class="n">username_key</span> <span class="o">=</span> <span class="s2">&#34;name&#34;</span> <span class="c1">#用户的name作为Jupyterhub的用户名，还可以选email或id</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Users</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">Authenticator</span><span class="o">.</span><span class="n">admin_users</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;admin1&#34;</span><span class="p">,</span> <span class="s2">&#34;admin2&#34;</span><span class="p">}</span> <span class="c1">#Moodle中的管理员的name</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">Authenticator</span><span class="o">.</span><span class="n">allow_all</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#允许所有登录</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 如果使用systemd类似的需要本地用户账号的spawner,需要先检查jupyterhub系统中是否存在该用户，如果不存在则创建一个新用户以便spawner能正常启动</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">pre_spawn_hook</span><span class="p">(</span><span class="n">spawner</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="n">username</span> <span class="o">=</span> <span class="n">spawner</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span>
+</span></span><span class="line"><span class="cl">      <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="n">pwd</span><span class="o">.</span><span class="n">getpwnam</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="s2">&#34;useradd&#34;</span><span class="p">,</span> <span class="s2">&#34;-ms&#34;</span><span class="p">,</span> <span class="s2">&#34;/bin/bash&#34;</span><span class="p">,</span> <span class="n">username</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;User </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> has been added.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;User </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> is already exist.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">spawner_class</span> <span class="o">=</span> <span class="s2">&#34;systemd&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">Spawner</span><span class="o">.</span><span class="n">pre_spawn_hook</span> <span class="o">=</span> <span class="n">pre_spawn_hook</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># 一些安全设置，隔离temp目录和硬件设备</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">SystemdSpawner</span><span class="o">.</span><span class="n">isolate_tmp</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">SystemdSpawner</span><span class="o">.</span><span class="n">isolate_devices</span> <span class="o">=</span> <span class="kc">True</span></span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-14" class="outline-2">
+<h2 id="headline-14">
+Moodle的课程中添加Jupyterhub外部工具
+</h2>
+<div id="outline-text-headline-14" class="outline-text-2">
+<p>
+如果课程中需要添加Jupyterhub作为外部工具，需要首先设置在课程的活动选择中启用这个外部工具：</p>
+<p><img src="/images/2024-06-19_17-59-44_screenshot.png" alt="/images/2024-06-19_17-59-44_screenshot.png" title="/images/2024-06-19_17-59-44_screenshot.png" /></p>
+<p>
+之后在添加活动资源的时候就可以看到这个外部工具，添加到课程中即可。</p>
+<p><img src="/images/2024-06-19_18-00-54_screenshot.png" alt="/images/2024-06-19_18-00-54_screenshot.png" title="/images/2024-06-19_18-00-54_screenshot.png" /></p>
+<p>
+最终效果如下，在课程中会看到jupyterhub的连接，点击之后会传递当前用户的用户名（个人资料中的姓+名）作为jupyterhub中的用户名。</p>
+<p><img src="/images/2024-06-19_18-02-46_screenshot.png" alt="/images/2024-06-19_18-02-46_screenshot.png" title="/images/2024-06-19_18-02-46_screenshot.png" /></p>
+</div>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-06-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/" data-title="通过lti1.3将jupyterhub添加到moodle中作为外部工具" data-hashtags="jupyterhub,moodle,lms"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/" data-hashtag="jupyterhub"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/" data-title="通过lti1.3将jupyterhub添加到moodle中作为外部工具"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/" data-title="通过lti1.3将jupyterhub添加到moodle中作为外部工具"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/" data-title="通过lti1.3将jupyterhub添加到moodle中作为外部工具"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/jupyterhub/">Jupyterhub</a>,&nbsp;<a href="/tags/moodle/">Moodle</a>,&nbsp;<a href="/tags/lms/">Lms</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/" class="prev" rel="prev" title="Debian系安装ping"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Debian系安装ping</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://xf21.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-H0THCDBDY4', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-H0THCDBDY4" async></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?3508d9f941c446dcf5e14d1e77231e51";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></body>
+</html>
