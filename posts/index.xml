@@ -3,7 +3,15 @@
         <title>所有文章 - XF21</title>
         <link>https://xf21.dev/posts/</link>
         <description>所有文章 | XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 20 Jun 2024 13:29:17 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>50个成为优秀程序员的法则[11-20]</title>
+    <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/</link>
+    <pubDate>Thu, 20 Jun 2024 13:29:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/</guid>
+    <description><![CDATA[原文链接: 50 Coding Laws That Would Make You A Decent Programmer. 11. 不要成为一个肮脏的程序员 这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净]]></description>
+</item>
+<item>
     <title>FFMPEG合并多个视频文件</title>
     <link>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</link>
     <pubDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/gpt4all/</guid>
     <description><![CDATA[GPT4All简介 GPT4All 是一个生态系统，用于训练和部署在消费级 CPU 上本地运行的强大且定制的大型语言模型。目标很简单——成为任何个人或企业都可以自由]]></description>
-</item>
-<item>
-    <title>使用Easy hugo部署到github</title>
-    <link>https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
-    <pubDate>Tue, 03 Oct 2023 13:16:41 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
-    <description><![CDATA[需要自己写一个 deploy.sh ##!/bin/bash # 将public目录中的所有文件提交到GitHub Pages的特定分支 # 清除并重新生成Hugo站点 hugo -d ./public # 进入public]]></description>
 </item>
 </channel>
 </rss>
