@@ -3,15 +3,23 @@
         <title>XF21</title>
         <link>https://xf21.dev/</link>
         <description>好记性不如烂笔头🖊️</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 19 Jun 2024 18:04:21 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</lastBuildDate>
             <atom:link href="https://xf21.dev/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>FFMPEG合并多个视频文件</title>
+    <link>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</link>
+    <pubDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</guid>
+    <description><![CDATA[需求 合并多个mts文件 保存成H.264格式编码，视频格式为MP4格式。 视频码流率：2M/s-3M/s。 视频分辨率：高清16：9拍摄，请设定为]]></description>
+</item>
+<item>
     <title>通过lti1.3将jupyterhub添加到moodle中作为外部工具</title>
     <link>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Wed, 19 Jun 2024 18:04:21 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</guid>
-    <description><![CDATA[这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方便的功能非常欠缺，好在有一个叫LT]]></description>
+    <description><![CDATA[这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LT]]></description>
 </item>
 <item>
     <title>Debian系安装ping</title>
@@ -76,14 +84,6 @@
     <author>作者</author>
     <guid>https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
     <description><![CDATA[需要自己写一个 deploy.sh ##!/bin/bash # 将public目录中的所有文件提交到GitHub Pages的特定分支 # 清除并重新生成Hugo站点 hugo -d ./public # 进入public]]></description>
-</item>
-<item>
-    <title>新的开始</title>
-    <link>https://xf21.dev/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</link>
-    <pubDate>Tue, 03 Oct 2023 13:08:50 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</guid>
-    <description><![CDATA[因为一些原因暂停了日常的记录,现在从nvim切换到了emacs,又准备重新来记录一下日常。]]></description>
 </item>
 </channel>
 </rss>
