@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Nil - 标签 - XF21</title>
-        <link>http://localhost:1313/tags/nil/</link>
+        <link>https://xf21.dev/tags/nil/</link>
         <description>Nil - 标签 - XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/nil/" rel="self" type="application/rss+xml" /><item>
-    <title>FFMPEG合并多个视频文件</title>
-    <link>http://localhost:1313/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</link>
-    <pubDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 29 Jun 2024 10:04:17 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/nil/" rel="self" type="application/rss+xml" /><item>
+    <title>思维肥胖危机</title>
+    <link>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</link>
+    <pubDate>Sat, 29 Jun 2024 10:04:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</guid>
-    <description><![CDATA[Short description]]></description>
+    <guid>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</guid>
+    <description><![CDATA[一篇很有意思的文章，The Intellectual Obesity Crisis &#34;我们的大脑更容易受到暴饮暴食的伤害，而不是饥饿。&#34; –Petrarch 伯克利研究人员2019]]></description>
 </item>
 </channel>
 </rss>
