@@ -4,11 +4,11 @@
         <link>https://xf21.dev/categories/</link>
         <description>Categories - 分类 - XF21</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 29 Jun 2024 10:04:17 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>Nil</title>
-    <link>https://xf21.dev/categories/nil/</link>
+    <title>日常</title>
+    <link>https://xf21.dev/categories/%E6%97%A5%E5%B8%B8/</link>
     <pubDate>Sat, 29 Jun 2024 10:04:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://xf21.dev/categories/nil/</guid>
+    <guid>https://xf21.dev/categories/%E6%97%A5%E5%B8%B8/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -25,14 +25,6 @@
     <pubDate>Tue, 03 Oct 2023 13:16:41 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://xf21.dev/categories/emacs/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>日常</title>
-    <link>https://xf21.dev/categories/%E6%97%A5%E5%B8%B8/</link>
-    <pubDate>Tue, 03 Oct 2023 13:08:50 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://xf21.dev/categories/%E6%97%A5%E5%B8%B8/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
