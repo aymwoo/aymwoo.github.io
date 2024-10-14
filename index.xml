@@ -9,7 +9,7 @@
     <title>如何快速旋转多个pdf</title>
     <link>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</link>
     <pubDate>Mon, 14 Oct 2024 10:32:15 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Wuxf</author>
     <guid>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</guid>
     <description><![CDATA[<p>
 经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。</p>]]></description>
