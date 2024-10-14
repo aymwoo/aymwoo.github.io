@@ -9,7 +9,13 @@
     <pubDate>Fri, 14 Jun 2024 14:07:34 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/</guid>
-    <description><![CDATA[很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 ping 的时候经常找不到 ping ，需要安装，安装的命令如下： apt install iputils-ping 有时候还需]]></description>
+    <description><![CDATA[<p>
+很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 <code>ping</code> 的时候经常找不到 <code>ping</code> ，需要安装，安装的命令如下：</p>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  apt install iputils-ping</span></span></code></pre></div>
+</div>
+<p>
+有时候还需要查看自己的代理是否生效，可以使用下面的命令：</p>]]></description>
 </item>
 </channel>
 </rss>

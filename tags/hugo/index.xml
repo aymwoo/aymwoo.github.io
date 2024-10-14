@@ -9,7 +9,8 @@
     <pubDate>Mon, 03 Jun 2024 15:46:49 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
-    <description><![CDATA[运行 easy-hugo 之后发现顶部导航的快捷键无法使用，应该是与 evil 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 buffer 的下面将会出现一个菜单，]]></description>
+    <description><![CDATA[<p>
+运行 <code>easy-hugo</code> 之后发现顶部导航的快捷键无法使用，应该是与 <code>evil</code> 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 <code>buffer</code> 的下面将会出现一个菜单，凑合用。</p>]]></description>
 </item>
 <item>
     <title>Hugo</title>
@@ -17,7 +18,16 @@
     <pubDate>Tue, 11 Jan 2022 10:54:56 &#43;0800</pubDate>
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/hugo/</guid>
-    <description><![CDATA[Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。 常用命令 添加站点]]></description>
+    <description><![CDATA[<h1 id="hugo-使用笔记">Hugo 使用笔记</h1>
+<p>在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。</p>
+<h2 id="常用命令">常用命令</h2>
+<h3 id="添加站点">添加站点</h3>
+<pre tabindex="0"><code>hugo new site yoursite
+</code></pre><h3 id="添加theme以我用的loveit为例">添加theme,以我用的LoveIt为例</h3>
+<pre tabindex="0"><code>cd yoursite
+git init
+git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</code></pre><p>当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:</p>]]></description>
 </item>
 </channel>
 </rss>

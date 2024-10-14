@@ -3,15 +3,31 @@
         <title>XF21</title>
         <link>https://xf21.dev/</link>
         <description>好记性不如烂笔头🖊️</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 29 Jun 2024 10:04:17 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 14 Oct 2024 10:32:15 &#43;0800</lastBuildDate>
             <atom:link href="https://xf21.dev/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>如何快速旋转多个pdf</title>
+    <link>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</link>
+    <pubDate>Mon, 14 Oct 2024 10:32:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</guid>
+    <description><![CDATA[<p>
+经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。</p>]]></description>
+</item>
+<item>
     <title>思维肥胖危机</title>
     <link>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</link>
     <pubDate>Sat, 29 Jun 2024 10:04:17 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</guid>
-    <description><![CDATA[一篇很有意思的文章，The Intellectual Obesity Crisis &#34;我们的大脑更容易受到暴饮暴食的伤害，而不是饥饿。&#34; –Petrarch 伯克利研究人员2019]]></description>
+    <description><![CDATA[<p>
+一篇很有意思的文章，<a href="https://www.gurwinder.blog/p/the-intellectual-obesity-crisis">The Intellectual Obesity Crisis</a></p>
+<blockquote>
+<p>&#34;我们的大脑更容易受到暴饮暴食的伤害，而不是饥饿。&#34;
+–Petrarch</p>
+</blockquote>
+<p>
+伯克利研究人员2019年的一项研究发现，信息与食物一样作用于大脑产生多巴胺的奖励系统。简单地说，大脑将信息本身视为一种奖励；信息是否准确或有用并不重要，大脑仍然会渴望它，并在消费后感到满足，如果糖产生的效果一样。</p>]]></description>
 </item>
 <item>
     <title>50个成为优秀程序员的法则[11-20]</title>
@@ -19,7 +35,14 @@
     <pubDate>Thu, 20 Jun 2024 13:29:17 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/</guid>
-    <description><![CDATA[原文链接: 50 Coding Laws That Would Make You A Decent Programmer. 11. 不要成为一个肮脏的程序员 这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净]]></description>
+    <description><![CDATA[<p>原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+11. 不要成为一个肮脏的程序员
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净的代码不会隐藏错误。它向程序员公开了bug可以隐藏的任何地方，并可以无需完全重构就可以修复其中的bug。</p>]]></description>
 </item>
 <item>
     <title>FFMPEG合并多个视频文件</title>
@@ -27,7 +50,27 @@
     <pubDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</guid>
-    <description><![CDATA[需求 合并多个mts文件 保存成H.264格式编码，视频格式为MP4格式。 视频码流率：2M/s-3M/s。 视频分辨率：高清16：9拍摄，请设定为]]></description>
+    <description><![CDATA[<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+需求
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ul>
+<li>合并多个mts文件</li>
+<li>保存成H.264格式编码，视频格式为MP4格式。</li>
+<li>视频码流率：2M/s-3M/s。</li>
+<li>视频分辨率：高清16：9拍摄，请设定为1920×1080。</li>
+<li>视频文件大小不超过2G</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+方法
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>
+使用神器 <code>ffmpeg</code> 来进行这个工作。</p>]]></description>
 </item>
 <item>
     <title>通过lti1.3将jupyterhub添加到moodle中作为外部工具</title>
@@ -35,7 +78,8 @@
     <pubDate>Wed, 19 Jun 2024 18:04:21 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</guid>
-    <description><![CDATA[这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LT]]></description>
+    <description><![CDATA[<p>
+这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。</p>]]></description>
 </item>
 <item>
     <title>Debian系安装ping</title>
@@ -43,7 +87,13 @@
     <pubDate>Fri, 14 Jun 2024 14:07:34 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/</guid>
-    <description><![CDATA[很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 ping 的时候经常找不到 ping ，需要安装，安装的命令如下： apt install iputils-ping 有时候还需]]></description>
+    <description><![CDATA[<p>
+很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 <code>ping</code> 的时候经常找不到 <code>ping</code> ，需要安装，安装的命令如下：</p>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  apt install iputils-ping</span></span></code></pre></div>
+</div>
+<p>
+有时候还需要查看自己的代理是否生效，可以使用下面的命令：</p>]]></description>
 </item>
 <item>
     <title>Python中的bytes对象以及UTF-8编码</title>
@@ -51,7 +101,15 @@
     <pubDate>Fri, 07 Jun 2024 10:59:46 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</guid>
-    <description><![CDATA[看了 `bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding 之后自己尝试了一下中文,加深了对UTF-8的一点点理解. Python的bytes对象 bytes 是由单个字节构成的不可变整数]]></description>
+    <description><![CDATA[<p>
+看了 <a href="https://www.thepythoncodingstack.com/p/bytes-python-built-in-unicode-utf-8-encoding">`bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding</a> 之后自己尝试了一下中文,加深了对UTF-8的一点点理解.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Python的bytes对象
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+<code>bytes</code> 是由单个字节构成的不可变整数序列。序列中的每个值的大小被限制为 0 &lt;= x &lt; 256 (如果违反此限制将引发 <code>ValueError</code>)。</p>]]></description>
 </item>
 <item>
     <title>用ollama和open-webui搭建本地LLM服务</title>
@@ -59,7 +117,8 @@
     <pubDate>Thu, 06 Jun 2024 16:46:09 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</guid>
-    <description><![CDATA[我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 Ollama 结合 qwen 模型能够在CPU下提供比较不错的反应速度]]></description>
+    <description><![CDATA[<p>
+我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 <a href="https://github.com/ollama/ollama">Ollama</a> 结合 <a href="https://github.com/QwenLM/Qwen">qwen</a> 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.</p>]]></description>
 </item>
 <item>
     <title>50个成为优秀程序员的法则[1-10]</title>
@@ -67,7 +126,15 @@
     <pubDate>Wed, 05 Jun 2024 10:44:03 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/</guid>
-    <description><![CDATA[原文链接: 50 Coding Laws That Would Make You A Decent Programmer. 1. 不惜一切代价避免注释 开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写]]></description>
+    <description><![CDATA[<p>
+原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+1. 不惜一切代价避免注释
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:</p>]]></description>
 </item>
 <item>
     <title>Jupyterlab中显示Plotly的图形</title>
@@ -75,15 +142,30 @@
     <pubDate>Tue, 04 Jun 2024 16:39:56 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/</guid>
-    <description><![CDATA[需要借助 IPython.dispaly.HTML 对象,在 Jupyterlab 安装的时候就已经可用了,具体用法如下: from IPython.display import HTML import plotly.graph_objects as go # 准备数据 x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] # 创建线形图 fig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y, mode=&#34;lines&#34;)) fig.update_layout( title=&#34;Simple]]></description>
-</item>
-<item>
-    <title>Emacs下easy-hugo键绑定和evil冲突的解决办法</title>
-    <link>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
-    <pubDate>Mon, 03 Jun 2024 15:46:49 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
-    <description><![CDATA[运行 easy-hugo 之后发现顶部导航的快捷键无法使用，应该是与 evil 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 buffer 的下面将会出现一个菜单，]]></description>
+    <description><![CDATA[<p>需要借助 <code>IPython.dispaly.HTML</code> 对象,在 <code>Jupyterlab</code> 安装的时候就已经可用了,具体用法如下:</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+</span></span><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 准备数据</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 创建线形图</span>
+</span></span><span class="line"><span class="cl">  <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&#34;lines&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">title</span><span class="o">=</span><span class="s2">&#34;Simple Line Plot&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&#34;X&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&#34;Y&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&#34;Courier New, monospace&#34;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&#34;#7f7f7f&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 显示图形</span>
+</span></span><span class="line"><span class="cl">  <span class="n">HTML</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">to_html</span><span class="p">())</span></span></span></code></pre></div>
+</div>
+<p></p>]]></description>
 </item>
 </channel>
 </rss>

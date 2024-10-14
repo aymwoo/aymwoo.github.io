@@ -9,7 +9,16 @@
     <pubDate>Tue, 11 Jan 2022 10:54:56 &#43;0800</pubDate>
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/hugo/</guid>
-    <description><![CDATA[Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。 常用命令 添加站点]]></description>
+    <description><![CDATA[<h1 id="hugo-使用笔记">Hugo 使用笔记</h1>
+<p>在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。</p>
+<h2 id="常用命令">常用命令</h2>
+<h3 id="添加站点">添加站点</h3>
+<pre tabindex="0"><code>hugo new site yoursite
+</code></pre><h3 id="添加theme以我用的loveit为例">添加theme,以我用的LoveIt为例</h3>
+<pre tabindex="0"><code>cd yoursite
+git init
+git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</code></pre><p>当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:</p>]]></description>
 </item>
 </channel>
 </rss>

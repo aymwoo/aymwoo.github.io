@@ -9,7 +9,8 @@
     <pubDate>Mon, 03 Jun 2024 15:46:49 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
-    <description><![CDATA[运行 easy-hugo 之后发现顶部导航的快捷键无法使用，应该是与 evil 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 buffer 的下面将会出现一个菜单，]]></description>
+    <description><![CDATA[<p>
+运行 <code>easy-hugo</code> 之后发现顶部导航的快捷键无法使用，应该是与 <code>evil</code> 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 <code>buffer</code> 的下面将会出现一个菜单，凑合用。</p>]]></description>
 </item>
 </channel>
 </rss>

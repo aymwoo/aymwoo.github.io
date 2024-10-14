@@ -9,7 +9,27 @@
     <pubDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</pubDate>
     <author>Wuxf</author>
     <guid>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</guid>
-    <description><![CDATA[需求 合并多个mts文件 保存成H.264格式编码，视频格式为MP4格式。 视频码流率：2M/s-3M/s。 视频分辨率：高清16：9拍摄，请设定为]]></description>
+    <description><![CDATA[<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+需求
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ul>
+<li>合并多个mts文件</li>
+<li>保存成H.264格式编码，视频格式为MP4格式。</li>
+<li>视频码流率：2M/s-3M/s。</li>
+<li>视频分辨率：高清16：9拍摄，请设定为1920×1080。</li>
+<li>视频文件大小不超过2G</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+方法
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>
+使用神器 <code>ffmpeg</code> 来进行这个工作。</p>]]></description>
 </item>
 </channel>
 </rss>

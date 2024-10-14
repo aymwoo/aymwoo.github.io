@@ -9,7 +9,12 @@
     <pubDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</pubDate>
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/markdown-plantuml/</guid>
-    <description><![CDATA[Markdown搭配PlantUML画各种图 PlantUML的安装 包管理工具安装 PlantUML的运行需要Java环境,如果是用pacman]]></description>
+    <description><![CDATA[<h1 id="markdown搭配plantuml画各种图">Markdown搭配PlantUML画各种图</h1>
+<h2 id="plantuml的安装">PlantUML的安装</h2>
+<h3 id="包管理工具安装">包管理工具安装</h3>
+<p>PlantUML的运行需要Java环境,如果是用pacman之类的包管理工具安装,会自动安装jre.</p>
+<pre tabindex="0"><code>#pacman -S plantuml
+</code></pre><p>如果需要绘制时序图和活动图之外的图,还需要安装graphviz软件.</p>]]></description>
 </item>
 </channel>
 </rss>

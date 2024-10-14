@@ -9,7 +9,12 @@
     <pubDate>Thu, 26 Oct 2023 15:32:19 &#43;0800</pubDate>
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/gpt4all/</guid>
-    <description><![CDATA[GPT4All简介 GPT4All 是一个生态系统，用于训练和部署在消费级 CPU 上本地运行的强大且定制的大型语言模型。目标很简单——成为任何个人或企业都可以自由]]></description>
+    <description><![CDATA[<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+GPT4All简介
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>GPT4All 是一个生态系统，用于训练和部署在消费级 CPU 上本地运行的强大且定制的大型语言模型。目标很简单——成为任何个人或企业都可以自由使用、分发和构建的最佳指令调整助理式语言模型。GPT4All 模型是一个 3GB - 8GB 文件，您可以下载该文件并将其插入 GPT4All 开源生态系统软件中。 Nomic AI 支持并维护这个软件生态系统，以加强质量和安全性，同时带头让任何个人或企业轻松训练和部署自己的边缘大型语言模型。</p>]]></description>
 </item>
 </channel>
 </rss>
