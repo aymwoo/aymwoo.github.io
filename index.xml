@@ -3,9 +3,23 @@
         <title>XF21</title>
         <link>https://xf21.dev/</link>
         <description>好记性不如烂笔头🖊️</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 14 Oct 2024 11:26:37 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 13 Nov 2024 10:04:18 &#43;0800</lastBuildDate>
             <atom:link href="https://xf21.dev/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Python清理字符串中的不可见字符</title>
+    <link>https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/</link>
+    <pubDate>Wed, 13 Nov 2024 10:04:18 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/</guid>
+    <description><![CDATA[<p>
+需要处理一些字符串中的 <code>\u202d</code> 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">new_str</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">input_str</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isprintable</span><span class="p">())</span></span></span></code></pre></div>
+</div>
+<p>
+😀</p>]]></description>
+</item>
+<item>
     <title>50个成为优秀程序员的法则[21-30]</title>
     <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/</link>
     <pubDate>Mon, 14 Oct 2024 11:26:37 &#43;0800</pubDate>
@@ -209,22 +223,6 @@ Python的bytes对象
     <guid>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</guid>
     <description><![CDATA[<p>
 我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 <a href="https://github.com/ollama/ollama">Ollama</a> 结合 <a href="https://github.com/QwenLM/Qwen">qwen</a> 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.</p>]]></description>
-</item>
-<item>
-    <title>50个成为优秀程序员的法则[1-10]</title>
-    <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/</link>
-    <pubDate>Wed, 05 Jun 2024 10:44:03 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/</guid>
-    <description><![CDATA[<p>
-原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-1. 不惜一切代价避免注释
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:</p>]]></description>
 </item>
 </channel>
 </rss>

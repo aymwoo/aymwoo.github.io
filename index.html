@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-	<meta name="generator" content="Hugo 0.135.0">
+	<meta name="generator" content="Hugo 0.138.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -65,6 +65,17 @@
         alt="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp"
         title="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp" /></a></div><h1 class="home-title">XF21</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/https://github.com/aymwoo" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:wu.xf@hotmail.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/">Python清理字符串中的不可见字符</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-11-13">2024-11-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
+需要处理一些字符串中的 <code>\u202d</code> 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">new_str</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">input_str</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isprintable</span><span class="p">())</span></span></span></code></pre></div>
+</div>
+<p>
+😀</p></div><div class="post-footer">
+        <a href="/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href=""></a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/">50个成为优秀程序员的法则[21-30]</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-10-14">2024-10-14</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
 原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
@@ -206,12 +217,6 @@
 使用神器 <code>ffmpeg</code> 来进行这个工作。</p></div><div class="post-footer">
         <a href="/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ffmpeg/">Ffmpeg</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/">通过lti1.3将jupyterhub添加到moodle中作为外部工具</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-19">2024-06-19</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
-这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。</p></div><div class="post-footer">
-        <a href="/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/jupyterhub/">Jupyterhub</a>,&nbsp;<a href="/tags/moodle/">Moodle</a>,&nbsp;<a href="/tags/lms/">Lms</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
