@@ -3,7 +3,15 @@
         <title>Tags - 标签 - XF21</title>
         <link>https://xf21.dev/tags/</link>
         <description>Tags - 标签 - XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 13 Nov 2024 10:04:18 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 19 Mar 2025 13:54:46 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Docker</title>
+    <link>https://xf21.dev/tags/docker/</link>
+    <pubDate>Wed, 19 Mar 2025 13:54:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://xf21.dev/tags/docker/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Python,Programming</title>
     <link>https://xf21.dev/tags/pythonprogramming/</link>
     <pubDate>Wed, 13 Nov 2024 10:04:18 &#43;0800</pubDate>
@@ -73,14 +81,6 @@
     <pubDate>Wed, 19 Jun 2024 18:04:21 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://xf21.dev/tags/moodle/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Linux</title>
-    <link>https://xf21.dev/tags/linux/</link>
-    <pubDate>Fri, 14 Jun 2024 14:07:34 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://xf21.dev/tags/linux/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

@@ -18,7 +18,7 @@
     <pubDate>Wed, 12 Jan 2022 09:14:46 &#43;0800</pubDate>
     <author>wuxf</author>
     <guid>https://xf21.dev/posts/rustdesk/</guid>
-    <description><![CDATA[<h1 id="rustdesk--开源远程桌面">RustDesk&ndash;开源远程桌面</h1>
+    <description><![CDATA[<h1 id="rustdesk开源远程桌面">RustDesk&ndash;开源远程桌面</h1>
 <p>github上14.4k star的开源跨平台远程桌面,目前提供三个免费的公共服务器,但都在境外(首尔,新加坡,达拉斯),但使用感受还比较流畅.</p>]]></description>
 </item>
 <item>

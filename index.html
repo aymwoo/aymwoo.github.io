@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-	<meta name="generator" content="Hugo 0.138.0">
+	<meta name="generator" content="Hugo 0.145.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -65,6 +65,17 @@
         alt="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp"
         title="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp" /></a></div><h1 class="home-title">XF21</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/https://github.com/aymwoo" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:wu.xf@hotmail.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/">Docker的代理设置</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-03-19">2025-03-19</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
+Create a file named <code>/etc/systemd/system/docker.service.d/http-proxy.conf</code> that adds the <code>HTTP_PROXY</code> environment variable:</p>
+<div class="src src-conf">
+<pre tabindex="0"><code class="language-conf" data-lang="conf">[Service]
+Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34;
+Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34;</code></pre>
+</div></div><div class="post-footer">
+        <a href="/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">Docker</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/">Python清理字符串中的不可见字符</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-11-13">2024-11-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
 需要处理一些字符串中的 <code>\u202d</code> 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：</p>
@@ -192,31 +203,6 @@
 这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净的代码不会隐藏错误。它向程序员公开了bug可以隐藏的任何地方，并可以无需完全重构就可以修复其中的bug。</p></div><div class="post-footer">
         <a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/programming/">Programming</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/">FFMPEG合并多个视频文件</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-20">2024-06-20</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-需求
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<ul>
-<li>合并多个mts文件</li>
-<li>保存成H.264格式编码，视频格式为MP4格式。</li>
-<li>视频码流率：2M/s-3M/s。</li>
-<li>视频分辨率：高清16：9拍摄，请设定为1920×1080。</li>
-<li>视频文件大小不超过2G</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-方法
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>
-使用神器 <code>ffmpeg</code> 来进行这个工作。</p></div><div class="post-footer">
-        <a href="/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ffmpeg/">Ffmpeg</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>

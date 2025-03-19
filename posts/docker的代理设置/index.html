@@ -4,43 +4,41 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Python清理字符串中的不可见字符 - XF21</title><meta name="Description" content="好记性不如烂笔头🖊️"><meta property="og:url" content="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/">
+        <title>Docker的代理设置 - XF21</title><meta name="Description" content="Short description"><meta property="og:url" content="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/">
   <meta property="og:site_name" content="XF21">
-  <meta property="og:title" content="Python清理字符串中的不可见字符">
-  <meta property="og:description" content="需要处理一些字符串中的 \u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：
-new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
+  <meta property="og:title" content="Docker的代理设置">
+  <meta property="og:description" content="Short description">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-11-13T10:04:18+08:00">
-    <meta property="article:modified_time" content="2024-11-13T10:04:18+08:00">
-    <meta property="article:tag" content="Python,Programming">
+    <meta property="article:published_time" content="2025-03-19T13:54:46+08:00">
+    <meta property="article:modified_time" content="2025-03-19T13:54:46+08:00">
+    <meta property="article:tag" content="Docker">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Python清理字符串中的不可见字符">
-  <meta name="twitter:description" content="需要处理一些字符串中的 \u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：
-new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
+  <meta name="twitter:title" content="Docker的代理设置">
+  <meta name="twitter:description" content="Short description">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/" /><link rel="prev" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/" /><link rel="next" href="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/" /><link rel="prev" href="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Python清理字符串中的不可见字符",
+        "headline": "Docker的代理设置",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/xf21.dev\/posts\/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6\/"
-        },"genre": "posts","keywords": "Python,Programming","wordcount":  52 ,
-        "url": "https:\/\/xf21.dev\/posts\/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6\/","datePublished": "2024-11-13T10:04:18+08:00","dateModified": "2024-11-13T10:04:18+08:00","publisher": {
+            "@id": "https:\/\/xf21.dev\/posts\/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE\/"
+        },"genre": "posts","keywords": "Docker","wordcount":  14 ,
+        "url": "https:\/\/xf21.dev\/posts\/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE\/","datePublished": "2025-03-19T13:54:46+08:00","dateModified": "2025-03-19T13:54:46+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Wuxf"
-            },"description": ""
+            },"description": "Short description"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -74,9 +72,9 @@ new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Python清理字符串中的不可见字符</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker的代理设置</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-13">2024-11-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 52 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-03-19">2025-03-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 14 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -85,35 +83,34 @@ new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"></div>
             </div><div class="content" id="content"><p>
-需要处理一些字符串中的 <code>\u202d</code> 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：</p>
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">new_str</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">input_str</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isprintable</span><span class="p">())</span></span></span></code></pre></div>
+Create a file named <code>/etc/systemd/system/docker.service.d/http-proxy.conf</code> that adds the <code>HTTP_PROXY</code> environment variable:</p>
+<div class="src src-conf">
+<pre tabindex="0"><code class="language-conf" data-lang="conf">[Service]
+Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34;
+Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34;</code></pre>
 </div>
-<p>
-😀</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-11-13</span>
+                <span>更新于 2025-03-19</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/" data-title="Python清理字符串中的不可见字符" data-hashtags="Python,Programming"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/" data-hashtag="Python,Programming"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/" data-title="Python清理字符串中的不可见字符"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/" data-title="Python清理字符串中的不可见字符"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/" data-title="Python清理字符串中的不可见字符"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/" data-title="Docker的代理设置" data-hashtags="Docker"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/" data-hashtag="Docker"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/" data-title="Docker的代理设置"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/" data-title="Docker的代理设置"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/" data-title="Docker的代理设置"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href=""></a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">Docker</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/" class="prev" rel="prev" title="50个成为优秀程序员的法则[21-30]"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>50个成为优秀程序员的法则[21-30]</a>
-            <a href="/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/" class="next" rel="next" title="Docker的代理设置">Docker的代理设置<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/" class="prev" rel="prev" title="Python清理字符串中的不可见字符"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Python清理字符串中的不可见字符</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

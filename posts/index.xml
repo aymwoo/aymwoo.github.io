@@ -3,7 +3,21 @@
         <title>所有文章 - XF21</title>
         <link>https://xf21.dev/posts/</link>
         <description>所有文章 | XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 13 Nov 2024 10:04:18 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 19 Mar 2025 13:54:46 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Docker的代理设置</title>
+    <link>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</link>
+    <pubDate>Wed, 19 Mar 2025 13:54:46 &#43;0800</pubDate>
+    <author>Wuxf</author>
+    <guid>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</guid>
+    <description><![CDATA[<p>
+Create a file named <code>/etc/systemd/system/docker.service.d/http-proxy.conf</code> that adds the <code>HTTP_PROXY</code> environment variable:</p>
+<div class="src src-conf">
+<pre tabindex="0"><code class="language-conf" data-lang="conf">[Service]
+Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34;
+Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34;</code></pre>
+</div>]]></description>
+</item>
+<item>
     <title>Python清理字符串中的不可见字符</title>
     <link>https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/</link>
     <pubDate>Wed, 13 Nov 2024 10:04:18 &#43;0800</pubDate>
@@ -212,15 +226,6 @@ Python的bytes对象
 <div id="outline-text-headline-1" class="outline-text-2">
 <p>
 <code>bytes</code> 是由单个字节构成的不可变整数序列。序列中的每个值的大小被限制为 0 &lt;= x &lt; 256 (如果违反此限制将引发 <code>ValueError</code>)。</p>]]></description>
-</item>
-<item>
-    <title>用ollama和open-webui搭建本地LLM服务</title>
-    <link>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</link>
-    <pubDate>Thu, 06 Jun 2024 16:46:09 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</guid>
-    <description><![CDATA[<p>
-我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 <a href="https://github.com/ollama/ollama">Ollama</a> 结合 <a href="https://github.com/QwenLM/Qwen">qwen</a> 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.</p>]]></description>
 </item>
 </channel>
 </rss>
