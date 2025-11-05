@@ -1,24 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Web - 标签 - XF21</title>
-        <link>https://xf21.dev/tags/web/</link>
-        <description>Web - 标签 - XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 11 Jan 2022 10:54:56 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/web/" rel="self" type="application/rss+xml" /><item>
-    <title>Hugo</title>
-    <link>https://xf21.dev/posts/hugo/</link>
-    <pubDate>Tue, 11 Jan 2022 10:54:56 &#43;0800</pubDate>
-    <author>wuxf</author>
-    <guid>https://xf21.dev/posts/hugo/</guid>
-    <description><![CDATA[<h1 id="hugo-使用笔记">Hugo 使用笔记</h1>
-<p>在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。</p>
-<h2 id="常用命令">常用命令</h2>
-<h3 id="添加站点">添加站点</h3>
-<pre tabindex="0"><code>hugo new site yoursite
-</code></pre><h3 id="添加theme以我用的loveit为例">添加theme,以我用的LoveIt为例</h3>
-<pre tabindex="0"><code>cd yoursite
-git init
-git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
-</code></pre><p>当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on XF21</title>
+    <link>https://xf21.dev/tags/web/</link>
+    <description>Recent content in Web on XF21</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 11 Jan 2022 10:54:56 +0800</lastBuildDate>
+    <atom:link href="https://xf21.dev/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://xf21.dev/posts/hugo/</link>
+      <pubDate>Tue, 11 Jan 2022 10:54:56 +0800</pubDate>
+      <guid>https://xf21.dev/posts/hugo/</guid>
+      <description>&lt;h1 id=&#34;hugo-使用笔记&#34;&gt;Hugo 使用笔记&lt;/h1&gt;&#xA;&lt;p&gt;在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。&lt;/p&gt;&#xA;&lt;h2 id=&#34;常用命令&#34;&gt;常用命令&lt;/h2&gt;&#xA;&lt;h3 id=&#34;添加站点&#34;&gt;添加站点&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new site yoursite&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;添加theme以我用的loveit为例&#34;&gt;添加theme,以我用的LoveIt为例&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd yoursite&#xA;git init&#xA;git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

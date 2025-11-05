@@ -1,20 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>PlantUML - 标签 - XF21</title>
-        <link>https://xf21.dev/tags/plantuml/</link>
-        <description>PlantUML - 标签 - XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/plantuml/" rel="self" type="application/rss+xml" /><item>
-    <title>Markdown PlantUML</title>
-    <link>https://xf21.dev/posts/markdown-plantuml/</link>
-    <pubDate>Fri, 14 Jan 2022 14:03:26 &#43;0800</pubDate>
-    <author>wuxf</author>
-    <guid>https://xf21.dev/posts/markdown-plantuml/</guid>
-    <description><![CDATA[<h1 id="markdown搭配plantuml画各种图">Markdown搭配PlantUML画各种图</h1>
-<h2 id="plantuml的安装">PlantUML的安装</h2>
-<h3 id="包管理工具安装">包管理工具安装</h3>
-<p>PlantUML的运行需要Java环境,如果是用pacman之类的包管理工具安装,会自动安装jre.</p>
-<pre tabindex="0"><code>#pacman -S plantuml
-</code></pre><p>如果需要绘制时序图和活动图之外的图,还需要安装graphviz软件.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PlantUML on XF21</title>
+    <link>https://xf21.dev/tags/plantuml/</link>
+    <description>Recent content in PlantUML on XF21</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 14 Jan 2022 14:03:26 +0800</lastBuildDate>
+    <atom:link href="https://xf21.dev/tags/plantuml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown PlantUML</title>
+      <link>https://xf21.dev/posts/markdown-plantuml/</link>
+      <pubDate>Fri, 14 Jan 2022 14:03:26 +0800</pubDate>
+      <guid>https://xf21.dev/posts/markdown-plantuml/</guid>
+      <description>&lt;h1 id=&#34;markdown搭配plantuml画各种图&#34;&gt;Markdown搭配PlantUML画各种图&lt;/h1&gt;&#xA;&lt;h2 id=&#34;plantuml的安装&#34;&gt;PlantUML的安装&lt;/h2&gt;&#xA;&lt;h3 id=&#34;包管理工具安装&#34;&gt;包管理工具安装&lt;/h3&gt;&#xA;&lt;p&gt;PlantUML的运行需要Java环境,如果是用pacman之类的包管理工具安装,会自动安装jre.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#pacman -S plantuml&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果需要绘制时序图和活动图之外的图,还需要安装graphviz软件.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

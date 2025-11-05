@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-	<meta name="generator" content="Hugo 0.145.0">
+	<meta name="generator" content="Hugo 0.152.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -63,8 +63,27 @@
         data-srcset="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp, https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp 1.5x, https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp 2x"
         data-sizes="auto"
         alt="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp"
-        title="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp" /></a></div><h1 class="home-title">XF21</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/https://github.com/aymwoo" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:wu.xf@hotmail.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
+        title="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp" /></a></div><h1 class="home-title">XF21</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/https://github.com/aymwoo" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:wu@xf21.dev" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/">用ollama和open-webui搭建本地LLM服务</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-06">2024-06-06</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
+我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 <a href="https://github.com/ollama/ollama">Ollama</a> 结合 <a href="https://github.com/QwenLM/Qwen">qwen</a> 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.</p></div><div class="post-footer">
+        <a href="/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ollama/">Ollama</a>,&nbsp;<a href="/tags/llm/">LLM</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/">50个成为优秀程序员的法则[1-10]</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-05">2024-06-05</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
+原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+1. 不惜一切代价避免注释
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:</p></div><div class="post-footer">
+        <a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/programming/">Programming</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/">Jupyterlab中显示Plotly的图形</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-04">2024-06-04</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>需要借助 <code>IPython.dispaly.HTML</code> 对象,在 <code>Jupyterlab</code> 安装的时候就已经可用了,具体用法如下:</p>
 <div class="src src-python">
@@ -135,18 +154,6 @@ GPT4All简介
 </div></div><div class="post-footer">
         <a href="/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/org/">Org</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/">新的开始</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-10-03">2023-10-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%B8%B8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>日常</a></span></div><div class="content"><p>
-因为一些原因暂停了日常的记录,现在从nvim切换到了emacs,又准备重新来记录一下日常。</p></div><div class="post-footer">
-        <a href="/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/other/">Other</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/fish-add-path/">Fish Add Path</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-01-15">2022-01-15</time></span></div><div class="content"><h1 id="fish-添加路径到path">fish 添加路径到PATH</h1>
-<p>相对与bash,zsh来说更直观,比如要全局添加<code>~/.local/bin</code>到<code>PATH</code>中,就可以在你的<code>fish</code>的配置文件中加入下面的语句:</p></div><div class="post-footer">
-        <a href="/posts/fish-add-path/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/fish/">Fish</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -162,6 +169,10 @@ GPT4All简介
                 </li><li class="page-item ">
                     <span class="page-link">
                         <a href="/page/4/">4</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/5/">5</a>
                     </span>
                 </li></ul></div></div>
             </main></div>

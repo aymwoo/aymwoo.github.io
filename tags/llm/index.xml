@@ -1,16 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>LLM - 标签 - XF21</title>
-        <link>https://xf21.dev/tags/llm/</link>
-        <description>LLM - 标签 - XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 06 Jun 2024 16:46:09 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/llm/" rel="self" type="application/rss+xml" /><item>
-    <title>用ollama和open-webui搭建本地LLM服务</title>
-    <link>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</link>
-    <pubDate>Thu, 06 Jun 2024 16:46:09 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</guid>
-    <description><![CDATA[<p>
-我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 <a href="https://github.com/ollama/ollama">Ollama</a> 结合 <a href="https://github.com/QwenLM/Qwen">qwen</a> 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLM on XF21</title>
+    <link>https://xf21.dev/tags/llm/</link>
+    <description>Recent content in LLM on XF21</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 06 Jun 2024 16:46:09 +0800</lastBuildDate>
+    <atom:link href="https://xf21.dev/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用ollama和open-webui搭建本地LLM服务</title>
+      <link>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Thu, 06 Jun 2024 16:46:09 +0800</pubDate>
+      <guid>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</guid>
+      <description>&lt;p&gt;&#xA;我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 &lt;a href=&#34;https://github.com/ollama/ollama&#34;&gt;Ollama&lt;/a&gt; 结合 &lt;a href=&#34;https://github.com/QwenLM/Qwen&#34;&gt;qwen&lt;/a&gt; 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

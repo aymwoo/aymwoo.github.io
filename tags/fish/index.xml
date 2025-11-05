@@ -1,16 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Fish - 标签 - XF21</title>
-        <link>https://xf21.dev/tags/fish/</link>
-        <description>Fish - 标签 - XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 15 Jan 2022 10:48:21 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/fish/" rel="self" type="application/rss+xml" /><item>
-    <title>Fish Add Path</title>
-    <link>https://xf21.dev/posts/fish-add-path/</link>
-    <pubDate>Sat, 15 Jan 2022 10:48:21 &#43;0800</pubDate>
-    <author>wuxf</author>
-    <guid>https://xf21.dev/posts/fish-add-path/</guid>
-    <description><![CDATA[<h1 id="fish-添加路径到path">fish 添加路径到PATH</h1>
-<p>相对与bash,zsh来说更直观,比如要全局添加<code>~/.local/bin</code>到<code>PATH</code>中,就可以在你的<code>fish</code>的配置文件中加入下面的语句:</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fish on XF21</title>
+    <link>https://xf21.dev/tags/fish/</link>
+    <description>Recent content in Fish on XF21</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 15 Jan 2022 10:48:21 +0800</lastBuildDate>
+    <atom:link href="https://xf21.dev/tags/fish/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fish Add Path</title>
+      <link>https://xf21.dev/posts/fish-add-path/</link>
+      <pubDate>Sat, 15 Jan 2022 10:48:21 +0800</pubDate>
+      <guid>https://xf21.dev/posts/fish-add-path/</guid>
+      <description>&lt;h1 id=&#34;fish-添加路径到path&#34;&gt;fish 添加路径到PATH&lt;/h1&gt;&#xA;&lt;p&gt;相对与bash,zsh来说更直观,比如要全局添加&lt;code&gt;~/.local/bin&lt;/code&gt;到&lt;code&gt;PATH&lt;/code&gt;中,就可以在你的&lt;code&gt;fish&lt;/code&gt;的配置文件中加入下面的语句:&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

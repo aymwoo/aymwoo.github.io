@@ -1,21 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Docker - 标签 - XF21</title>
-        <link>https://xf21.dev/tags/docker/</link>
-        <description>Docker - 标签 - XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 19 Mar 2025 13:54:46 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/tags/docker/" rel="self" type="application/rss+xml" /><item>
-    <title>Docker的代理设置</title>
-    <link>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</link>
-    <pubDate>Wed, 19 Mar 2025 13:54:46 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</guid>
-    <description><![CDATA[<p>
-Create a file named <code>/etc/systemd/system/docker.service.d/http-proxy.conf</code> that adds the <code>HTTP_PROXY</code> environment variable:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">[Service]
-Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34;
-Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34;</code></pre>
-</div>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on XF21</title>
+    <link>https://xf21.dev/tags/docker/</link>
+    <description>Recent content in Docker on XF21</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 19 Mar 2025 13:54:46 +0800</lastBuildDate>
+    <atom:link href="https://xf21.dev/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker的代理设置</title>
+      <link>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Wed, 19 Mar 2025 13:54:46 +0800</pubDate>
+      <guid>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;p&gt;&#xA;Create a file named &lt;code&gt;/etc/systemd/system/docker.service.d/http-proxy.conf&lt;/code&gt; that adds the &lt;code&gt;HTTP_PROXY&lt;/code&gt; environment variable:&lt;/p&gt;&#xA;&lt;div class=&#34;src src-conf&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;[Service]&#xA;Environment=&amp;#34;HTTP_PROXY=http://proxy.example.com:3128&amp;#34;&#xA;Environment=&amp;#34;HTTPS_PROXY=https://proxy.example.com:3129&amp;#34;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
 </rss>
