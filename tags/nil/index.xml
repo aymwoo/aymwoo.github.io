@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Nil on XF21</title>
     <link>https://xf21.dev/tags/nil/</link>
     <description>Recent content in Nil on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 05 Nov 2025 08:10:51 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/nil/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +18,14 @@
       <link>https://xf21.dev/posts/%E5%8A%A0%E9%80%9Fplaywright-install/</link>
       <pubDate>Wed, 05 Nov 2025 08:10:51 +0800</pubDate>
       <guid>https://xf21.dev/posts/%E5%8A%A0%E9%80%9Fplaywright-install/</guid>
-      <description>&lt;div class=&#34;src src-fish&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PLAYWRIGHT_DOWNLOAD_HOST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://npmmirror.com/mirrors/playwright&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+      <description>Short description</description>
     </item>
     <item>
       <title>test</title>
       <link>https://xf21.dev/posts/test/</link>
       <pubDate>Wed, 19 Mar 2025 14:23:17 +0800</pubDate>
       <guid>https://xf21.dev/posts/test/</guid>
-      <description></description>
+      <description>Short description</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Docker on XF21</title>
     <link>https://xf21.dev/tags/docker/</link>
     <description>Recent content in Docker on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 19 Mar 2025 13:54:46 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/docker/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,7 @@
       <link>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Wed, 19 Mar 2025 13:54:46 +0800</pubDate>
       <guid>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</guid>
-      <description>&lt;p&gt;&#xA;Create a file named &lt;code&gt;/etc/systemd/system/docker.service.d/http-proxy.conf&lt;/code&gt; that adds the &lt;code&gt;HTTP_PROXY&lt;/code&gt; environment variable:&lt;/p&gt;&#xA;&lt;div class=&#34;src src-conf&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;[Service]&#xA;Environment=&amp;#34;HTTP_PROXY=http://proxy.example.com:3128&amp;#34;&#xA;Environment=&amp;#34;HTTPS_PROXY=https://proxy.example.com:3129&amp;#34;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;</description>
+      <description>Short description</description>
     </item>
   </channel>
 </rss>

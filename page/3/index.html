@@ -1,197 +1,290 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-	<meta name="generator" content="Hugo 0.152.2">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>XF21</title><meta name="Description" content="好记性不如烂笔头🖊️"><meta property="og:url" content="https://xf21.dev/">
+<html lang="zh-cn" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>XF21</title>
+
+<meta name="description" content="好记性不如烂笔头">
+<meta name="author" content="Wu Xiangfeng">
+<link rel="canonical" href="https://xf21.dev/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://xf21.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xf21.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xf21.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://xf21.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="https://xf21.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://xf21.dev/index.xml" title="rss">
+<link rel="alternate" hreflang="zh-cn" href="https://xf21.dev/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://xf21.dev/">
   <meta property="og:site_name" content="XF21">
   <meta property="og:title" content="XF21">
-  <meta property="og:description" content="好记性不如烂笔头🖊️">
-  <meta property="og:locale" content="zh_CN">
+  <meta property="og:description" content="好记性不如烂笔头">
+  <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="website">
+      <meta property="og:image" content="https://xf21.dev/images/papermod-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xf21.dev/images/papermod-cover.png">
+<meta name="twitter:title" content="XF21">
+<meta name="twitter:description" content="好记性不如烂笔头">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="XF21">
-  <meta name="twitter:description" content="好记性不如烂笔头🖊️">
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xf21.dev/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="XF21">
-    <link rel="feed" href="/index.xml" type="application/rss+xml" title="XF21"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "url": "https:\/\/xf21.dev\/","inLanguage": "zh-CN","description": "好记性不如烂笔头🖊️","name": "XF21"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "XF21",
+  "url": "https://xf21.dev/",
+  "description": "好记性不如烂笔头",
+  "logo": "https://xf21.dev/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://xf21.dev/" accesskey="h" title="XF21 (Alt + H)">XF21</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Debian系安装ping
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 ping 的时候经常找不到 ping ，需要安装，安装的命令如下：
+apt install iputils-ping 有时候还需要查看自己的代理是否生效，可以使用下面的命令：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-14 14:07:34 +0800 CST'>June 14, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Debian系安装ping" href="https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Python中的bytes对象以及UTF-8编码
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 看了 `bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding 之后自己尝试了一下中文,加深了对UTF-8的一点点理解.
+Python的bytes对象 bytes 是由单个字节构成的不可变整数序列。序列中的每个值的大小被限制为 0 &lt;= x &lt; 256 (如果违反此限制将引发 ValueError)。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-07 10:59:46 +0800 CST'>June 7, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Python中的bytes对象以及UTF-8编码" href="https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">用ollama和open-webui搭建本地LLM服务
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 Ollama 结合 qwen 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-06 16:46:09 +0800 CST'>June 6, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 用ollama和open-webui搭建本地LLM服务" href="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">50个成为优秀程序员的法则[1-10]
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.
+1. 不惜一切代价避免注释 开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-05 10:44:03 +0800 CST'>June 5, 2024</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 50个成为优秀程序员的法则[1-10]" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Jupyterlab中显示Plotly的图形
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>需要借助 IPython.dispaly.HTML 对象,在 Jupyterlab 安装的时候就已经可用了,具体用法如下:
+from IPython.display import HTML import plotly.graph_objects as go # 准备数据 x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] # 创建线形图 fig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y, mode=&#34;lines&#34;)) fig.update_layout( title=&#34;Simple Line Plot&#34;, xaxis_title=&#34;X&#34;, yaxis_title=&#34;Y&#34;, font=dict(family=&#34;Courier New, monospace&#34;, size=18, color=&#34;#7f7f7f&#34;), ) # 显示图形 HTML(fig.to_html()) </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-04 16:39:56 +0800 CST'>June 4, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Jupyterlab中显示Plotly的图形" href="https://xf21.dev/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://xf21.dev/page/2/">
+      «&nbsp;&nbsp;2/5
+    </a>
+    <a class="next" href="https://xf21.dev/page/4/">&nbsp;4/5&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://xf21.dev/">XF21</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="XF21">XF21</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a></div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="XF21">XF21</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-            </a></div>
-    </div>
-</header><main class="main">
-                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="文章"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp"
-        data-srcset="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp, https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp 1.5x, https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp 2x"
-        data-sizes="auto"
-        alt="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp"
-        title="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp" /></a></div><h1 class="home-title">XF21</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/https://github.com/aymwoo" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:wu@xf21.dev" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/">用ollama和open-webui搭建本地LLM服务</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-06">2024-06-06</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
-我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 <a href="https://github.com/ollama/ollama">Ollama</a> 结合 <a href="https://github.com/QwenLM/Qwen">qwen</a> 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.</p></div><div class="post-footer">
-        <a href="/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ollama/">Ollama</a>,&nbsp;<a href="/tags/llm/">LLM</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/">50个成为优秀程序员的法则[1-10]</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-05">2024-06-05</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
-原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-1. 不惜一切代价避免注释
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:</p></div><div class="post-footer">
-        <a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/programming/">Programming</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/">Jupyterlab中显示Plotly的图形</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-04">2024-06-04</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>需要借助 <code>IPython.dispaly.HTML</code> 对象,在 <code>Jupyterlab</code> 安装的时候就已经可用了,具体用法如下:</p>
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
-</span></span><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 准备数据</span>
-</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 创建线形图</span>
-</span></span><span class="line"><span class="cl">  <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">  <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&#34;lines&#34;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">  <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">      <span class="n">title</span><span class="o">=</span><span class="s2">&#34;Simple Line Plot&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&#34;X&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&#34;Y&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&#34;Courier New, monospace&#34;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&#34;#7f7f7f&#34;</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">  <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 显示图形</span>
-</span></span><span class="line"><span class="cl">  <span class="n">HTML</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">to_html</span><span class="p">())</span></span></span></code></pre></div>
-</div>
-<p><img src="/images/2024-06-04_17-20-28_screenshot.png" alt="/images/2024-06-04_17-20-28_screenshot.png" title="/images/2024-06-04_17-20-28_screenshot.png" /></p></div><div class="post-footer">
-        <a href="/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/jupyter/">Jupyter</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Emacs下easy-hugo键绑定和evil冲突的解决办法</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-06-03">2024-06-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
-运行 <code>easy-hugo</code> 之后发现顶部导航的快捷键无法使用，应该是与 <code>evil</code> 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 <code>buffer</code> 的下面将会出现一个菜单，凑合用。</p></div><div class="post-footer">
-        <a href="/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/emacs/">Emacs</a>,&nbsp;<a href="/tags/hugo/">Hugo</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/gpt4all/">GPT4All</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-10-26">2023-10-26</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-GPT4All简介
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>GPT4All 是一个生态系统，用于训练和部署在消费级 CPU 上本地运行的强大且定制的大型语言模型。目标很简单——成为任何个人或企业都可以自由使用、分发和构建的最佳指令调整助理式语言模型。GPT4All 模型是一个 3GB - 8GB 文件，您可以下载该文件并将其插入 GPT4All 开源生态系统软件中。 Nomic AI 支持并维护这个软件生态系统，以加强质量和安全性，同时带头让任何个人或企业轻松训练和部署自己的边缘大型语言模型。</p></div><div class="post-footer">
-        <a href="/posts/gpt4all/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/gpt4all/">GPT4All</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/">使用Easy hugo部署到github</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-10-03">2023-10-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/emacs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Emacs</a></span></div><div class="content"><p>需要自己写一个 <code>deploy.sh</code></p>
-<div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  <span class="c1">##!/bin/bash</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 将public目录中的所有文件提交到GitHub Pages的特定分支</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 清除并重新生成Hugo站点</span>
-</span></span><span class="line"><span class="cl">  hugo -d ./public
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 进入public目录</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">cd</span> ./public
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 初始化一个Git仓库并提交更改</span>
-</span></span><span class="line"><span class="cl">  git init
-</span></span><span class="line"><span class="cl">  git add .
-</span></span><span class="line"><span class="cl">  git commit -m <span class="s2">&#34;Deploying to GitHub Pages&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 将更改推送到GitHub Pages的特定分支，例如&#34;gh-pages&#34;</span>
-</span></span><span class="line"><span class="cl">  git push --force git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git master
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># 返回项目根目录</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">cd</span> ..</span></span></code></pre></div>
-</div></div><div class="post-footer">
-        <a href="/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/org/">Org</a></div></div>
-</article><ul class="pagination"><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/">1</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/2/">2</a>
-                    </span>
-                </li><li class="page-item active">
-                    <span class="page-link">
-                        <a href="/page/3/">3</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/4/">4</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/5/">5</a>
-                    </span>
-                </li></ul></div></div>
-            </main></div>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"data":{"id-1":"好记性不如烂笔头🖊️"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
-            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-            gtag('config', 'G-H0THCDBDY4', { 'anonymize_ip': true });
-        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-H0THCDBDY4" async></script><script>
-			var _hmt = _hmt || [];
-			(function() {
-			  var hm = document.createElement("script");
-			  hm.src = "https://hm.baidu.com/hm.js?3508d9f941c446dcf5e14d1e77231e51";
-			  var s = document.getElementsByTagName("script")[0]; 
-			  s.parentNode.insertBefore(hm, s);
-			})();
-		</script></body>
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
 </html>

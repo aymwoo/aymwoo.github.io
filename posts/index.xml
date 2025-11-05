@@ -1,219 +1,276 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>所有文章 - XF21</title>
-        <link>https://xf21.dev/posts/</link>
-        <description>所有文章 | XF21</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 05 Nov 2025 08:10:51 &#43;0800</lastBuildDate><atom:link href="https://xf21.dev/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>加速playwright install</title>
-    <link>https://xf21.dev/posts/%E5%8A%A0%E9%80%9Fplaywright-install/</link>
-    <pubDate>Wed, 05 Nov 2025 08:10:51 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://xf21.dev/posts/%E5%8A%A0%E9%80%9Fplaywright-install/</guid>
-    <description><![CDATA[<div class="src src-fish">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">export</span> <span class="nv">PLAYWRIGHT_DOWNLOAD_HOST</span><span class="o">=</span><span class="s2">&#34;https://npmmirror.com/mirrors/playwright&#34;</span></span></span></code></pre></div>
-</div>]]></description>
-</item>
-<item>
-    <title>test</title>
-    <link>https://xf21.dev/posts/test/</link>
-    <pubDate>Wed, 19 Mar 2025 14:23:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://xf21.dev/posts/test/</guid>
-    <description><![CDATA[Short description]]></description>
-</item>
-<item>
-    <title>Docker的代理设置</title>
-    <link>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</link>
-    <pubDate>Wed, 19 Mar 2025 13:54:46 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</guid>
-    <description><![CDATA[<p>
-Create a file named <code>/etc/systemd/system/docker.service.d/http-proxy.conf</code> that adds the <code>HTTP_PROXY</code> environment variable:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">[Service]
-Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34;
-Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34;</code></pre>
-</div>]]></description>
-</item>
-<item>
-    <title>Python清理字符串中的不可见字符</title>
-    <link>https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/</link>
-    <pubDate>Wed, 13 Nov 2024 10:04:18 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/</guid>
-    <description><![CDATA[<p>
-需要处理一些字符串中的 <code>\u202d</code> 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：</p>
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">new_str</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">input_str</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isprintable</span><span class="p">())</span></span></span></code></pre></div>
-</div>
-<p>
-😀</p>]]></description>
-</item>
-<item>
-    <title>50个成为优秀程序员的法则[21-30]</title>
-    <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/</link>
-    <pubDate>Mon, 14 Oct 2024 11:26:37 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/</guid>
-    <description><![CDATA[<p>
-原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-21. 避免魔法数字
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-魔法数字是一个硬编码的值，可能会在稍后阶段更改，但因此很难更新。</p>
-<div class="src src-sql">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">❌</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">✅</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">NUM_OF_ORDERS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="n">NUM_OF_ORDERS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-22. 避免深度嵌套
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">y</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">do_something</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">do_something</span><span class="p">()</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-23. 避免临时变量
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
-</span></span><span class="line"><span class="cl"><span class="n">temp_result</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">final_result</span> <span class="o">=</span> <span class="n">temp_result</span> <span class="o">*</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="n">final_result</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-4" class="outline-2">
-<h2 id="headline-4">
-24. 避免使用神秘的缩写
-</h2>
-<div id="outline-text-headline-4" class="outline-text-2">
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_total_price</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">unit_price</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-5" class="outline-2">
-<h2 id="headline-5">
-25. 避免硬编码Path
-</h2>
-<div id="outline-text-headline-5" class="outline-text-2">
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
-</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&#34;/path/to/file.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
-</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;FILE_PATH&#34;</span><span class="p">)</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-6" class="outline-2">
-<h2 id="headline-6">
-26. 使用使用Try…Catch…Finally语句
-</h2>
-<div id="outline-text-headline-6" class="outline-text-2">
-<p>在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。</p>]]></description>
-</item>
-<item>
-    <title>如何快速旋转多个pdf</title>
-    <link>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</link>
-    <pubDate>Mon, 14 Oct 2024 10:32:15 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</guid>
-    <description><![CDATA[<p>
-经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。</p>]]></description>
-</item>
-<item>
-    <title>思维肥胖危机</title>
-    <link>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</link>
-    <pubDate>Sat, 29 Jun 2024 10:04:17 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</guid>
-    <description><![CDATA[<p>
-一篇很有意思的文章，<a href="https://www.gurwinder.blog/p/the-intellectual-obesity-crisis">The Intellectual Obesity Crisis</a></p>
-<blockquote>
-<p>&#34;我们的大脑更容易受到暴饮暴食的伤害，而不是饥饿。&#34;
-–Petrarch</p>
-</blockquote>
-<p>
-伯克利研究人员2019年的一项研究发现，信息与食物一样作用于大脑产生多巴胺的奖励系统。简单地说，大脑将信息本身视为一种奖励；信息是否准确或有用并不重要，大脑仍然会渴望它，并在消费后感到满足，如果糖产生的效果一样。</p>]]></description>
-</item>
-<item>
-    <title>50个成为优秀程序员的法则[11-20]</title>
-    <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/</link>
-    <pubDate>Thu, 20 Jun 2024 13:29:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/</guid>
-    <description><![CDATA[<p>原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-11. 不要成为一个肮脏的程序员
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净的代码不会隐藏错误。它向程序员公开了bug可以隐藏的任何地方，并可以无需完全重构就可以修复其中的bug。</p>]]></description>
-</item>
-<item>
-    <title>FFMPEG合并多个视频文件</title>
-    <link>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</link>
-    <pubDate>Thu, 20 Jun 2024 13:13:54 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</guid>
-    <description><![CDATA[<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-需求
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<ul>
-<li>合并多个mts文件</li>
-<li>保存成H.264格式编码，视频格式为MP4格式。</li>
-<li>视频码流率：2M/s-3M/s。</li>
-<li>视频分辨率：高清16：9拍摄，请设定为1920×1080。</li>
-<li>视频文件大小不超过2G</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-方法
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>
-使用神器 <code>ffmpeg</code> 来进行这个工作。</p>]]></description>
-</item>
-<item>
-    <title>通过lti1.3将jupyterhub添加到moodle中作为外部工具</title>
-    <link>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</link>
-    <pubDate>Wed, 19 Jun 2024 18:04:21 &#43;0800</pubDate>
-    <author>Wuxf</author>
-    <guid>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</guid>
-    <description><![CDATA[<p>
-这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on XF21</title>
+    <link>https://xf21.dev/posts/</link>
+    <description>Recent content in Posts on XF21</description>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 05 Nov 2025 08:10:51 +0800</lastBuildDate>
+    <atom:link href="https://xf21.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>加速playwright install</title>
+      <link>https://xf21.dev/posts/%E5%8A%A0%E9%80%9Fplaywright-install/</link>
+      <pubDate>Wed, 05 Nov 2025 08:10:51 +0800</pubDate>
+      <guid>https://xf21.dev/posts/%E5%8A%A0%E9%80%9Fplaywright-install/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>test</title>
+      <link>https://xf21.dev/posts/test/</link>
+      <pubDate>Wed, 19 Mar 2025 14:23:17 +0800</pubDate>
+      <guid>https://xf21.dev/posts/test/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>Docker的代理设置</title>
+      <link>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Wed, 19 Mar 2025 13:54:46 +0800</pubDate>
+      <guid>https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>Python清理字符串中的不可见字符</title>
+      <link>https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Wed, 13 Nov 2024 10:04:18 +0800</pubDate>
+      <guid>https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/</guid>
+      <description>&lt;p&gt;
+需要处理一些字符串中的 &lt;code&gt;\u202d&lt;/code&gt; 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;new_str&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input_str&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isprintable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+😀&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>50个成为优秀程序员的法则[21-30]</title>
+      <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/</link>
+      <pubDate>Mon, 14 Oct 2024 11:26:37 +0800</pubDate>
+      <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>如何快速旋转多个pdf</title>
+      <link>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</link>
+      <pubDate>Mon, 14 Oct 2024 10:32:15 +0800</pubDate>
+      <guid>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</guid>
+      <description>命令行小工具一键旋转</description>
+    </item>
+    <item>
+      <title>思维肥胖危机</title>
+      <link>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</link>
+      <pubDate>Sat, 29 Jun 2024 10:04:17 +0800</pubDate>
+      <guid>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>50个成为优秀程序员的法则[11-20]</title>
+      <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/</link>
+      <pubDate>Thu, 20 Jun 2024 13:29:17 +0800</pubDate>
+      <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>FFMPEG合并多个视频文件</title>
+      <link>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Thu, 20 Jun 2024 13:13:54 +0800</pubDate>
+      <guid>https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>通过lti1.3将jupyterhub添加到moodle中作为外部工具</title>
+      <link>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Wed, 19 Jun 2024 18:04:21 +0800</pubDate>
+      <guid>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>Debian系安装ping</title>
+      <link>https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/</link>
+      <pubDate>Fri, 14 Jun 2024 14:07:34 +0800</pubDate>
+      <guid>https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>Python中的bytes对象以及UTF-8编码</title>
+      <link>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Fri, 07 Jun 2024 10:59:46 +0800</pubDate>
+      <guid>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>用ollama和open-webui搭建本地LLM服务</title>
+      <link>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Thu, 06 Jun 2024 16:46:09 +0800</pubDate>
+      <guid>https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>50个成为优秀程序员的法则[1-10]</title>
+      <link>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/</link>
+      <pubDate>Wed, 05 Jun 2024 10:44:03 +0800</pubDate>
+      <guid>https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>Jupyterlab中显示Plotly的图形</title>
+      <link>https://xf21.dev/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/</link>
+      <pubDate>Tue, 04 Jun 2024 16:39:56 +0800</pubDate>
+      <guid>https://xf21.dev/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>Emacs下easy-hugo键绑定和evil冲突的解决办法</title>
+      <link>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Mon, 03 Jun 2024 15:46:49 +0800</pubDate>
+      <guid>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>GPT4All</title>
+      <link>https://xf21.dev/posts/gpt4all/</link>
+      <pubDate>Thu, 26 Oct 2023 15:32:19 +0800</pubDate>
+      <guid>https://xf21.dev/posts/gpt4all/</guid>
+      <description>GPT4All初步</description>
+    </item>
+    <item>
+      <title>使用Easy hugo部署到github</title>
+      <link>https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
+      <pubDate>Tue, 03 Oct 2023 13:16:41 +0800</pubDate>
+      <guid>https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>新的开始</title>
+      <link>https://xf21.dev/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</link>
+      <pubDate>Tue, 03 Oct 2023 13:08:50 +0800</pubDate>
+      <guid>https://xf21.dev/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</guid>
+      <description>Short description</description>
+    </item>
+    <item>
+      <title>Fish Add Path</title>
+      <link>https://xf21.dev/posts/fish-add-path/</link>
+      <pubDate>Sat, 15 Jan 2022 10:48:21 +0800</pubDate>
+      <guid>https://xf21.dev/posts/fish-add-path/</guid>
+      <description>&lt;h1 id=&#34;fish-添加路径到path&#34;&gt;fish 添加路径到PATH&lt;/h1&gt;
+&lt;p&gt;相对与bash,zsh来说更直观,比如要全局添加&lt;code&gt;~/.local/bin&lt;/code&gt;到&lt;code&gt;PATH&lt;/code&gt;中,就可以在你的&lt;code&gt;fish&lt;/code&gt;的配置文件中加入下面的语句:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RustDesk</title>
+      <link>https://xf21.dev/posts/rustdesk/</link>
+      <pubDate>Wed, 12 Jan 2022 09:14:46 +0800</pubDate>
+      <guid>https://xf21.dev/posts/rustdesk/</guid>
+      <description>&lt;h1 id=&#34;rustdesk开源远程桌面&#34;&gt;RustDesk&amp;ndash;开源远程桌面&lt;/h1&gt;
+&lt;p&gt;github上14.4k star的开源跨平台远程桌面,目前提供三个免费的公共服务器,但都在境外(首尔,新加坡,达拉斯),但使用感受还比较流畅.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://xf21.dev/posts/hugo/</link>
+      <pubDate>Tue, 11 Jan 2022 10:54:56 +0800</pubDate>
+      <guid>https://xf21.dev/posts/hugo/</guid>
+      <description>&lt;h1 id=&#34;hugo-使用笔记&#34;&gt;Hugo 使用笔记&lt;/h1&gt;
+&lt;p&gt;在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。&lt;/p&gt;
+&lt;h2 id=&#34;常用命令&#34;&gt;常用命令&lt;/h2&gt;
+&lt;h3 id=&#34;添加站点&#34;&gt;添加站点&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new site yoursite
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;添加theme以我用的loveit为例&#34;&gt;添加theme,以我用的LoveIt为例&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd yoursite
+git init
+git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ranger</title>
+      <link>https://xf21.dev/posts/ranger/</link>
+      <pubDate>Sun, 09 Jan 2022 15:28:34 +0800</pubDate>
+      <guid>https://xf21.dev/posts/ranger/</guid>
+      <description>&lt;h1 id=&#34;ranger&#34;&gt;Ranger&lt;/h1&gt;
+&lt;p&gt;ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式.
+&lt;img alt=&#34;ranger 截图&#34; loading=&#34;lazy&#34; src=&#34;ranger.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;安装 ranger 包,以 Arch 为例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# pacman -S ranger
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;快捷键&lt;/th&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;?&lt;/td&gt;
+          &lt;td&gt;帮助&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;l,Enter&lt;/td&gt;
+          &lt;td&gt;打开文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;j,k&lt;/td&gt;
+          &lt;td&gt;在文件列表中上下移动&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;h,l&lt;/td&gt;
+          &lt;td&gt;在上一级和下一级目录间移动&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;blank&lt;/td&gt;
+          &lt;td&gt;选中文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;q&lt;/td&gt;
+          &lt;td&gt;退出&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果您熟悉 vim，那么应该熟悉 ranger 的 UI 规范。Ranger 使用 HJKL 键进行导航，并从 vim 借鉴了许多习惯用法。例如:yy (vim 中的复制行)复制一个文件，pp 粘贴它，dd 剪切文件。更复杂的函数可以从命令行调用:(冒号)。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello</title>
+      <link>https://xf21.dev/posts/hello/</link>
+      <pubDate>Sun, 02 Jan 2022 02:30:37 +0800</pubDate>
+      <guid>https://xf21.dev/posts/hello/</guid>
+      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;Hello Kitty&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://xf21.dev/posts/%E6%95%99%E8%82%B2%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84%E6%95%99%E8%82%B2%E5%8F%98%E9%9D%A9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xf21.dev/posts/%E6%95%99%E8%82%B2%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84%E6%95%99%E8%82%B2%E5%8F%98%E9%9D%A9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;h1 class=&#34;title&#34;&gt;《教育的未来：人工智能时代的教育变革》读书笔记&lt;/h1&gt;
+
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+其他-教育的未来：人工智能时代的教育变革
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+全面的系统性思维
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;全面的系统性思维是任何复杂操作都需要的品质。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+批判性和系统思维能力
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;就目前而言，终身学习仍然是有弹性、有报酬
+的长期职业生涯的最确定的答案。但它的形式和内容可能并不像过去所教导我们期望的那样。事实上，真正有用的终身教育可能与之前
+的任何教育形式都不一样。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

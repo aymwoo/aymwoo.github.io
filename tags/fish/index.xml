@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Fish on XF21</title>
     <link>https://xf21.dev/tags/fish/</link>
     <description>Recent content in Fish on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 15 Jan 2022 10:48:21 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/fish/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,8 @@
       <link>https://xf21.dev/posts/fish-add-path/</link>
       <pubDate>Sat, 15 Jan 2022 10:48:21 +0800</pubDate>
       <guid>https://xf21.dev/posts/fish-add-path/</guid>
-      <description>&lt;h1 id=&#34;fish-添加路径到path&#34;&gt;fish 添加路径到PATH&lt;/h1&gt;&#xA;&lt;p&gt;相对与bash,zsh来说更直观,比如要全局添加&lt;code&gt;~/.local/bin&lt;/code&gt;到&lt;code&gt;PATH&lt;/code&gt;中,就可以在你的&lt;code&gt;fish&lt;/code&gt;的配置文件中加入下面的语句:&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;fish-添加路径到path&#34;&gt;fish 添加路径到PATH&lt;/h1&gt;
+&lt;p&gt;相对与bash,zsh来说更直观,比如要全局添加&lt;code&gt;~/.local/bin&lt;/code&gt;到&lt;code&gt;PATH&lt;/code&gt;中,就可以在你的&lt;code&gt;fish&lt;/code&gt;的配置文件中加入下面的语句:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tools on XF21</title>
     <link>https://xf21.dev/tags/tools/</link>
     <description>Recent content in Tools on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 14 Oct 2024 10:32:15 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/tools/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +18,63 @@
       <link>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</link>
       <pubDate>Mon, 14 Oct 2024 10:32:15 +0800</pubDate>
       <guid>https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/</guid>
-      <description>&lt;p&gt;&#xA;经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。&lt;/p&gt;</description>
+      <description>命令行小工具一键旋转</description>
     </item>
     <item>
       <title>RustDesk</title>
       <link>https://xf21.dev/posts/rustdesk/</link>
       <pubDate>Wed, 12 Jan 2022 09:14:46 +0800</pubDate>
       <guid>https://xf21.dev/posts/rustdesk/</guid>
-      <description>&lt;h1 id=&#34;rustdesk开源远程桌面&#34;&gt;RustDesk&amp;ndash;开源远程桌面&lt;/h1&gt;&#xA;&lt;p&gt;github上14.4k star的开源跨平台远程桌面,目前提供三个免费的公共服务器,但都在境外(首尔,新加坡,达拉斯),但使用感受还比较流畅.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;rustdesk开源远程桌面&#34;&gt;RustDesk&amp;ndash;开源远程桌面&lt;/h1&gt;
+&lt;p&gt;github上14.4k star的开源跨平台远程桌面,目前提供三个免费的公共服务器,但都在境外(首尔,新加坡,达拉斯),但使用感受还比较流畅.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ranger</title>
       <link>https://xf21.dev/posts/ranger/</link>
       <pubDate>Sun, 09 Jan 2022 15:28:34 +0800</pubDate>
       <guid>https://xf21.dev/posts/ranger/</guid>
-      <description>&lt;h1 id=&#34;ranger&#34;&gt;Ranger&lt;/h1&gt;&#xA;&lt;p&gt;ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式.&#xA;&lt;img&#xA;        class=&#34;lazyload&#34;&#xA;        src=&#34;https://xf21.dev/svg/loading.min.svg&#34;&#xA;        data-src=&#34;ranger.png&#34;&#xA;        data-srcset=&#34;ranger.png, ranger.png 1.5x, ranger.png 2x&#34;&#xA;        data-sizes=&#34;auto&#34;&#xA;        alt=&#34;ranger.png&#34;&#xA;        title=&#34;ranger 截图&#34; /&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;&#xA;&lt;p&gt;安装 ranger 包,以 Arch 为例：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# pacman -S ranger&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;快捷键&lt;/th&gt;&#xA;          &lt;th&gt;命令&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;?&lt;/td&gt;&#xA;          &lt;td&gt;帮助&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;l,Enter&lt;/td&gt;&#xA;          &lt;td&gt;打开文件&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;j,k&lt;/td&gt;&#xA;          &lt;td&gt;在文件列表中上下移动&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;h,l&lt;/td&gt;&#xA;          &lt;td&gt;在上一级和下一级目录间移动&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;blank&lt;/td&gt;&#xA;          &lt;td&gt;选中文件&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;q&lt;/td&gt;&#xA;          &lt;td&gt;退出&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;如果您熟悉 vim，那么应该熟悉 ranger 的 UI 规范。Ranger 使用 HJKL 键进行导航，并从 vim 借鉴了许多习惯用法。例如:yy (vim 中的复制行)复制一个文件，pp 粘贴它，dd 剪切文件。更复杂的函数可以从命令行调用:(冒号)。&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;ranger&#34;&gt;Ranger&lt;/h1&gt;
+&lt;p&gt;ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式.
+&lt;img alt=&#34;ranger 截图&#34; loading=&#34;lazy&#34; src=&#34;ranger.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;安装 ranger 包,以 Arch 为例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# pacman -S ranger
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;快捷键&lt;/th&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;?&lt;/td&gt;
+          &lt;td&gt;帮助&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;l,Enter&lt;/td&gt;
+          &lt;td&gt;打开文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;j,k&lt;/td&gt;
+          &lt;td&gt;在文件列表中上下移动&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;h,l&lt;/td&gt;
+          &lt;td&gt;在上一级和下一级目录间移动&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;blank&lt;/td&gt;
+          &lt;td&gt;选中文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;q&lt;/td&gt;
+          &lt;td&gt;退出&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果您熟悉 vim，那么应该熟悉 ranger 的 UI 规范。Ranger 使用 HJKL 键进行导航，并从 vim 借鉴了许多习惯用法。例如:yy (vim 中的复制行)复制一个文件，pp 粘贴它，dd 剪切文件。更复杂的函数可以从命令行调用:(冒号)。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

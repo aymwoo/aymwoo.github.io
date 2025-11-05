@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>生活 on XF21</title>
     <link>https://xf21.dev/tags/%E7%94%9F%E6%B4%BB/</link>
     <description>Recent content in 生活 on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 29 Jun 2024 10:04:17 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,7 @@
       <link>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</link>
       <pubDate>Sat, 29 Jun 2024 10:04:17 +0800</pubDate>
       <guid>https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/</guid>
-      <description>&lt;p&gt;&#xA;一篇很有意思的文章，&lt;a href=&#34;https://www.gurwinder.blog/p/the-intellectual-obesity-crisis&#34;&gt;The Intellectual Obesity Crisis&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;#34;我们的大脑更容易受到暴饮暴食的伤害，而不是饥饿。&amp;#34;&#xA;–Petrarch&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xA;伯克利研究人员2019年的一项研究发现，信息与食物一样作用于大脑产生多巴胺的奖励系统。简单地说，大脑将信息本身视为一种奖励；信息是否准确或有用并不重要，大脑仍然会渴望它，并在消费后感到满足，如果糖产生的效果一样。&lt;/p&gt;</description>
+      <description>Short description</description>
     </item>
   </channel>
 </rss>

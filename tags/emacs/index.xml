@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Emacs on XF21</title>
     <link>https://xf21.dev/tags/emacs/</link>
     <description>Recent content in Emacs on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 03 Jun 2024 15:46:49 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,7 @@
       <link>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
       <pubDate>Mon, 03 Jun 2024 15:46:49 +0800</pubDate>
       <guid>https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
-      <description>&lt;p&gt;&#xA;运行 &lt;code&gt;easy-hugo&lt;/code&gt; 之后发现顶部导航的快捷键无法使用，应该是与 &lt;code&gt;evil&lt;/code&gt; 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 &lt;code&gt;buffer&lt;/code&gt; 的下面将会出现一个菜单，凑合用。&lt;/p&gt;</description>
+      <description>Short description</description>
     </item>
   </channel>
 </rss>

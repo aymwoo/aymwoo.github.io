@@ -1,232 +1,285 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-	<meta name="generator" content="Hugo 0.152.2">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>XF21</title><meta name="Description" content="好记性不如烂笔头🖊️"><meta property="og:url" content="https://xf21.dev/">
+<html lang="zh-cn" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>XF21</title>
+
+<meta name="description" content="好记性不如烂笔头">
+<meta name="author" content="Wu Xiangfeng">
+<link rel="canonical" href="https://xf21.dev/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://xf21.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xf21.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xf21.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://xf21.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="https://xf21.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://xf21.dev/index.xml" title="rss">
+<link rel="alternate" hreflang="zh-cn" href="https://xf21.dev/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://xf21.dev/">
   <meta property="og:site_name" content="XF21">
   <meta property="og:title" content="XF21">
-  <meta property="og:description" content="好记性不如烂笔头🖊️">
-  <meta property="og:locale" content="zh_CN">
+  <meta property="og:description" content="好记性不如烂笔头">
+  <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="website">
+      <meta property="og:image" content="https://xf21.dev/images/papermod-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xf21.dev/images/papermod-cover.png">
+<meta name="twitter:title" content="XF21">
+<meta name="twitter:description" content="好记性不如烂笔头">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="XF21">
-  <meta name="twitter:description" content="好记性不如烂笔头🖊️">
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xf21.dev/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="XF21">
-    <link rel="feed" href="/index.xml" type="application/rss+xml" title="XF21"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "url": "https:\/\/xf21.dev\/","inLanguage": "zh-CN","description": "好记性不如烂笔头🖊️","name": "XF21"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "XF21",
+  "url": "https://xf21.dev/",
+  "description": "好记性不如烂笔头",
+  "logo": "https://xf21.dev/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://xf21.dev/" accesskey="h" title="XF21 (Alt + H)">XF21</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="first-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">加速playwright install
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> export PLAYWRIGHT_DOWNLOAD_HOST=&#34;https://npmmirror.com/mirrors/playwright&#34; </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-05 08:10:51 +0800 CST'>November 5, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wu Xiangfeng</span></footer>
+  <a class="entry-link" aria-label="post link to 加速playwright install" href="https://xf21.dev/posts/%E5%8A%A0%E9%80%9Fplaywright-install/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">test
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p></p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-19 14:23:17 +0800 CST'>March 19, 2025</span>&nbsp;·&nbsp;<span>0 min</span>&nbsp;·&nbsp;<span>Wu Xiangfeng</span></footer>
+  <a class="entry-link" aria-label="post link to test" href="https://xf21.dev/posts/test/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Docker的代理设置
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Create a file named /etc/systemd/system/docker.service.d/http-proxy.conf that adds the HTTP_PROXY environment variable:
+[Service] Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34; Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34; </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-19 13:54:46 +0800 CST'>March 19, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Docker的代理设置" href="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Python清理字符串中的不可见字符
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 需要处理一些字符串中的 \u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：
+new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-11-13 10:04:18 +0800 CST'>November 13, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Python清理字符串中的不可见字符" href="https://xf21.dev/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">50个成为优秀程序员的法则[21-30]
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.
+21. 避免魔法数字 魔法数字是一个硬编码的值，可能会在稍后阶段更改，但因此很难更新。
+# ❌ SELECT TOP 50 * FROM orders # ✅ NUM_OF_ORDERS = 50 SELECT TOP NUM_OF_ORDERS * FROM orders 22. 避免深度嵌套 # ❌ if x: if y: do_something() # ✅ if x and y: do_something() 23. 避免临时变量 # ❌ temp_result = calculate(x, y) final_result = temp_result * 2 # ✅ final_result = calculate(x, y) * 2 24. 避免使用神秘的缩写 # ❌ def calc(x, y): pass # ✅ def calculate_total_price(quantity, unit_price): pass 25. 避免硬编码Path # ❌ file_path = &#34;/path/to/file.txt&#34; # ✅ import os file_path = os.getenv(&#34;FILE_PATH&#34;) 26. 使用使用Try…Catch…Finally语句 在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-14 11:26:37 +0800 CST'>October 14, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 50个成为优秀程序员的法则[21-30]" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://xf21.dev/page/2/">&nbsp;2/5&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://xf21.dev/">XF21</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="XF21">XF21</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a></div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="XF21">XF21</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-            </a></div>
-    </div>
-</header><main class="main">
-                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="文章"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp"
-        data-srcset="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp, https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp 1.5x, https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp 2x"
-        data-sizes="auto"
-        alt="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp"
-        title="https://www.gravatar.com/avatar/b700fbda703fdbe6f4aac35495a97438?s=240&amp;d=mp" /></a></div><h1 class="home-title">XF21</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/https://github.com/aymwoo" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:wu@xf21.dev" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/%E5%8A%A0%E9%80%9Fplaywright-install/">加速playwright install</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-11-05">2025-11-05</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/nil/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Nil</a>&nbsp;<a href="/categories/nil/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Nil</a></span></div><div class="content"><div class="src src-fish">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">export</span> <span class="nv">PLAYWRIGHT_DOWNLOAD_HOST</span><span class="o">=</span><span class="s2">&#34;https://npmmirror.com/mirrors/playwright&#34;</span></span></span></code></pre></div>
-</div></div><div class="post-footer">
-        <a href="/posts/%E5%8A%A0%E9%80%9Fplaywright-install/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nil/">Nil</a>,&nbsp;<a href="/tags/nil/">Nil</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/test/">test</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-03-19">2025-03-19</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/nil/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Nil</a>&nbsp;<a href="/categories/nil/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Nil</a></span></div><div class="content">Short description</div><div class="post-footer">
-        <a href="/posts/test/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nil/">Nil</a>,&nbsp;<a href="/tags/nil/">Nil</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/">Docker的代理设置</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-03-19">2025-03-19</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
-Create a file named <code>/etc/systemd/system/docker.service.d/http-proxy.conf</code> that adds the <code>HTTP_PROXY</code> environment variable:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">[Service]
-Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34;
-Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34;</code></pre>
-</div></div><div class="post-footer">
-        <a href="/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">Docker</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/">Python清理字符串中的不可见字符</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-11-13">2024-11-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
-需要处理一些字符串中的 <code>\u202d</code> 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：</p>
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">new_str</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">input_str</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isprintable</span><span class="p">())</span></span></span></code></pre></div>
-</div>
-<p>
-😀</p></div><div class="post-footer">
-        <a href="/posts/python%E6%B8%85%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%AF%E8%A7%81%E5%AD%97%E7%AC%A6/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href=""></a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/">50个成为优秀程序员的法则[21-30]</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-10-14">2024-10-14</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div><div class="content"><p>
-原文链接:  <a href="https://medium.com/@alexobidiegwu/50-laws-of-best-practices-in-python-6942c7cafd56">50 Coding Laws That Would Make You A Decent Programmer.</a></p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-21. 避免魔法数字
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-魔法数字是一个硬编码的值，可能会在稍后阶段更改，但因此很难更新。</p>
-<div class="src src-sql">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">❌</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">✅</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">NUM_OF_ORDERS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="n">NUM_OF_ORDERS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-22. 避免深度嵌套
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">y</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">do_something</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">do_something</span><span class="p">()</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-23. 避免临时变量
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
-</span></span><span class="line"><span class="cl"><span class="n">temp_result</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">final_result</span> <span class="o">=</span> <span class="n">temp_result</span> <span class="o">*</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="n">final_result</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-4" class="outline-2">
-<h2 id="headline-4">
-24. 避免使用神秘的缩写
-</h2>
-<div id="outline-text-headline-4" class="outline-text-2">
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_total_price</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">unit_price</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-5" class="outline-2">
-<h2 id="headline-5">
-25. 避免硬编码Path
-</h2>
-<div id="outline-text-headline-5" class="outline-text-2">
-<div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
-</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&#34;/path/to/file.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
-</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;FILE_PATH&#34;</span><span class="p">)</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-6" class="outline-2">
-<h2 id="headline-6">
-26. 使用使用Try…Catch…Finally语句
-</h2>
-<div id="outline-text-headline-6" class="outline-text-2">
-<p>在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。</p></div><div class="post-footer">
-        <a href="/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/programming/">Programming</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/">如何快速旋转多个pdf</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Wuxf</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-10-14">2024-10-14</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%B8%B8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>日常</a></span></div><div class="content"><p>
-经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。</p></div><div class="post-footer">
-        <a href="/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tools/">Tools</a></div></div>
-</article><ul class="pagination"><li class="page-item active">
-                    <span class="page-link">
-                        <a href="/">1</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/2/">2</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/3/">3</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/5/">5</a>
-                    </span>
-                </li></ul></div></div>
-            </main></div>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"data":{"id-1":"好记性不如烂笔头🖊️"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
-            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-            gtag('config', 'G-H0THCDBDY4', { 'anonymize_ip': true });
-        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-H0THCDBDY4" async></script><script>
-			var _hmt = _hmt || [];
-			(function() {
-			  var hm = document.createElement("script");
-			  hm.src = "https://hm.baidu.com/hm.js?3508d9f941c446dcf5e14d1e77231e51";
-			  var s = document.getElementsByTagName("script")[0]; 
-			  s.parentNode.insertBefore(hm, s);
-			})();
-		</script></body>
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
 </html>

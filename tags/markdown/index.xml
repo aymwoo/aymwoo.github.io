@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on XF21</title>
-    <link>https://xf21.dev/tags/markdown/</link>
+    <link>http://localhost:1313/tags/markdown/</link>
     <description>Recent content in Markdown on XF21</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 14 Jan 2022 14:03:26 +0800</lastBuildDate>
-    <atom:link href="https://xf21.dev/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown PlantUML</title>
-      <link>https://xf21.dev/posts/markdown-plantuml/</link>
+      <link>http://localhost:1313/posts/markdown-plantuml/</link>
       <pubDate>Fri, 14 Jan 2022 14:03:26 +0800</pubDate>
-      <guid>https://xf21.dev/posts/markdown-plantuml/</guid>
+      <guid>http://localhost:1313/posts/markdown-plantuml/</guid>
       <description>&lt;h1 id=&#34;markdown搭配plantuml画各种图&#34;&gt;Markdown搭配PlantUML画各种图&lt;/h1&gt;&#xA;&lt;h2 id=&#34;plantuml的安装&#34;&gt;PlantUML的安装&lt;/h2&gt;&#xA;&lt;h3 id=&#34;包管理工具安装&#34;&gt;包管理工具安装&lt;/h3&gt;&#xA;&lt;p&gt;PlantUML的运行需要Java环境,如果是用pacman之类的包管理工具安装,会自动安装jre.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#pacman -S plantuml&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果需要绘制时序图和活动图之外的图,还需要安装graphviz软件.&lt;/p&gt;</description>
     </item>
   </channel>

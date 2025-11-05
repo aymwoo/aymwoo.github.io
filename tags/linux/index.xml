@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on XF21</title>
     <link>https://xf21.dev/tags/linux/</link>
     <description>Recent content in Linux on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 14 Jun 2024 14:07:34 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,7 @@
       <link>https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/</link>
       <pubDate>Fri, 14 Jun 2024 14:07:34 +0800</pubDate>
       <guid>https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/</guid>
-      <description>&lt;p&gt;&#xA;很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 &lt;code&gt;ping&lt;/code&gt; 的时候经常找不到 &lt;code&gt;ping&lt;/code&gt; ，需要安装，安装的命令如下：&lt;/p&gt;&#xA;&lt;div class=&#34;src src-bash&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  apt install iputils-ping&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&#xA;有时候还需要查看自己的代理是否生效，可以使用下面的命令：&lt;/p&gt;</description>
+      <description>Short description</description>
     </item>
   </channel>
 </rss>

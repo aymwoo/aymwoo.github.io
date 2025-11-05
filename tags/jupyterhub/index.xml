@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jupyterhub on XF21</title>
     <link>https://xf21.dev/tags/jupyterhub/</link>
     <description>Recent content in Jupyterhub on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 19 Jun 2024 18:04:21 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/jupyterhub/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,7 @@
       <link>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Wed, 19 Jun 2024 18:04:21 +0800</pubDate>
       <guid>https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/</guid>
-      <description>&lt;p&gt;&#xA;这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。&lt;/p&gt;</description>
+      <description>Short description</description>
     </item>
   </channel>
 </rss>

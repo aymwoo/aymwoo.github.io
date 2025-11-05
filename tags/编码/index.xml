@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>编码 on XF21</title>
     <link>https://xf21.dev/tags/%E7%BC%96%E7%A0%81/</link>
     <description>Recent content in 编码 on XF21</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>XF21</title>
+      <url>https://xf21.dev/images/papermod-cover.png</url>
+      <link>https://xf21.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 07 Jun 2024 10:59:46 +0800</lastBuildDate>
     <atom:link href="https://xf21.dev/tags/%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,7 @@
       <link>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</link>
       <pubDate>Fri, 07 Jun 2024 10:59:46 +0800</pubDate>
       <guid>https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/</guid>
-      <description>&lt;p&gt;&#xA;看了 &lt;a href=&#34;https://www.thepythoncodingstack.com/p/bytes-python-built-in-unicode-utf-8-encoding&#34;&gt;`bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding&lt;/a&gt; 之后自己尝试了一下中文,加深了对UTF-8的一点点理解.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Python的bytes对象&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;&lt;code&gt;bytes&lt;/code&gt; 是由单个字节构成的不可变整数序列。序列中的每个值的大小被限制为 0 &amp;lt;= x &amp;lt; 256 (如果违反此限制将引发 &lt;code&gt;ValueError&lt;/code&gt;)。&lt;/p&gt;</description>
+      <description>Short description</description>
     </item>
   </channel>
 </rss>

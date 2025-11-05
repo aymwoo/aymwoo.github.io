@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://xf21.dev/sitemap.xml
