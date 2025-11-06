@@ -113,6 +113,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -138,7 +159,7 @@
   </header>
   <div class="entry-content">
     <p>需要自己写一个 deploy.sh
-##!/bin/bash # 将public目录中的所有文件提交到GitHub Pages的特定分支 # 清除并重新生成Hugo站点 hugo -d ./public # 进入public目录 cd ./public # 初始化一个Git仓库并提交更改 git init git add . git commit -m &#34;Deploying to GitHub Pages&#34; # 将更改推送到GitHub Pages的特定分支，例如&#34;gh-pages&#34; git push --force git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git master # 返回项目根目录 cd .. </p>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ##!/bin/bash # 将public目录中的所有文件提交到GitHub Pages的特定分支 # 清除并重新生成Hugo站点 hugo -d ./public # 进入public目录 cd ./public # 初始化一个Git仓库并提交更改 git init git add . git commit -m &#34;Deploying to GitHub Pages&#34; # 将更改推送到GitHub Pages的特定分支，例如&#34;gh-pages&#34; git push --force git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git master # 返回项目根目录 cd .. </p>
   </div>
   <footer class="entry-footer"><span title='2023-10-03 13:16:41 +0800 CST'>October 3, 2023</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wu Xiangfeng</span></footer>
   <a class="entry-link" aria-label="post link to 使用Easy hugo部署到github" href="https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/"></a>

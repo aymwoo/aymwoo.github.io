@@ -10,7 +10,14 @@
 <meta name="description" content="
 需要处理一些字符串中的 \u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：
 
+
+
+1
+
+
   new_str=&#39;&#39;.join(c for c in input_str if c.isprintable())
+
+
 
 
 😀">
@@ -80,7 +87,7 @@
   <meta property="og:site_name" content="XF21">
   <meta property="og:title" content="Python清理字符串中的不可见字符">
   <meta property="og:description" content=" 需要处理一些字符串中的 \u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：
-new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
+1 new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -94,7 +101,14 @@ new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
 <meta name="twitter:description" content="
 需要处理一些字符串中的 \u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：
 
+
+
+1
+
+
   new_str=&#39;&#39;.join(c for c in input_str if c.isprintable())
+
+
 
 
 😀">
@@ -126,12 +140,12 @@ new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
   "@type": "BlogPosting",
   "headline": "Python清理字符串中的不可见字符",
   "name": "Python清理字符串中的不可见字符",
-  "description": " 需要处理一些字符串中的 \\u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：\nnew_str=\u0026#39;\u0026#39;.join(c for c in input_str if c.isprintable()) 😀\n",
+  "description": " 需要处理一些字符串中的 \\u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：\n1 new_str=\u0026#39;\u0026#39;.join(c for c in input_str if c.isprintable()) 😀\n",
   "keywords": [
     "Python,Programming"
   ],
-  "articleBody": " 需要处理一些字符串中的 \\u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：\nnew_str=''.join(c for c in input_str if c.isprintable()) 😀\n",
-  "wordCount" : "52",
+  "articleBody": " 需要处理一些字符串中的 \\u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：\n1 new_str=''.join(c for c in input_str if c.isprintable()) 😀\n",
+  "wordCount" : "53",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-11-13T10:04:18+08:00",
   "dateModified": "2024-11-13T10:04:18+08:00",
@@ -183,6 +197,27 @@ new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -202,7 +237,14 @@ new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀">
   <div class="post-content"><p>
 需要处理一些字符串中的 <code>\u202d</code> 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">new_str</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">input_str</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isprintable</span><span class="p">())</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">new_str</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">input_str</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isprintable</span><span class="p">())</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 😀</p>

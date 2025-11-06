@@ -118,8 +118,8 @@
   "keywords": [
     "Python", "Programming"
   ],
-  "articleBody": " 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.\n1. 不惜一切代价避免注释 开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:\n浏览注释会转移或者分散阅读者的思维 注释可能虚假或者没有及时更新 好的代码无需注释也能看懂 2. 不要使用类型属性作为变量的名称 这个比较好理解，以 Python 为例，作者的建议是通过类型标注来指示变量类型而不是名称。\n# ❌ name_of_variable_str = value # ✅ name_of_variable: str = value 3. 类的名称应该是名词 主要是因为类对象用于标识或表示一堆特征和动作，使用名词作为类名会避免冗余，使代码更易读。\n# ❌ GetGoat.get_horn_length() # ✅ Goat.get_horn_length() 4. 函数名应该是动词 以便于更好的理解它所进行的操作\n5. 函数应该指定参数和返回类型 # ❌ def conver_to_string(num): return \"My new string is \" + str(num) # ✅ def conver_to_string(num: int) -\u003e str: return \"My new string is \" + str(num) 6. 一个函数必须只能执行一个功能 让一个函数执行一个功能至关重要，因为它有助于暴露错误的位置，实现可重用性，并完全按照函数名称所说的去做。\n# ❌ def check_if_address_is_valid(address): if address.is_valid: latitude = address.getLatitude() longtitude = address.getLongitude() return (latitude, longitude) # ✅ def check_if_address_is_valid(address): return address.is_vallid def get_latitude(): latitude = address.getLatitude() return latitude def get_longitude(): longtitude = address.getLongitude() return longitude 7. 函数应该处于相同的抽象级别 指的是一个函数应该执行一个定义明确的任务。该任务应该在整个函数中处于一致的抽象级别。\n# ❌ def get_numbers(): numbers = [2,3,4,1,4,1,416,6] return numbers def calculate_average(): numbers = get_numbers() numbers_plus_30 = [num + 30 for num in numbers] total = sum(numbers_plus_30) count = len(numbers) average = total / count return average calculate_average() # ✅ def calculate_average(numbers): total = sum(numbers) count = len(numbers) average = total / count return average calculate_average([2,3,4,1,4,1,416,6]) 不好的做法的函数有一堆抽象级别。 get_numbers() 是高级抽象，列表理解是中级抽象，sum是低级抽象。\n8. 函数名应该与其参数密切相关 # ❌ write(True) # ✅ write(name) 好的做法更能描述函数到底在做什么。\n9. 函数应该很小 一个函数应该是可重用的。函数越大，它被重用的可能性就越小。这也与为什么一个函数应该只做一件事相关。如果它只做一件事，它很有可能会很小。\n10. 避免冗余的词语 命名应该简洁明了，避免多于的描述，那样反而会导致混淆。\n# ❌ getProfileInfo() getProfileInfos() getProfileAccount() # ✅ getProfile() 11. 不要成为一个肮脏的程序员 这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净的代码不会隐藏错误。它向程序员公开了bug可以隐藏的任何地方，并可以无需完全重构就可以修复其中的bug。\n12. 开放封闭原则 开放-封闭原则（OCP）指出，类、方法或函数必须对扩展开放，但不能进行修改。这意味着定义的任何类、方法或函数都可以很容易地为多个实例重用或扩展，而无需更改其代码。\n13. Liskov替换原则 Liskov替换原则（LSP）是一种子类型关系的特定定义，称为强行为子类型，最初由Barbara Liskov在1987年的一次会议主题演讲中引入，题为数据抽象和层次结构。它基于“可替换性”的概念——面向对象编程中的一项原则，规定对象（如类）可以被子对象（如扩展第一类的类）替换，而不会破坏程序。它是一种语义关系，而不仅仅是句法关系，因为它旨在保证层次结构中类型的语义互操作性，尤其是对象类型。\n14. 知道何时使用注释 文章中说，每当您需要使用注释时，都要为自己无法用代码表达自己而感到羞耻。但是在某些情况下，使用注释实际上有助于表达代码的底层工作原理，而不是代码本身。原文列举了几个好注释的最佳示例：\n信息注释：例如，突出函数返回值的注释 TODO注释 后果警告 15. 什么时候不适合添加注释 噪声注释 ，如下：\n# add to animal list animal.append(dog) 非本地信息 ：编写注释时，确保它只与它引用的函数或语句相关。除此之外的任何内容都应该删除。 不明显的注释 ：你的评论和引用的函数之间的联系必须清晰。 短函数 ：短函数往往不需要注释，而是用一个好的名字来描述它。 16. 保持源文件简短 出于可重用性和易读性的需要，源文件应该在100-200行之间，最多500行。除非你有很好的理由选择其他方式。\n17. 正确的使用空行 空行是告诉读者我们正在进入一个新的独立概念的一种方式。每一个代码块表示一个完整的想法。\n18. 保持相关联的代码/函数/类靠近 Go where you are valued\n函数/变量应该尽可能靠近最需要或最重要的地方。它应该离它最不重要的地方最远。\n19. 知道何时使用空白 我们使用空格来表示两件事不是强相关的，没有空格来关联强相关的事物。\n20. 遵守团队规则 降低这些个人偏好并采用团队的偏好。\n",
-  "wordCount" : "1641",
+  "articleBody": " 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.\n1. 不惜一切代价避免注释 开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:\n浏览注释会转移或者分散阅读者的思维 注释可能虚假或者没有及时更新 好的代码无需注释也能看懂 2. 不要使用类型属性作为变量的名称 这个比较好理解，以 Python 为例，作者的建议是通过类型标注来指示变量类型而不是名称。\n1 2 3 4 5 # ❌ name_of_variable_str = value # ✅ name_of_variable: str = value 3. 类的名称应该是名词 主要是因为类对象用于标识或表示一堆特征和动作，使用名词作为类名会避免冗余，使代码更易读。\n1 2 3 4 5 # ❌ GetGoat.get_horn_length() # ✅ Goat.get_horn_length() 4. 函数名应该是动词 以便于更好的理解它所进行的操作\n5. 函数应该指定参数和返回类型 1 2 3 4 5 6 7 # ❌ def conver_to_string(num): return \"My new string is \" + str(num) # ✅ def conver_to_string(num: int) -\u003e str: return \"My new string is \" + str(num) 6. 一个函数必须只能执行一个功能 让一个函数执行一个功能至关重要，因为它有助于暴露错误的位置，实现可重用性，并完全按照函数名称所说的去做。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 # ❌ def check_if_address_is_valid(address): if address.is_valid: latitude = address.getLatitude() longtitude = address.getLongitude() return (latitude, longitude) # ✅ def check_if_address_is_valid(address): return address.is_vallid def get_latitude(): latitude = address.getLatitude() return latitude def get_longitude(): longtitude = address.getLongitude() return longitude 7. 函数应该处于相同的抽象级别 指的是一个函数应该执行一个定义明确的任务。该任务应该在整个函数中处于一致的抽象级别。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 # ❌ def get_numbers(): numbers = [2,3,4,1,4,1,416,6] return numbers def calculate_average(): numbers = get_numbers() numbers_plus_30 = [num + 30 for num in numbers] total = sum(numbers_plus_30) count = len(numbers) average = total / count return average calculate_average() # ✅ def calculate_average(numbers): total = sum(numbers) count = len(numbers) average = total / count return average calculate_average([2,3,4,1,4,1,416,6]) 不好的做法的函数有一堆抽象级别。 get_numbers() 是高级抽象，列表理解是中级抽象，sum是低级抽象。\n8. 函数名应该与其参数密切相关 1 2 3 4 5 # ❌ write(True) # ✅ write(name) 好的做法更能描述函数到底在做什么。\n9. 函数应该很小 一个函数应该是可重用的。函数越大，它被重用的可能性就越小。这也与为什么一个函数应该只做一件事相关。如果它只做一件事，它很有可能会很小。\n10. 避免冗余的词语 命名应该简洁明了，避免多于的描述，那样反而会导致混淆。\n1 2 3 4 5 6 7 # ❌ getProfileInfo() getProfileInfos() getProfileAccount() # ✅ getProfile() 11. 不要成为一个肮脏的程序员 这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净的代码不会隐藏错误。它向程序员公开了bug可以隐藏的任何地方，并可以无需完全重构就可以修复其中的bug。\n12. 开放封闭原则 开放-封闭原则（OCP）指出，类、方法或函数必须对扩展开放，但不能进行修改。这意味着定义的任何类、方法或函数都可以很容易地为多个实例重用或扩展，而无需更改其代码。\n13. Liskov替换原则 Liskov替换原则（LSP）是一种子类型关系的特定定义，称为强行为子类型，最初由Barbara Liskov在1987年的一次会议主题演讲中引入，题为数据抽象和层次结构。它基于“可替换性”的概念——面向对象编程中的一项原则，规定对象（如类）可以被子对象（如扩展第一类的类）替换，而不会破坏程序。它是一种语义关系，而不仅仅是句法关系，因为它旨在保证层次结构中类型的语义互操作性，尤其是对象类型。\n14. 知道何时使用注释 文章中说，每当您需要使用注释时，都要为自己无法用代码表达自己而感到羞耻。但是在某些情况下，使用注释实际上有助于表达代码的底层工作原理，而不是代码本身。原文列举了几个好注释的最佳示例：\n信息注释：例如，突出函数返回值的注释 TODO注释 后果警告 15. 什么时候不适合添加注释 噪声注释 ，如下：\n1 2 # add to animal list animal.append(dog) 非本地信息 ：编写注释时，确保它只与它引用的函数或语句相关。除此之外的任何内容都应该删除。 不明显的注释 ：你的评论和引用的函数之间的联系必须清晰。 短函数 ：短函数往往不需要注释，而是用一个好的名字来描述它。 16. 保持源文件简短 出于可重用性和易读性的需要，源文件应该在100-200行之间，最多500行。除非你有很好的理由选择其他方式。\n17. 正确的使用空行 空行是告诉读者我们正在进入一个新的独立概念的一种方式。每一个代码块表示一个完整的想法。\n18. 保持相关联的代码/函数/类靠近 Go where you are valued\n函数/变量应该尽可能靠近最需要或最重要的地方。它应该离它最不重要的地方最远。\n19. 知道何时使用空白 我们使用空格来表示两件事不是强相关的，没有空格来关联强相关的事物。\n20. 遵守团队规则 降低这些个人偏好并采用团队的偏好。\n",
+  "wordCount" : "1715",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-06-05T10:44:03+08:00",
   "dateModified": "2024-06-05T10:44:03+08:00",
@@ -171,6 +171,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -225,11 +246,22 @@
 <p>
 这个比较好理解，以 <code>Python</code> 为例，作者的建议是通过类型标注来指示变量类型而不是名称。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl">  <span class="n">name_of_variable_str</span> <span class="o">=</span> <span class="n">value</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl">  <span class="n">name_of_variable</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">value</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="n">name_of_variable</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">value</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -241,11 +273,22 @@
 <p>
 主要是因为类对象用于标识或表示一堆特征和动作，使用名词作为类名会避免冗余，使代码更易读。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl">  <span class="n">GetGoat</span><span class="o">.</span><span class="n">get_horn_length</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Goat</span><span class="o">.</span><span class="n">get_horn_length</span><span class="p">()</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="n">Goat</span><span class="o">.</span><span class="n">get_horn_length</span><span class="p">()</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -264,13 +307,26 @@
 </h2>
 <div id="outline-text-headline-8" class="outline-text-2">
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">conver_to_string</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="s2">&#34;My new string is &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># ✅</span>
 </span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">conver_to_string</span><span class="p">(</span><span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="s2">&#34;My new string is &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="s2">&#34;My new string is &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -282,7 +338,30 @@
 <p>
 让一个函数执行一个功能至关重要，因为它有助于暴露错误的位置，实现可重用性，并完全按照函数名称所说的去做。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">check_if_address_is_valid</span><span class="p">(</span><span class="n">address</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">address</span><span class="o">.</span><span class="n">is_valid</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">          <span class="n">latitude</span> <span class="o">=</span> <span class="n">address</span><span class="o">.</span><span class="n">getLatitude</span><span class="p">()</span>
@@ -300,7 +379,9 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">get_longitude</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">      <span class="n">longtitude</span> <span class="o">=</span> <span class="n">address</span><span class="o">.</span><span class="n">getLongitude</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">longitude</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">longitude</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -312,7 +393,35 @@
 <p>
 指的是一个函数应该执行一个定义明确的任务。该任务应该在整个函数中处于一致的抽象级别。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">get_numbers</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">      <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">416</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">numbers</span>
@@ -335,7 +444,9 @@
 </span></span><span class="line"><span class="cl">    <span class="n">average</span> <span class="o">=</span> <span class="n">total</span> <span class="o">/</span> <span class="n">count</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">average</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="n">calculate_average</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">416</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="n">calculate_average</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">416</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   不好的做法的函数有一堆抽象级别。 <code>get_numbers()</code> 是高级抽象，列表理解是中级抽象，sum是低级抽象。</p>
@@ -347,11 +458,22 @@
 </h2>
 <div id="outline-text-headline-11" class="outline-text-2">
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl">  <span class="n">write</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl">  <span class="n">write</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="n">write</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 好的做法更能描述函数到底在做什么。</p>
@@ -374,13 +496,26 @@
 <p>
 命名应该简洁明了，避免多于的描述，那样反而会导致混淆。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl">  <span class="n">getProfileInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">  <span class="n">getProfileInfos</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">  <span class="n">getProfileAccount</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl">  <span class="n">getProfile</span><span class="p">()</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="n">getProfile</span><span class="p">()</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -434,8 +569,16 @@ Liskov替换原则（LSP）是一种子类型关系的特定定义，称为强�
 <li>
 <p><strong>噪声注释</strong> ，如下：</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># add to animal list</span>
-</span></span><span class="line"><span class="cl">  <span class="n">animal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dog</span><span class="p">)</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># add to animal list</span>
+</span></span><span class="line"><span class="cl">  <span class="n">animal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dog</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </li>
 <li><strong>非本地信息</strong> ：编写注释时，确保它只与它引用的函数或语句相关。除此之外的任何内容都应该删除。</li>

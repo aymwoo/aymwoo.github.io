@@ -128,6 +128,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -148,77 +169,75 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Debian系安装ping
+    <h2 class="entry-hint-parent">RustDesk
     </h2>
   </header>
   <div class="entry-content">
-    <p> 很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 ping 的时候经常找不到 ping ，需要安装，安装的命令如下：
-apt install iputils-ping 有时候还需要查看自己的代理是否生效，可以使用下面的命令：
+    <p>RustDesk–开源远程桌面 github上14.4k star的开源跨平台远程桌面,目前提供三个免费的公共服务器,但都在境外(首尔,新加坡,达拉斯),但使用感受还比较流畅.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-14 14:07:34 +0800 CST'>June 14, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to Debian系安装ping" href="https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/"></a>
+  <footer class="entry-footer"><span title='2022-01-12 09:14:46 +0800 CST'>January 12, 2022</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to RustDesk" href="https://xf21.dev/posts/rustdesk/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Python中的bytes对象以及UTF-8编码
+    <h2 class="entry-hint-parent">Hugo
     </h2>
   </header>
   <div class="entry-content">
-    <p> 看了 `bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding 之后自己尝试了一下中文,加深了对UTF-8的一点点理解.
-Python的bytes对象 bytes 是由单个字节构成的不可变整数序列。序列中的每个值的大小被限制为 0 &lt;= x &lt; 256 (如果违反此限制将引发 ValueError)。
+    <p>Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。
+常用命令 添加站点 1 hugo new site yoursite 添加theme,以我用的LoveIt为例 1 2 3 cd yoursite git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-07 10:59:46 +0800 CST'>June 7, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to Python中的bytes对象以及UTF-8编码" href="https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/"></a>
+  <footer class="entry-footer"><span title='2022-01-11 10:54:56 +0800 CST'>January 11, 2022</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Hugo" href="https://xf21.dev/posts/hugo/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">用ollama和open-webui搭建本地LLM服务
+    <h2 class="entry-hint-parent">Ranger
     </h2>
   </header>
   <div class="entry-content">
-    <p> 我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 Ollama 结合 qwen 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.
+    <p>Ranger ranger 是一个用 Python 编写的基于终端的文件管理器,使用 vim 的操作方式. 安装 安装 ranger 包,以 Arch 为例：
+1 # pacman -S ranger 使用 快捷键 命令 ? 帮助 l,Enter 打开文件 j,k 在文件列表中上下移动 h,l 在上一级和下一级目录间移动 blank 选中文件 q 退出 如果您熟悉 vim，那么应该熟悉 ranger 的 UI 规范。Ranger 使用 HJKL 键进行导航，并从 vim 借鉴了许多习惯用法。例如:yy (vim 中的复制行)复制一个文件，pp 粘贴它，dd 剪切文件。更复杂的函数可以从命令行调用:(冒号)。
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-06 16:46:09 +0800 CST'>June 6, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to 用ollama和open-webui搭建本地LLM服务" href="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/"></a>
+  <footer class="entry-footer"><span title='2022-01-09 15:28:34 +0800 CST'>January 9, 2022</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Ranger" href="https://xf21.dev/posts/ranger/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">50个成为优秀程序员的法则[1-10]
+    <h2 class="entry-hint-parent">Hello
     </h2>
   </header>
   <div class="entry-content">
-    <p> 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.
-1. 不惜一切代价避免注释 开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:
-...</p>
+    <p>Hello World Hello Kitty
+</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-05 10:44:03 +0800 CST'>June 5, 2024</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to 50个成为优秀程序员的法则[1-10]" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/"></a>
+  <footer class="entry-footer"><span title='2022-01-02 02:30:37 +0800 CST'>January 2, 2022</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Hello" href="https://xf21.dev/posts/hello/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Jupyterlab中显示Plotly的图形
+    <h2 class="entry-hint-parent">
     </h2>
   </header>
   <div class="entry-content">
-    <p>需要借助 IPython.dispaly.HTML 对象,在 Jupyterlab 安装的时候就已经可用了,具体用法如下:
-from IPython.display import HTML import plotly.graph_objects as go # 准备数据 x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] # 创建线形图 fig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y, mode=&#34;lines&#34;)) fig.update_layout( title=&#34;Simple Line Plot&#34;, xaxis_title=&#34;X&#34;, yaxis_title=&#34;Y&#34;, font=dict(family=&#34;Courier New, monospace&#34;, size=18, color=&#34;#7f7f7f&#34;), ) # 显示图形 HTML(fig.to_html()) </p>
+    <p>《教育的未来：人工智能时代的教育变革》读书笔记 其他-教育的未来：人工智能时代的教育变革 全面的系统性思维 全面的系统性思维是任何复杂操作都需要的品质。
+批判性和系统思维能力 就目前而言，终身学习仍然是有弹性、有报酬 的长期职业生涯的最确定的答案。但它的形式和内容可能并不像过去所教导我们期望的那样。事实上，真正有用的终身教育可能与之前 的任何教育形式都不一样。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-04 16:39:56 +0800 CST'>June 4, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to Jupyterlab中显示Plotly的图形" href="https://xf21.dev/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/"></a>
+  <footer class="entry-footer"><span>10 min</span>&nbsp;·&nbsp;<span>Wu Xiangfeng</span></footer>
+  <a class="entry-link" aria-label="post link to " href="https://xf21.dev/posts/%E6%95%99%E8%82%B2%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84%E6%95%99%E8%82%B2%E5%8F%98%E9%9D%A9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://xf21.dev/posts/page/2/">
-      «&nbsp;&nbsp;2/5
-    </a>
-    <a class="next" href="https://xf21.dev/posts/page/4/">&nbsp;4/5&nbsp;»
+      «&nbsp;&nbsp;2/3
     </a>
   </nav>
 </footer>

@@ -119,8 +119,8 @@
   "keywords": [
     "jupyterhub", "moodle", "lms"
   ],
-  "articleBody": " 这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。\n基本概念 LTI是一种标准，LTI1.3是目前这一标准的最新版本之一。 学习工具（Tools） LTI标准中外部应用程序或服务的统称，如在线测验工具、互动内容平台等，这里Jupyterhub就是学习工具。\n平台 提供课程管理、内容管理或学习管理的系统，如LMS（Learning Management System，学习管理系统）,这里Moodle就是平台。\n安装Moodle 安装 Moodle我使用的是 bitnami提供的Moodle容器(docker) ,直接把 docker-compose.yml 下到本地，安装好docker环境之后，启动服务即可。\n# Copyright Broadcom, Inc. All Rights Reserved. # SPDX-License-Identifier: APACHE-2.0 version: '2' services: mariadb: image: docker.io/bitnami/mariadb:11.3 environment: # ALLOW_EMPTY_PASSWORD is recommended only for development. - ALLOW_EMPTY_PASSWORD=yes - MARIADB_USER=bn_moodle - MARIADB_DATABASE=bitnami_moodle - MARIADB_CHARACTER_SET=utf8mb4 - MARIADB_COLLATE=utf8mb4_unicode_ci volumes: - 'mariadb_data:/bitnami/mariadb' moodle: image: docker.io/bitnami/moodle:4.4 ports: - '80:8080' - '443:8443' environment: - MOODLE_DATABASE_HOST=mariadb - MOODLE_DATABASE_PORT_NUMBER=3306 - MOODLE_DATABASE_USER=bn_moodle - MOODLE_DATABASE_NAME=bitnami_moodle # ALLOW_EMPTY_PASSWORD is recommended only for development. - ALLOW_EMPTY_PASSWORD=yes volumes: - 'moodle_data:/bitnami/moodle' - 'moodledata_data:/bitnami/moodledata' depends_on: - mariadb volumes: mariadb_data: driver: local moodle_data: driver: local moodledata_data: driver: local 在docker-compose.yml目录下启动服务\ndocker compose up -d 配置 Moodle中的配置主要是创建一个外部工具，通过这个外部工具调用jupyterhub，可以把用户信息等数据一并传递过去供jupyterhub使用。\n创建外部工具 选择 站点管理-\u003e插件-\u003e活动模块-\u003e外部工具-\u003e管理 ，点击 \"手动配置一个工具\":\n填写jupyterhub服务相关信息（待Jupyterhub环境配置好后） 客户端ID在创建的时候自动生成，无需填写。注意下面红框中的内容需要选择相应的选项开启才能共享用户信息。注意默认启动容器要选择新窗口，因为Jupyterhub的安全设置似乎不允许嵌入方式。\n查看工具信息 回到 站点管理-\u003e插件-\u003e活动模块-\u003e外部工具-\u003e管理 ，会有一个工具列表看到刚刚创建的外部工具，点击其\"工具配置细节\"\nJupyterhub 安装 和Moodle整合需要使用jupyterhub的ltiauthenticator认证器，安装的时候一并安装\nmkdir jupyterhub cd jupyterhub # 创建python虚拟环境 python -m venv .venv source .venv/bin/activate pip install jupyterhub jupyterlab jupyterhub-ltiauthenticator 配置 cd jupyterhub # 编辑jupyterhub配置文件 vim jupyterhub_config.py 相关配置内容如下:\nimport os import pwd import subprocess c = get_config() # noqa # LTI13AUTHENTICATOR configuration for Moodle c.JupyterHub.authenticator_class = \"ltiauthenticator.lti13.auth.LTI13Authenticator\" c.LTI13Authenticator.issuer = \"http://10.80.73.225:13080\" c.LTI13Authenticator.client_id = \"ty3IkxZtqgrJotg\" #Moodle当中的外部工具ID c.LTI13Authenticator.authorize_url = \"http://10.80.73.225:13080/mod/lti/auth.php\" #Moodle的外部工具的身份验证请求URL c.LTI13Authenticator.jwks_endpoint = \"http://10.80.73.225:13080/mod/lti/certs.php\" #Moodle的外部工具的公钥集URL c.LTI13Authenticator.username_key = \"name\" #用户的name作为Jupyterhub的用户名，还可以选email或id # Users c.Authenticator.admin_users = {\"admin1\", \"admin2\"} #Moodle中的管理员的name c.Authenticator.allow_all = True #允许所有登录 # 如果使用systemd类似的需要本地用户账号的spawner,需要先检查jupyterhub系统中是否存在该用户，如果不存在则创建一个新用户以便spawner能正常启动 def pre_spawn_hook(spawner): username = spawner.user.name try: pwd.getpwnam(username) except KeyError: subprocess.check_call([\"useradd\", \"-ms\", \"/bin/bash\", username]) print(f\"User {username} has been added.\") else: print(f\"User {username} is already exist.\") c.JupyterHub.spawner_class = \"systemd\" c.Spawner.pre_spawn_hook = pre_spawn_hook # 一些安全设置，隔离temp目录和硬件设备 c.SystemdSpawner.isolate_tmp = True c.SystemdSpawner.isolate_devices = True Moodle的课程中添加Jupyterhub外部工具 如果课程中需要添加Jupyterhub作为外部工具，需要首先设置在课程的活动选择中启用这个外部工具：\n之后在添加活动资源的时候就可以看到这个外部工具，添加到课程中即可。\n最终效果如下，在课程中会看到jupyterhub的连接，点击之后会传递当前用户的用户名（个人资料中的姓+名）作为jupyterhub中的用户名。\n",
-  "wordCount" : "1479",
+  "articleBody": " 这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。\n基本概念 LTI是一种标准，LTI1.3是目前这一标准的最新版本之一。 学习工具（Tools） LTI标准中外部应用程序或服务的统称，如在线测验工具、互动内容平台等，这里Jupyterhub就是学习工具。\n平台 提供课程管理、内容管理或学习管理的系统，如LMS（Learning Management System，学习管理系统）,这里Moodle就是平台。\n安装Moodle 安装 Moodle我使用的是 bitnami提供的Moodle容器(docker) ,直接把 docker-compose.yml 下到本地，安装好docker环境之后，启动服务即可。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 # Copyright Broadcom, Inc. All Rights Reserved. # SPDX-License-Identifier: APACHE-2.0 version: '2' services: mariadb: image: docker.io/bitnami/mariadb:11.3 environment: # ALLOW_EMPTY_PASSWORD is recommended only for development. - ALLOW_EMPTY_PASSWORD=yes - MARIADB_USER=bn_moodle - MARIADB_DATABASE=bitnami_moodle - MARIADB_CHARACTER_SET=utf8mb4 - MARIADB_COLLATE=utf8mb4_unicode_ci volumes: - 'mariadb_data:/bitnami/mariadb' moodle: image: docker.io/bitnami/moodle:4.4 ports: - '80:8080' - '443:8443' environment: - MOODLE_DATABASE_HOST=mariadb - MOODLE_DATABASE_PORT_NUMBER=3306 - MOODLE_DATABASE_USER=bn_moodle - MOODLE_DATABASE_NAME=bitnami_moodle # ALLOW_EMPTY_PASSWORD is recommended only for development. - ALLOW_EMPTY_PASSWORD=yes volumes: - 'moodle_data:/bitnami/moodle' - 'moodledata_data:/bitnami/moodledata' depends_on: - mariadb volumes: mariadb_data: driver: local moodle_data: driver: local moodledata_data: driver: local 在docker-compose.yml目录下启动服务\n1 docker compose up -d 配置 Moodle中的配置主要是创建一个外部工具，通过这个外部工具调用jupyterhub，可以把用户信息等数据一并传递过去供jupyterhub使用。\n创建外部工具 选择 站点管理-\u003e插件-\u003e活动模块-\u003e外部工具-\u003e管理 ，点击 \"手动配置一个工具\":\n填写jupyterhub服务相关信息（待Jupyterhub环境配置好后） 客户端ID在创建的时候自动生成，无需填写。注意下面红框中的内容需要选择相应的选项开启才能共享用户信息。注意默认启动容器要选择新窗口，因为Jupyterhub的安全设置似乎不允许嵌入方式。\n查看工具信息 回到 站点管理-\u003e插件-\u003e活动模块-\u003e外部工具-\u003e管理 ，会有一个工具列表看到刚刚创建的外部工具，点击其\"工具配置细节\"\nJupyterhub 安装 和Moodle整合需要使用jupyterhub的ltiauthenticator认证器，安装的时候一并安装\n1 2 3 4 5 6 mkdir jupyterhub cd jupyterhub # 创建python虚拟环境 python -m venv .venv source .venv/bin/activate pip install jupyterhub jupyterlab jupyterhub-ltiauthenticator 配置 1 2 3 cd jupyterhub # 编辑jupyterhub配置文件 vim jupyterhub_config.py 相关配置内容如下:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 import os import pwd import subprocess c = get_config() # noqa # LTI13AUTHENTICATOR configuration for Moodle c.JupyterHub.authenticator_class = \"ltiauthenticator.lti13.auth.LTI13Authenticator\" c.LTI13Authenticator.issuer = \"http://10.80.73.225:13080\" c.LTI13Authenticator.client_id = \"ty3IkxZtqgrJotg\" #Moodle当中的外部工具ID c.LTI13Authenticator.authorize_url = \"http://10.80.73.225:13080/mod/lti/auth.php\" #Moodle的外部工具的身份验证请求URL c.LTI13Authenticator.jwks_endpoint = \"http://10.80.73.225:13080/mod/lti/certs.php\" #Moodle的外部工具的公钥集URL c.LTI13Authenticator.username_key = \"name\" #用户的name作为Jupyterhub的用户名，还可以选email或id # Users c.Authenticator.admin_users = {\"admin1\", \"admin2\"} #Moodle中的管理员的name c.Authenticator.allow_all = True #允许所有登录 # 如果使用systemd类似的需要本地用户账号的spawner,需要先检查jupyterhub系统中是否存在该用户，如果不存在则创建一个新用户以便spawner能正常启动 def pre_spawn_hook(spawner): username = spawner.user.name try: pwd.getpwnam(username) except KeyError: subprocess.check_call([\"useradd\", \"-ms\", \"/bin/bash\", username]) print(f\"User {username} has been added.\") else: print(f\"User {username} is already exist.\") c.JupyterHub.spawner_class = \"systemd\" c.Spawner.pre_spawn_hook = pre_spawn_hook # 一些安全设置，隔离temp目录和硬件设备 c.SystemdSpawner.isolate_tmp = True c.SystemdSpawner.isolate_devices = True Moodle的课程中添加Jupyterhub外部工具 如果课程中需要添加Jupyterhub作为外部工具，需要首先设置在课程的活动选择中启用这个外部工具：\n之后在添加活动资源的时候就可以看到这个外部工具，添加到课程中即可。\n最终效果如下，在课程中会看到jupyterhub的连接，点击之后会传递当前用户的用户名（个人资料中的姓+名）作为jupyterhub中的用户名。\n",
+  "wordCount" : "1564",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-06-19T18:04:21+08:00",
   "dateModified": "2024-06-19T18:04:21+08:00",
@@ -172,6 +172,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -186,7 +207,7 @@
     <div class="post-description">
       Short description
     </div>
-    <div class="post-meta"><span title='2024-06-19 18:04:21 +0800 CST'>June 19, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Wuxf</span>
+    <div class="post-meta"><span title='2024-06-19 18:04:21 +0800 CST'>June 19, 2024</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Wuxf</span>
 
 </div>
   </header> 
@@ -237,7 +258,51 @@ LTI标准中外部应用程序或服务的统称，如在线测验工具、互�
 <p>
 Moodle我使用的是 <a href="https://github.com/bitnami/containers/tree/main/bitnami/moodle">bitnami提供的Moodle容器(docker)</a> ,直接把 docker-compose.yml 下到本地，安装好docker环境之后，启动服务即可。</p>
 <div class="src src-yaml">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># Copyright Broadcom, Inc. All Rights Reserved.</span><span class="w">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># Copyright Broadcom, Inc. All Rights Reserved.</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># SPDX-License-Identifier: APACHE-2.0</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;2&#39;</span><span class="w">
@@ -276,12 +341,21 @@ Moodle我使用的是 <a href="https://github.com/bitnami/containers/tree/main/b
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">moodle_data</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">moodledata_data</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span></span></span></code></pre></div>
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 在docker-compose.yml目录下启动服务</p>
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  docker compose up -d</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  docker compose up -d</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -339,12 +413,24 @@ Jupyterhub
 <p>
 和Moodle整合需要使用jupyterhub的<a href="https://github.com/jupyterhub/ltiauthenticator/">ltiauthenticator</a>认证器，安装的时候一并安装</p>
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  mkdir jupyterhub
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  mkdir jupyterhub
 </span></span><span class="line"><span class="cl">  <span class="nb">cd</span> jupyterhub
 </span></span><span class="line"><span class="cl">  <span class="c1"># 创建python虚拟环境</span>
 </span></span><span class="line"><span class="cl">  python -m venv .venv
 </span></span><span class="line"><span class="cl">  <span class="nb">source</span> .venv/bin/activate
-</span></span><span class="line"><span class="cl">  pip install jupyterhub jupyterlab jupyterhub-ltiauthenticator</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  pip install jupyterhub jupyterlab jupyterhub-ltiauthenticator</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -354,14 +440,62 @@ Jupyterhub
 </h3>
 <div id="outline-text-headline-13" class="outline-text-3">
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  <span class="nb">cd</span> jupyterhub
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  <span class="nb">cd</span> jupyterhub
 </span></span><span class="line"><span class="cl">  <span class="c1"># 编辑jupyterhub配置文件</span>
-</span></span><span class="line"><span class="cl">  vim jupyterhub_config.py</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  vim jupyterhub_config.py</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 相关配置内容如下:</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">os</span>
 </span></span><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">pwd</span>
 </span></span><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">subprocess</span>
 </span></span><span class="line"><span class="cl">
@@ -395,7 +529,9 @@ Jupyterhub
 </span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">Spawner</span><span class="o">.</span><span class="n">pre_spawn_hook</span> <span class="o">=</span> <span class="n">pre_spawn_hook</span>
 </span></span><span class="line"><span class="cl">  <span class="c1"># 一些安全设置，隔离temp目录和硬件设备</span>
 </span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">SystemdSpawner</span><span class="o">.</span><span class="n">isolate_tmp</span> <span class="o">=</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">SystemdSpawner</span><span class="o">.</span><span class="n">isolate_devices</span> <span class="o">=</span> <span class="kc">True</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span><span class="o">.</span><span class="n">SystemdSpawner</span><span class="o">.</span><span class="n">isolate_devices</span> <span class="o">=</span> <span class="kc">True</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -117,8 +117,8 @@
   "keywords": [
     "org"
   ],
-  "articleBody": "需要自己写一个 deploy.sh\n##!/bin/bash # 将public目录中的所有文件提交到GitHub Pages的特定分支 # 清除并重新生成Hugo站点 hugo -d ./public # 进入public目录 cd ./public # 初始化一个Git仓库并提交更改 git init git add . git commit -m \"Deploying to GitHub Pages\" # 将更改推送到GitHub Pages的特定分支，例如\"gh-pages\" git push --force git@github.com:/.github.io.git master # 返回项目根目录 cd .. ",
-  "wordCount" : "161",
+  "articleBody": "需要自己写一个 deploy.sh\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ##!/bin/bash # 将public目录中的所有文件提交到GitHub Pages的特定分支 # 清除并重新生成Hugo站点 hugo -d ./public # 进入public目录 cd ./public # 初始化一个Git仓库并提交更改 git init git add . git commit -m \"Deploying to GitHub Pages\" # 将更改推送到GitHub Pages的特定分支，例如\"gh-pages\" git push --force git@github.com:/.github.io.git master # 返回项目根目录 cd .. ",
+  "wordCount" : "181",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2023-10-03T13:16:41+08:00",
   "dateModified": "2023-10-03T13:16:41+08:00",
@@ -170,6 +170,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -191,7 +212,31 @@
 
   <div class="post-content"><p>需要自己写一个 <code>deploy.sh</code></p>
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  <span class="c1">##!/bin/bash</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  <span class="c1">##!/bin/bash</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># 将public目录中的所有文件提交到GitHub Pages的特定分支</span>
 </span></span><span class="line"><span class="cl">
@@ -210,7 +255,9 @@
 </span></span><span class="line"><span class="cl">  git push --force git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git master
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># 返回项目根目录</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">cd</span> ..</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="nb">cd</span> ..</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 
 

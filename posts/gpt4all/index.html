@@ -118,8 +118,8 @@
   "keywords": [
     "AI", "GPT4All"
   ],
-  "articleBody": " GPT4All简介 GPT4All 是一个生态系统，用于训练和部署在消费级 CPU 上本地运行的强大且定制的大型语言模型。目标很简单——成为任何个人或企业都可以自由使用、分发和构建的最佳指令调整助理式语言模型。GPT4All 模型是一个 3GB - 8GB 文件，您可以下载该文件并将其插入 GPT4All 开源生态系统软件中。 Nomic AI 支持并维护这个软件生态系统，以加强质量和安全性，同时带头让任何个人或企业轻松训练和部署自己的边缘大型语言模型。\n使用 安装 pip install gpt4all 使用 调用比较简单，但根据你的计算机的性能，运行时间可能会比较长\nfrom gpt4all import GPT4All # 如果allow_download为True # 当你下载的model文件路径不对时则会尝试，不建议打开，可以通过其他工具下载你需要的模型文件 # 如果allow_download为False # 当你下载的model文件路径不对时则会提示一个错误 model = GPT4All(\"orca-mini-3b-gguf2-q4_0.gguf\",allow_download=False) output = model.generate(\"The capital of France is \", max_tokens=3) print(output) 程序会输出: Paris\n🛟 提示: Model下载的地址为gpt4all.io,如果你的网速过慢也可以在城域网下载,地址是: wizardlm-13b-v1.2.Q4_0.gguf 和 mistral-7b-openorca.Q4_0.gguf\nGPT4All Chat UI GPT4All Chat Client 使您可以轻松地与任何本地大型语言模型进行交互。 它经过优化，可以在任何运行OSX/Windows/Linux的计算机的CPU上运行7-13B参数LLMs。 下载地址：gpt4all.io\nGPT4All CLI GPT4All CLI (command-line interface) 是一个python脚本，提供了一个REPL(Read-Eval-Print-Loop)环境来使用GPT4All。\n你可以点击链接下载这个文件：app.py (城域网)\n如果你克隆了GPT4All的仓库,此脚本的位置是/GPT4All仓库/gpt4all-bindings/cli/app.py\n开始体验 pip install gpt4all typer python app.py repl 🛟 提示: app.py 默认的模型是 mistral-7b-openorca.Q4_0.gguf 如果你下载了其他的模型，可以在代码中替换，如果本地没有此模型将会在运行时下载。\nGPT4All Chat UI GPT4all 官网上有windows,mac,ubuntu三个系统下的UI下载，我并没有以上三个系统，所以没法体验，感兴趣的小伙伴可以自己去下载安装。\n浏览模型内容 ATTACH gpt4all.io 的网页中有个浏览模型的部分，可以查看模型内容，如下图所示：\n我们可以把把图放到，可以看到一个一个的点，就是一个知识点\n还可以放到更大\n小结 数据来源 GPT4All 在2023 3月20日至2023 3月26日之间使用GPT-3.5-Turbo的OpenAI的API收集了大约100万个即时响应对。首先利用三个公开可用的数据集收集了各种各样的问题/提示: •LAION OIG的统一chip2子集。 •使用Stackoverflow问题的随机子样本编码问题 •使用大科学/P3的子样本进行指令调整 根据斯坦福Alpaca项目的评论，对数据准备和管理给予大量关注。在收集提示生成对的初始数据集后，将数据加载到Atlas中以进行数据整理和清理。\n训练费用 大约四天的工作，800美元的GPU成本 (从Lambda实验室和Paperspace租用)，包括几个失败的训练，以及500美元的OpenAI API支出来生产这些模型。gpt4all-lora，GPT4All发布的模型可以在Lambda Labs DGX A100 8x 80GB 上进行大约8个小时的训练，总费用为100美元。\n我能看懂的部分就这些了，:)\n",
-  "wordCount" : "1297",
+  "articleBody": " GPT4All简介 GPT4All 是一个生态系统，用于训练和部署在消费级 CPU 上本地运行的强大且定制的大型语言模型。目标很简单——成为任何个人或企业都可以自由使用、分发和构建的最佳指令调整助理式语言模型。GPT4All 模型是一个 3GB - 8GB 文件，您可以下载该文件并将其插入 GPT4All 开源生态系统软件中。 Nomic AI 支持并维护这个软件生态系统，以加强质量和安全性，同时带头让任何个人或企业轻松训练和部署自己的边缘大型语言模型。\n使用 安装 1 pip install gpt4all 使用 调用比较简单，但根据你的计算机的性能，运行时间可能会比较长\n1 2 3 4 5 6 7 8 9 from gpt4all import GPT4All # 如果allow_download为True # 当你下载的model文件路径不对时则会尝试，不建议打开，可以通过其他工具下载你需要的模型文件 # 如果allow_download为False # 当你下载的model文件路径不对时则会提示一个错误 model = GPT4All(\"orca-mini-3b-gguf2-q4_0.gguf\",allow_download=False) output = model.generate(\"The capital of France is \", max_tokens=3) print(output) 程序会输出: Paris\n🛟 提示: Model下载的地址为gpt4all.io,如果你的网速过慢也可以在城域网下载,地址是: wizardlm-13b-v1.2.Q4_0.gguf 和 mistral-7b-openorca.Q4_0.gguf\nGPT4All Chat UI GPT4All Chat Client 使您可以轻松地与任何本地大型语言模型进行交互。 它经过优化，可以在任何运行OSX/Windows/Linux的计算机的CPU上运行7-13B参数LLMs。 下载地址：gpt4all.io\nGPT4All CLI GPT4All CLI (command-line interface) 是一个python脚本，提供了一个REPL(Read-Eval-Print-Loop)环境来使用GPT4All。\n你可以点击链接下载这个文件：app.py (城域网)\n如果你克隆了GPT4All的仓库,此脚本的位置是/GPT4All仓库/gpt4all-bindings/cli/app.py\n开始体验 1 2 pip install gpt4all typer python app.py repl 🛟 提示: app.py 默认的模型是 mistral-7b-openorca.Q4_0.gguf 如果你下载了其他的模型，可以在代码中替换，如果本地没有此模型将会在运行时下载。\nGPT4All Chat UI GPT4all 官网上有windows,mac,ubuntu三个系统下的UI下载，我并没有以上三个系统，所以没法体验，感兴趣的小伙伴可以自己去下载安装。\n浏览模型内容 ATTACH gpt4all.io 的网页中有个浏览模型的部分，可以查看模型内容，如下图所示：\n我们可以把把图放到，可以看到一个一个的点，就是一个知识点\n还可以放到更大\n小结 数据来源 GPT4All 在2023 3月20日至2023 3月26日之间使用GPT-3.5-Turbo的OpenAI的API收集了大约100万个即时响应对。首先利用三个公开可用的数据集收集了各种各样的问题/提示: •LAION OIG的统一chip2子集。 •使用Stackoverflow问题的随机子样本编码问题 •使用大科学/P3的子样本进行指令调整 根据斯坦福Alpaca项目的评论，对数据准备和管理给予大量关注。在收集提示生成对的初始数据集后，将数据加载到Atlas中以进行数据整理和清理。\n训练费用 大约四天的工作，800美元的GPU成本 (从Lambda实验室和Paperspace租用)，包括几个失败的训练，以及500美元的OpenAI API支出来生产这些模型。gpt4all-lora，GPT4All发布的模型可以在Lambda Labs DGX A100 8x 80GB 上进行大约8个小时的训练，总费用为100美元。\n我能看懂的部分就这些了，:)\n",
+  "wordCount" : "1309",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2023-10-26T15:32:19+08:00",
   "dateModified": "2023-10-26T15:32:19+08:00",
@@ -171,6 +171,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -210,7 +231,14 @@ GPT4All简介
 </h3>
 <div id="outline-text-headline-3" class="outline-text-3">
 <div class="src src-shell">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  pip install gpt4all</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  pip install gpt4all</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -221,7 +249,20 @@ GPT4All简介
 <div id="outline-text-headline-4" class="outline-text-3">
 <p>调用比较简单，但根据你的计算机的性能，运行时间可能会比较长</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">from</span> <span class="nn">gpt4all</span> <span class="kn">import</span> <span class="n">GPT4All</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">from</span> <span class="nn">gpt4all</span> <span class="kn">import</span> <span class="n">GPT4All</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># 如果allow_download为True</span>
 </span></span><span class="line"><span class="cl">  <span class="c1"># 当你下载的model文件路径不对时则会尝试，不建议打开，可以通过其他工具下载你需要的模型文件</span>
@@ -229,7 +270,9 @@ GPT4All简介
 </span></span><span class="line"><span class="cl">  <span class="c1"># 当你下载的model文件路径不对时则会提示一个错误</span>
 </span></span><span class="line"><span class="cl">  <span class="n">model</span> <span class="o">=</span> <span class="n">GPT4All</span><span class="p">(</span><span class="s2">&#34;orca-mini-3b-gguf2-q4_0.gguf&#34;</span><span class="p">,</span><span class="n">allow_download</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s2">&#34;The capital of France is &#34;</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>程序会输出: <code>Paris</code></p>
 <p><img src="/posts/gpt4all/使用/2023-10-26_14-30-20_screenshot.png" alt="/posts/gpt4all/使用/2023-10-26_14-30-20_screenshot.png" title="/posts/gpt4all/使用/2023-10-26_14-30-20_screenshot.png" /></p>
@@ -265,8 +308,16 @@ GPT4All CLI
 </h3>
 <div id="outline-text-headline-7" class="outline-text-3">
 <div class="src src-shell">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  pip install gpt4all typer
-</span></span><span class="line"><span class="cl">  python app.py repl</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  pip install gpt4all typer
+</span></span><span class="line"><span class="cl">  python app.py repl</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 🛟 <strong>提示</strong>: app.py 默认的模型是 <code>mistral-7b-openorca.Q4_0.gguf</code> 如果你下载了其他的模型，可以在代码中替换，如果本地没有此模型将会在运行时下载。</p>

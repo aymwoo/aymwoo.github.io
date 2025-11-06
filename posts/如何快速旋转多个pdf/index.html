@@ -117,8 +117,8 @@
   "keywords": [
     "tools"
   ],
-  "articleBody": " 经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。\n安装 paru pdftk 运行 pdftk有很多功能，还能实现pdf的分割、合并等功能，这里我只用到了旋转。\n单个 pdftk input.pdf cat 1-endeast output rotated.pdf cat 这个操作用于组合或重排PDF页面。在这里,它用来指定要处理的页面范围。 1-endeast: 这部分指定了页面范围和旋转方向: 1-end: 表示从第1页到最后一页(end)。 east: 指定旋转方向为\"东\",即顺时针旋转90度。\n多个 for file in *.pdf pdftk \"$file\" cat 1-endright output \"temp_$file\" \u0026\u0026 mv \"temp_$file\" \"$file\" end ",
-  "wordCount" : "251",
+  "articleBody": " 经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。\n安装 1 paru pdftk 运行 pdftk有很多功能，还能实现pdf的分割、合并等功能，这里我只用到了旋转。\n单个 1 pdftk input.pdf cat 1-endeast output rotated.pdf cat 这个操作用于组合或重排PDF页面。在这里,它用来指定要处理的页面范围。 1-endeast: 这部分指定了页面范围和旋转方向: 1-end: 表示从第1页到最后一页(end)。 east: 指定旋转方向为\"东\",即顺时针旋转90度。\n多个 1 2 3 for file in *.pdf pdftk \"$file\" cat 1-endright output \"temp_$file\" \u0026\u0026 mv \"temp_$file\" \"$file\" end ",
+  "wordCount" : "256",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-10-14T10:32:15+08:00",
   "dateModified": "2024-10-14T10:32:15+08:00",
@@ -170,6 +170,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -198,7 +219,14 @@
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
 <div class="src src-fish">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl">  <span class="nf">paru</span> pdftk</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl">  <span class="nf">paru</span> pdftk</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -215,7 +243,14 @@ pdftk有很多功能，还能实现pdf的分割、合并等功能，这里我只
 </h3>
 <div id="outline-text-headline-3" class="outline-text-3">
 <div class="src src-fish">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">pdftk</span> input.pdf cat <span class="m">1</span>-endeast output rotated.pdf</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">pdftk</span> input.pdf cat <span class="m">1</span>-endeast output rotated.pdf</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 <code>cat</code> 这个操作用于组合或重排PDF页面。在这里,它用来指定要处理的页面范围。
@@ -230,9 +265,18 @@ pdftk有很多功能，还能实现pdf的分割、合并等功能，这里我只
 </h3>
 <div id="outline-text-headline-4" class="outline-text-3">
 <div class="src src-fish">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="k">for</span> <span class="nv">file</span> <span class="k">in</span> *.pdf
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="k">for</span> <span class="nv">file</span> <span class="k">in</span> *.pdf
 </span></span><span class="line"><span class="cl">   <span class="nf">pdftk</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> cat <span class="m">1</span>-endright output <span class="s2">&#34;temp_</span><span class="nv">$file</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span> <span class="nf">mv</span> <span class="s2">&#34;temp_</span><span class="nv">$file</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>

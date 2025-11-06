@@ -117,8 +117,8 @@
   "keywords": [
     "Linux"
   ],
-  "articleBody": " 很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 ping 的时候经常找不到 ping ，需要安装，安装的命令如下：\napt install iputils-ping 有时候还需要查看自己的代理是否生效，可以使用下面的命令：\napt install curl curl cip.cc cip.cc 是一个ip地址查询服务，也可以显示你当前的ip地址。\n",
-  "wordCount" : "125",
+  "articleBody": " 很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 ping 的时候经常找不到 ping ，需要安装，安装的命令如下：\n1 apt install iputils-ping 有时候还需要查看自己的代理是否生效，可以使用下面的命令：\n1 2 apt install curl curl cip.cc cip.cc 是一个ip地址查询服务，也可以显示你当前的ip地址。\n",
+  "wordCount" : "128",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-06-14T14:07:34+08:00",
   "dateModified": "2024-06-14T14:07:34+08:00",
@@ -170,6 +170,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -192,13 +213,28 @@
   <div class="post-content"><p>
 很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 <code>ping</code> 的时候经常找不到 <code>ping</code> ，需要安装，安装的命令如下：</p>
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  apt install iputils-ping</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  apt install iputils-ping</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 有时候还需要查看自己的代理是否生效，可以使用下面的命令：</p>
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  apt install curl
-</span></span><span class="line"><span class="cl">  curl cip.cc</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  apt install curl
+</span></span><span class="line"><span class="cl">  curl cip.cc</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 <a href="cip.cc">cip.cc</a> 是一个ip地址查询服务，也可以显示你当前的ip地址。</p>

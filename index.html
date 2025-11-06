@@ -127,18 +127,39 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
 
-<article class="first-entry"> 
+<article class="post-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">加速playwright install
     </h2>
   </header>
   <div class="entry-content">
-    <p> export PLAYWRIGHT_DOWNLOAD_HOST=&#34;https://npmmirror.com/mirrors/playwright&#34; </p>
+    <p> 1 export PLAYWRIGHT_DOWNLOAD_HOST=&#34;https://npmmirror.com/mirrors/playwright&#34; </p>
   </div>
   <footer class="entry-footer"><span title='2025-11-05 08:10:51 +0800 CST'>November 5, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wu Xiangfeng</span></footer>
   <a class="entry-link" aria-label="post link to 加速playwright install" href="https://xf21.dev/posts/%E5%8A%A0%E9%80%9Fplaywright-install/"></a>
@@ -163,7 +184,7 @@
   </header>
   <div class="entry-content">
     <p> Create a file named /etc/systemd/system/docker.service.d/http-proxy.conf that adds the HTTP_PROXY environment variable:
-[Service] Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34; Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34; </p>
+1 2 3 [Service] Environment=&#34;HTTP_PROXY=http://proxy.example.com:3128&#34; Environment=&#34;HTTPS_PROXY=https://proxy.example.com:3129&#34; </p>
   </div>
   <footer class="entry-footer"><span title='2025-03-19 13:54:46 +0800 CST'>March 19, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
   <a class="entry-link" aria-label="post link to Docker的代理设置" href="https://xf21.dev/posts/docker%E7%9A%84%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"></a>
@@ -176,7 +197,7 @@
   </header>
   <div class="entry-content">
     <p> 需要处理一些字符串中的 \u202d 这样的特殊不可见的字符，网上试了一些方法，最好用的还是下面这个：
-new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀
+1 new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀
 </p>
   </div>
   <footer class="entry-footer"><span title='2024-11-13 10:04:18 +0800 CST'>November 13, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
@@ -191,15 +212,83 @@ new_str=&#39;&#39;.join(c for c in input_str if c.isprintable()) 😀
   <div class="entry-content">
     <p> 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.
 21. 避免魔法数字 魔法数字是一个硬编码的值，可能会在稍后阶段更改，但因此很难更新。
-# ❌ SELECT TOP 50 * FROM orders # ✅ NUM_OF_ORDERS = 50 SELECT TOP NUM_OF_ORDERS * FROM orders 22. 避免深度嵌套 # ❌ if x: if y: do_something() # ✅ if x and y: do_something() 23. 避免临时变量 # ❌ temp_result = calculate(x, y) final_result = temp_result * 2 # ✅ final_result = calculate(x, y) * 2 24. 避免使用神秘的缩写 # ❌ def calc(x, y): pass # ✅ def calculate_total_price(quantity, unit_price): pass 25. 避免硬编码Path # ❌ file_path = &#34;/path/to/file.txt&#34; # ✅ import os file_path = os.getenv(&#34;FILE_PATH&#34;) 26. 使用使用Try…Catch…Finally语句 在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。
+1 2 3 4 5 # ❌ SELECT TOP 50 * FROM orders # ✅ NUM_OF_ORDERS = 50 SELECT TOP NUM_OF_ORDERS * FROM orders 22. 避免深度嵌套 1 2 3 4 5 6 7 # ❌ if x: if y: do_something() # ✅ if x and y: do_something() 23. 避免临时变量 1 2 3 4 5 # ❌ temp_result = calculate(x, y) final_result = temp_result * 2 # ✅ final_result = calculate(x, y) * 2 24. 避免使用神秘的缩写 1 2 3 4 5 6 # ❌ def calc(x, y): pass # ✅ def calculate_total_price(quantity, unit_price): pass 25. 避免硬编码Path 1 2 3 4 5 # ❌ file_path = &#34;/path/to/file.txt&#34; # ✅ import os file_path = os.getenv(&#34;FILE_PATH&#34;) 26. 使用使用Try…Catch…Finally语句 在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2024-10-14 11:26:37 +0800 CST'>October 14, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
   <a class="entry-link" aria-label="post link to 50个成为优秀程序员的法则[21-30]" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9921-30/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">如何快速旋转多个pdf
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-14 10:32:15 +0800 CST'>October 14, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 如何快速旋转多个pdf" href="https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">思维肥胖危机
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 一篇很有意思的文章，The Intellectual Obesity Crisis
+&#34;我们的大脑更容易受到暴饮暴食的伤害，而不是饥饿。&#34; –Petrarch
+伯克利研究人员2019年的一项研究发现，信息与食物一样作用于大脑产生多巴胺的奖励系统。简单地说，大脑将信息本身视为一种奖励；信息是否准确或有用并不重要，大脑仍然会渴望它，并在消费后感到满足，如果糖产生的效果一样。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-29 10:04:17 +0800 CST'>June 29, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 思维肥胖危机" href="https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">50个成为优秀程序员的法则[11-20]
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>原文链接: 50 Coding Laws That Would Make You A Decent Programmer.
+11. 不要成为一个肮脏的程序员 这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净的代码不会隐藏错误。它向程序员公开了bug可以隐藏的任何地方，并可以无需完全重构就可以修复其中的bug。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-20 13:29:17 +0800 CST'>June 20, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Wu Xiangfeng</span></footer>
+  <a class="entry-link" aria-label="post link to 50个成为优秀程序员的法则[11-20]" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">FFMPEG合并多个视频文件
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 需求 合并多个mts文件 保存成H.264格式编码，视频格式为MP4格式。 视频码流率：2M/s-3M/s。 视频分辨率：高清16：9拍摄，请设定为1920×1080。 视频文件大小不超过2G 方法 使用神器 ffmpeg 来进行这个工作。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-20 13:13:54 +0800 CST'>June 20, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to FFMPEG合并多个视频文件" href="https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">通过lti1.3将jupyterhub添加到moodle中作为外部工具
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-19 18:04:21 +0800 CST'>June 19, 2024</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 通过lti1.3将jupyterhub添加到moodle中作为外部工具" href="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/"></a>
+</article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="next" href="https://xf21.dev/page/2/">&nbsp;2/5&nbsp;»
+    <a class="next" href="https://xf21.dev/page/2/">&nbsp;2/3&nbsp;»
     </a>
   </nav>
 </footer>

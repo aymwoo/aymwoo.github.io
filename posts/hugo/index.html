@@ -11,11 +11,27 @@
 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。
 常用命令
 添加站点
+
+
+1
+
+
 hugo new site yoursite
+
+
 添加theme,以我用的LoveIt为例
+
+
+1
+2
+3
+
+
 cd yoursite
 git init
 git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+
+
 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:">
 <meta name="author" content="wuxf">
 <link rel="canonical" href="https://xf21.dev/posts/hugo/">
@@ -83,7 +99,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
   <meta property="og:site_name" content="XF21">
   <meta property="og:title" content="Hugo">
   <meta property="og:description" content="Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。
-常用命令 添加站点 hugo new site yoursite 添加theme,以我用的LoveIt为例 cd yoursite git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:">
+常用命令 添加站点 1 hugo new site yoursite 添加theme,以我用的LoveIt为例 1 2 3 cd yoursite git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -99,11 +115,27 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。
 常用命令
 添加站点
+
+
+1
+
+
 hugo new site yoursite
+
+
 添加theme,以我用的LoveIt为例
+
+
+1
+2
+3
+
+
 cd yoursite
 git init
 git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+
+
 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:">
 
 
@@ -133,12 +165,12 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
   "@type": "BlogPosting",
   "headline": "Hugo",
   "name": "Hugo",
-  "description": "Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。\n常用命令 添加站点 hugo new site yoursite 添加theme,以我用的LoveIt为例 cd yoursite git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:\n",
+  "description": "Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。\n常用命令 添加站点 1 hugo new site yoursite 添加theme,以我用的LoveIt为例 1 2 3 cd yoursite git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:\n",
   "keywords": [
     "web", "hugo"
   ],
-  "articleBody": "Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。\n常用命令 添加站点 hugo new site yoursite 添加theme,以我用的LoveIt为例 cd yoursite git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:\ngit submodule init git submodule update 如果submodule需要更新，进入submodule的目录下，git pull\n基础配置 baseURL = \"http://example.org/\" # 网站标题 title = \"我的全新 Hugo 网站\" # 指定主题 theme = \"LoveIt\" 更多设置查看LoveIt主页\n添加内容 使用hugo new添加内容,new还能提供更多的内容,如添加标题和日期\nhugo new posts/hello-world.md 编辑内容\nnvim /path/to/posts/hello-world.md 添加的内容默认已经有了一些东西如下:\n--- title: \"hello-world\" date: 2019-03-26T08:47:11+01:00 draft: true --- 需要需要发布,请将draft:true修改为draft:false,更多内容可以查看Draft的详细说明\n启动hugo服务 hugo server Build static pages hugo -D ",
-  "wordCount" : "429",
+  "articleBody": "Hugo 使用笔记 在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。\n常用命令 添加站点 1 hugo new site yoursite 添加theme,以我用的LoveIt为例 1 2 3 cd yoursite git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:\n1 2 git submodule init git submodule update 如果submodule需要更新，进入submodule的目录下，git pull\n基础配置 1 2 3 4 5 baseURL = \"http://example.org/\" # 网站标题 title = \"我的全新 Hugo 网站\" # 指定主题 theme = \"LoveIt\" 更多设置查看LoveIt主页\n添加内容 使用hugo new添加内容,new还能提供更多的内容,如添加标题和日期\n1 hugo new posts/hello-world.md 编辑内容\n1 nvim /path/to/posts/hello-world.md 添加的内容默认已经有了一些东西如下:\n1 2 3 4 5 --- title: \"hello-world\" date: 2019-03-26T08:47:11+01:00 draft: true --- 需要需要发布,请将draft:true修改为draft:false,更多内容可以查看Draft的详细说明\n启动hugo服务 1 hugo server Build static pages 1 hugo -D ",
+  "wordCount" : "449",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2022-01-11T10:54:56+08:00",
   "dateModified": "2022-01-11T10:54:56+08:00",
@@ -190,6 +222,27 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -243,39 +296,113 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>在gitee申请了pages服务,搭建了这个记录一些平时使用笔记的小地方，这篇文章记录在使用hugo中的一些东西。</p>
 <h2 id="常用命令">常用命令<a hidden class="anchor" aria-hidden="true" href="#常用命令">#</a></h2>
 <h3 id="添加站点">添加站点<a hidden class="anchor" aria-hidden="true" href="#添加站点">#</a></h3>
-<pre tabindex="0"><code>hugo new site yoursite
-</code></pre><h3 id="添加theme以我用的loveit为例">添加theme,以我用的LoveIt为例<a hidden class="anchor" aria-hidden="true" href="#添加theme以我用的loveit为例">#</a></h3>
-<pre tabindex="0"><code>cd yoursite
-git init
-git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
-</code></pre><p>当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:</p>
-<pre tabindex="0"><code>git submodule init
-git submodule update
-</code></pre><p><em>如果submodule需要更新，进入submodule的目录下，<code>git pull</code></em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new site yoursite
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="添加theme以我用的loveit为例">添加theme,以我用的LoveIt为例<a hidden class="anchor" aria-hidden="true" href="#添加theme以我用的loveit为例">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd yoursite
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当git clone下来的仓库中带有submodule时，submodule的内容并不会随着git clone一起下载下来,这个时候需要额外的执行如下命令获取submodule的内容:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git submodule init
+</span></span><span class="line"><span class="cl">git submodule update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>如果submodule需要更新，进入submodule的目录下，<code>git pull</code></em></p>
 <h3 id="基础配置">基础配置<a hidden class="anchor" aria-hidden="true" href="#基础配置">#</a></h3>
-<pre tabindex="0"><code>baseURL = &#34;http://example.org/&#34;
-# 网站标题
-title = &#34;我的全新 Hugo 网站&#34;
-# 指定主题
-theme = &#34;LoveIt&#34;
-</code></pre><p>更多设置查看<a href="https://github.com/dillonzq/LoveIt">LoveIt主页</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">baseURL = &#34;http://example.org/&#34;
+</span></span><span class="line"><span class="cl"># 网站标题
+</span></span><span class="line"><span class="cl">title = &#34;我的全新 Hugo 网站&#34;
+</span></span><span class="line"><span class="cl"># 指定主题
+</span></span><span class="line"><span class="cl">theme = &#34;LoveIt&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>更多设置查看<a href="https://github.com/dillonzq/LoveIt">LoveIt主页</a></p>
 <h3 id="添加内容">添加内容<a hidden class="anchor" aria-hidden="true" href="#添加内容">#</a></h3>
 <p>使用<code>hugo new</code>添加内容,<code>new</code>还能提供更多的内容,如添加标题和日期</p>
-<pre tabindex="0"><code>hugo new posts/hello-world.md
-</code></pre><p>编辑内容</p>
-<pre tabindex="0"><code>nvim /path/to/posts/hello-world.md
-</code></pre><p>添加的内容默认已经有了一些东西如下:</p>
-<pre tabindex="0"><code>---
-title: &#34;hello-world&#34;
-date: 2019-03-26T08:47:11+01:00
-draft: true
----
-</code></pre><p><em>需要需要发布,请将<code>draft:true</code>修改为<code>draft:false</code>,更多内容可以查看<a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content">Draft的详细说明</a></em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new posts/hello-world.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>编辑内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nvim /path/to/posts/hello-world.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>添加的内容默认已经有了一些东西如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;hello-world&#34;
+</span></span><span class="line"><span class="cl">date: 2019-03-26T08:47:11+01:00
+</span></span><span class="line"><span class="cl">draft: true
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>需要需要发布,请将<code>draft:true</code>修改为<code>draft:false</code>,更多内容可以查看<a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content">Draft的详细说明</a></em></p>
 <h3 id="启动hugo服务">启动hugo服务<a hidden class="anchor" aria-hidden="true" href="#启动hugo服务">#</a></h3>
-<pre tabindex="0"><code>hugo server
-</code></pre><h3 id="build-static-pages">Build static pages<a hidden class="anchor" aria-hidden="true" href="#build-static-pages">#</a></h3>
-<pre tabindex="0"><code>hugo -D
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="build-static-pages">Build static pages<a hidden class="anchor" aria-hidden="true" href="#build-static-pages">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 
   </div>
 

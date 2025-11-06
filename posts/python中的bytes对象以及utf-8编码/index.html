@@ -118,8 +118,8 @@
   "keywords": [
     "Python", "编码"
   ],
-  "articleBody": " 看了 `bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding 之后自己尝试了一下中文,加深了对UTF-8的一点点理解.\nPython的bytes对象 bytes 是由单个字节构成的不可变整数序列。序列中的每个值的大小被限制为 0 \u003c= x \u003c 256 (如果违反此限制将引发 ValueError)。\nbytes 对象和 str 对象都是序列，他们的输出非常相似，只不过 bytes 的输出多了前面的b和单引号：\ntext = \"Hello\" text_bytes = b\"Hello\" print(text) print(text_bytes) Hello b'Hello' 但他们也有一些区别：\ntext = \"Hello\" text_bytes = b\"Hello\" print(list(text)) print(list(text_bytes)) ['H', 'e', 'l', 'l', 'o'] [72, 101, 108, 108, 111] 和 str 中存放的是字符本身不一样， bytes 中存放的是字符的数字编码。\nUTF-8编码 Unicode，全称为Unicode标准（The Unicode Standard），其官方机构Unicode联盟所用的中文名称为统一码[1]，又译作万国码、统一字符码、统一字符编码[2]，是信息技术领域的业界标准，其整理、编码了世界上大部分的文字系统，使得电脑能以通用划一的字符集来处理和显示文字，不但减轻在不同编码系统间切换和转换的困扰，更提供了一种跨平台的乱码问题解决方案，已经收录超过14万个字符。\nUTF-8是UNICODE中最常见的一种编码，它是一种可变长度的编码表达方式，为了与以前的ASCII码兼容（ASCII为一个字节，前128个Unicode字符与ASCII字符匹配）。UTF-8将代码点编码为一到四个字节，具体取决于代码点的值。在下表中，x字符表示可用于编码的的位：\nde point Last code point Byte 1 Byte 2 Byte 3 Byte 4 U+0000 U+007F 0xxxxxxx U+0080 U+07FF 110xxxxx 10xxxxxx U+0800 U+FFFF 1110xxxx 10xxxxxx 10xxxxxx U+010000 U+10FFFF 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx 上表中如果一个字节的第一位是0，则这个字节单独就是一个字符；如果第一位是1，则连续有多少个1，就表示当前字符占用多少个字节。\n以\"中\"字为例，它的UNICODE编码为 \\u4e2d ，让我们通过 bytes 来看看UTF-8是如何编码的：\ntext_bytes = bytes(\"中\", \"utf-8\") print(f\"{text_bytes=}\") print(f\"{len(text_bytes)=}\") print(f\"{list(text_bytes)=}\") binary_list = [bin(x)[2:] for x in list(text_bytes)] print(f\"{binary_list=}\") text_bytes=b'\\xe4\\xb8\\xad' len(text_bytes)=3 list(text_bytes)=[228, 184, 173] binary_list=['11100100', '10111000', '10101101'] 最终获取到的三个字节内容分别是 ['11100100', '10111000', '10101101'] ，按照UTF-8编码的规则，第一个字符3个连续的1表示这个字符占3个字节，第一个字节用来表示字符编码的是 0100 ，第二个字节用来表示字符编码的是 111000 ，第三个字节用来表示字符编码的是 101101 ，这样组合起来的字符编码就是 0100_1110_0010_1101 ，转换成十六进制就是 4e2d 。\n可变的bytes bytes 是不可变序列，如果尝试修改 bytes 中的某个索引位置的值，可以用 bytearray 对象。下面是一个示例：\nchar = bytearray(list([228,184,173])) print(f\"before: {char.decode(\"utf-8\")}\") char[0] = 229 print(f\"after: {char.decode(\"utf-8\")}\") before: 中 after: 席 小结 bytes 是由单个字节构成的不可变整数序列，存放的是字符的编码数字。 UTF-8 是一种可变长度的编码表达方式，长度包含1到4个字节。根据第一个字节的左边第一个0左边的连续的1的个数来表示这个字符一共用了几个字节。每个字节左起第一个0右边的数位表示字符的Unicode编码。 bytes 是不可变序列，如果需要可变的 bytes ，用 bytearray 。 ",
-  "wordCount" : "1092",
+  "articleBody": " 看了 `bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding 之后自己尝试了一下中文,加深了对UTF-8的一点点理解.\nPython的bytes对象 bytes 是由单个字节构成的不可变整数序列。序列中的每个值的大小被限制为 0 \u003c= x \u003c 256 (如果违反此限制将引发 ValueError)。\nbytes 对象和 str 对象都是序列，他们的输出非常相似，只不过 bytes 的输出多了前面的b和单引号：\n1 2 3 4 5 text = \"Hello\" text_bytes = b\"Hello\" print(text) print(text_bytes) Hello b'Hello' 但他们也有一些区别：\n1 2 3 4 5 text = \"Hello\" text_bytes = b\"Hello\" print(list(text)) print(list(text_bytes)) ['H', 'e', 'l', 'l', 'o'] [72, 101, 108, 108, 111] 和 str 中存放的是字符本身不一样， bytes 中存放的是字符的数字编码。\nUTF-8编码 Unicode，全称为Unicode标准（The Unicode Standard），其官方机构Unicode联盟所用的中文名称为统一码[1]，又译作万国码、统一字符码、统一字符编码[2]，是信息技术领域的业界标准，其整理、编码了世界上大部分的文字系统，使得电脑能以通用划一的字符集来处理和显示文字，不但减轻在不同编码系统间切换和转换的困扰，更提供了一种跨平台的乱码问题解决方案，已经收录超过14万个字符。\nUTF-8是UNICODE中最常见的一种编码，它是一种可变长度的编码表达方式，为了与以前的ASCII码兼容（ASCII为一个字节，前128个Unicode字符与ASCII字符匹配）。UTF-8将代码点编码为一到四个字节，具体取决于代码点的值。在下表中，x字符表示可用于编码的的位：\nde point Last code point Byte 1 Byte 2 Byte 3 Byte 4 U+0000 U+007F 0xxxxxxx U+0080 U+07FF 110xxxxx 10xxxxxx U+0800 U+FFFF 1110xxxx 10xxxxxx 10xxxxxx U+010000 U+10FFFF 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx 上表中如果一个字节的第一位是0，则这个字节单独就是一个字符；如果第一位是1，则连续有多少个1，就表示当前字符占用多少个字节。\n以\"中\"字为例，它的UNICODE编码为 \\u4e2d ，让我们通过 bytes 来看看UTF-8是如何编码的：\n1 2 3 4 5 6 text_bytes = bytes(\"中\", \"utf-8\") print(f\"{text_bytes=}\") print(f\"{len(text_bytes)=}\") print(f\"{list(text_bytes)=}\") binary_list = [bin(x)[2:] for x in list(text_bytes)] print(f\"{binary_list=}\") text_bytes=b'\\xe4\\xb8\\xad' len(text_bytes)=3 list(text_bytes)=[228, 184, 173] binary_list=['11100100', '10111000', '10101101'] 最终获取到的三个字节内容分别是 ['11100100', '10111000', '10101101'] ，按照UTF-8编码的规则，第一个字符3个连续的1表示这个字符占3个字节，第一个字节用来表示字符编码的是 0100 ，第二个字节用来表示字符编码的是 111000 ，第三个字节用来表示字符编码的是 101101 ，这样组合起来的字符编码就是 0100_1110_0010_1101 ，转换成十六进制就是 4e2d 。\n可变的bytes bytes 是不可变序列，如果尝试修改 bytes 中的某个索引位置的值，可以用 bytearray 对象。下面是一个示例：\n1 2 3 4 5 char = bytearray(list([228,184,173])) print(f\"before: {char.decode(\"utf-8\")}\") char[0] = 229 print(f\"after: {char.decode(\"utf-8\")}\") before: 中 after: 席 小结 bytes 是由单个字节构成的不可变整数序列，存放的是字符的编码数字。 UTF-8 是一种可变长度的编码表达方式，长度包含1到4个字节。根据第一个字节的左边第一个0左边的连续的1的个数来表示这个字符一共用了几个字节。每个字节左起第一个0右边的数位表示字符的Unicode编码。 bytes 是不可变序列，如果需要可变的 bytes ，用 bytearray 。 ",
+  "wordCount" : "1113",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-06-07T10:59:46+08:00",
   "dateModified": "2024-06-07T10:59:46+08:00",
@@ -171,6 +171,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -203,11 +224,22 @@ Python的bytes对象
 <p>
 <code>bytes</code> 对象和 <code>str</code> 对象都是序列，他们的输出非常相似，只不过 <code>bytes</code> 的输出多了前面的b和单引号：</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="n">text_bytes</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&#34;Hello&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">text_bytes</span><span class="p">)</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">text_bytes</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <pre class="example">
 Hello
@@ -216,11 +248,22 @@ b&#39;Hello&#39;
 <p>
 但他们也有一些区别：</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="n">text_bytes</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&#34;Hello&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">text_bytes</span><span class="p">))</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">text_bytes</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <pre class="example">
 [&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]
@@ -288,12 +331,24 @@ UTF-8是UNICODE中最常见的一种编码，它是一种可变长度的编码�
 <p>
 以&#34;中&#34;字为例，它的UNICODE编码为 <code>\u4e2d</code> ，让我们通过 <code>bytes</code> 来看看UTF-8是如何编码的：</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">text_bytes</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="s2">&#34;中&#34;</span><span class="p">,</span> <span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">text_bytes</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="s2">&#34;中&#34;</span><span class="p">,</span> <span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">text_bytes</span><span class="si">=}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">text_bytes</span><span class="p">)</span><span class="si">=}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">text_bytes</span><span class="p">)</span><span class="si">=}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="n">binary_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">bin</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">text_bytes</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">binary_list</span><span class="si">=}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">binary_list</span><span class="si">=}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <pre class="example">
 text_bytes=b&#39;\xe4\xb8\xad&#39;
@@ -313,11 +368,22 @@ binary_list=[&#39;11100100&#39;, &#39;10111000&#39;, &#39;10101101&#39;]
 <p>
  <code>bytes</code> 是不可变序列，如果尝试修改 <code>bytes</code> 中的某个索引位置的值，可以用 <code>bytearray</code> 对象。下面是一个示例：</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">char</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="nb">list</span><span class="p">([</span><span class="mi">228</span><span class="p">,</span><span class="mi">184</span><span class="p">,</span><span class="mi">173</span><span class="p">]))</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">char</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="nb">list</span><span class="p">([</span><span class="mi">228</span><span class="p">,</span><span class="mi">184</span><span class="p">,</span><span class="mi">173</span><span class="p">]))</span>
 </span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;before: </span><span class="si">{</span><span class="n">char</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="n">char</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">229</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;after: </span><span class="si">{</span><span class="n">char</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;after: </span><span class="si">{</span><span class="n">char</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <pre class="example">
 before: 中

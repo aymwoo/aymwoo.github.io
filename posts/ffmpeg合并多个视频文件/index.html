@@ -117,8 +117,8 @@
   "keywords": [
     "ffmpeg"
   ],
-  "articleBody": " 需求 合并多个mts文件 保存成H.264格式编码，视频格式为MP4格式。 视频码流率：2M/s-3M/s。 视频分辨率：高清16：9拍摄，请设定为1920×1080。 视频文件大小不超过2G 方法 使用神器 ffmpeg 来进行这个工作。\n创建文件列表 需要合并的文件列表放在一个文本文件中，内容如下：\nfile 'file1.mts' file 'file2.mts' file 'file3.mts' ... 运行命令 ffmpeg -f concat -safe 0 -i filelist.txt -c:v libx264 -b:v 2.5M -maxrate 3M -bufsize 6M -s 1920x1080 -pix_fmt yuv420p -movflags +faststart output.mp4 命令参数的一些解释:\n-f concat : 指定输入格式为concat（合并） -safe 0 : 允许使用相对路径 -i filelist.txt : 指定输入文件列表 -c:v libx264 : 指定视频编码器为H.264 -i filelist.txt : 指定输入文件列表 -c:v libx264 : 指定视频编码器为H.264 -b:v 2.5M : 设置视频码率为2.5M（可以根据需要调整到2M或3M之间） -maxrate 3M : 设置最大视频码率为3M -bufsize 6M : 设置缓冲区大小为6M -s 1920x1080 :设置分辨率为1920x1080。 -pix_fmt yuv420p :设置像素格式为YUV 4:2:0 -movflags +faststart :优化文件用于网络流播放 结语 ffmpeg真的是非常强大，现在借助大模型提供的帮助可以更方便的使用ffmpeg快速完成以前比较麻烦的工作。\n",
-  "wordCount" : "426",
+  "articleBody": " 需求 合并多个mts文件 保存成H.264格式编码，视频格式为MP4格式。 视频码流率：2M/s-3M/s。 视频分辨率：高清16：9拍摄，请设定为1920×1080。 视频文件大小不超过2G 方法 使用神器 ffmpeg 来进行这个工作。\n创建文件列表 需要合并的文件列表放在一个文本文件中，内容如下：\n1 2 3 4 file 'file1.mts' file 'file2.mts' file 'file3.mts' ... 运行命令 1 ffmpeg -f concat -safe 0 -i filelist.txt -c:v libx264 -b:v 2.5M -maxrate 3M -bufsize 6M -s 1920x1080 -pix_fmt yuv420p -movflags +faststart output.mp4 命令参数的一些解释:\n-f concat : 指定输入格式为concat（合并） -safe 0 : 允许使用相对路径 -i filelist.txt : 指定输入文件列表 -c:v libx264 : 指定视频编码器为H.264 -i filelist.txt : 指定输入文件列表 -c:v libx264 : 指定视频编码器为H.264 -b:v 2.5M : 设置视频码率为2.5M（可以根据需要调整到2M或3M之间） -maxrate 3M : 设置最大视频码率为3M -bufsize 6M : 设置缓冲区大小为6M -s 1920x1080 :设置分辨率为1920x1080。 -pix_fmt yuv420p :设置像素格式为YUV 4:2:0 -movflags +faststart :优化文件用于网络流播放 结语 ffmpeg真的是非常强大，现在借助大模型提供的帮助可以更方便的使用ffmpeg快速完成以前比较麻烦的工作。\n",
+  "wordCount" : "431",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-06-20T13:13:54+08:00",
   "dateModified": "2024-06-20T13:13:54+08:00",
@@ -170,6 +170,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -219,10 +240,20 @@
 <p>
 需要合并的文件列表放在一个文本文件中，内容如下：</p>
 <div class="src src-text">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">file &#39;file1.mts&#39;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">file &#39;file1.mts&#39;
 </span></span><span class="line"><span class="cl">file &#39;file2.mts&#39;
 </span></span><span class="line"><span class="cl">file &#39;file3.mts&#39;
-</span></span><span class="line"><span class="cl">...</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">...</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -232,7 +263,14 @@
 </h3>
 <div id="outline-text-headline-4" class="outline-text-3">
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  ffmpeg -f concat -safe <span class="m">0</span> -i filelist.txt -c:v libx264 -b:v 2.5M -maxrate 3M -bufsize 6M -s 1920x1080 -pix_fmt yuv420p -movflags +faststart output.mp4</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  ffmpeg -f concat -safe <span class="m">0</span> -i filelist.txt -c:v libx264 -b:v 2.5M -maxrate 3M -bufsize 6M -s 1920x1080 -pix_fmt yuv420p -movflags +faststart output.mp4</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 命令参数的一些解释:</p>

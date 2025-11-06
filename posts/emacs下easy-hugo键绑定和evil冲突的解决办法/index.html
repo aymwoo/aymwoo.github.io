@@ -118,8 +118,8 @@
   "keywords": [
     "Emacs", "Hugo"
   ],
-  "articleBody": " 运行 easy-hugo 之后发现顶部导航的快捷键无法使用，应该是与 evil 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 buffer 的下面将会出现一个菜单，凑合用。\n(use-package easy-hugo :config (easy-hugo-enable-menu)) ",
-  "wordCount" : "78",
+  "articleBody": " 运行 easy-hugo 之后发现顶部导航的快捷键无法使用，应该是与 evil 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 buffer 的下面将会出现一个菜单，凑合用。\n1 2 3 (use-package easy-hugo :config (easy-hugo-enable-menu)) ",
+  "wordCount" : "81",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-06-03T15:46:49+08:00",
   "dateModified": "2024-06-03T15:46:49+08:00",
@@ -171,6 +171,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -193,9 +214,18 @@
   <div class="post-content"><p>
 运行 <code>easy-hugo</code> 之后发现顶部导航的快捷键无法使用，应该是与 <code>evil</code> 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 <code>buffer</code> 的下面将会出现一个菜单，凑合用。</p>
 <div class="src src-elisp">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">use-package</span> <span class="nv">easy-hugo</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">use-package</span> <span class="nv">easy-hugo</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">:config</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">easy-hugo-enable-menu</span><span class="p">))</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">easy-hugo-enable-menu</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p><img src="/images/2024-06-03_17-18-20_screenshot.png" alt="/images/2024-06-03_17-18-20_screenshot.png" title="/images/2024-06-03_17-18-20_screenshot.png" /></p>
 

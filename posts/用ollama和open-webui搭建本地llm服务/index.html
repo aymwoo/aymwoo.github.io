@@ -118,8 +118,8 @@
   "keywords": [
     "Ollama", "LLM"
   ],
-  "articleBody": " 我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 Ollama 结合 qwen 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.\n搭建服务 services: ollama: image: ollama/ollama container_name: ollama ports: - \"11434:11434\" volumes: - ollama:/root/.ollama restart: unless-stopped open-webui: image: ghcr.io/open-webui/open-webui:main container_name: open-webui ports: - \"8080:8080\" volumes: - open-webui:/app/backend/data extra_hosts: - \"host.docker.internal:host-gateway\" restart: unless-stopped volumes: ollama: open-webui: 之后可以通过 docker compose up -d 命令启动服务, http://localhost:8080 可以看到Open-WebUI的服务,第一个注册的用户将会被自动赋予管理员的权限.接下来就可以选择左下角的菜单中的设置添加模型.\n添加模型 通过网页添加 所有可用的模型可以在 https://ollama.com/library 这里查看,在拉取模型那里输入名称就可以拉取下来.因为我的需求,我主要选择了 qwen 和 codeqwen ,版本自然比当前通义千问的官网的版本低一些,但对于我的需求来说够用了.\ndocker命令进入容器内部添加 或者,你也可以通过docker命令进入容器内部用如下命令抓取.\ndocker exec -it ollama bash ollama pull qwen:latest 使用 除了基本的问答之外,Open-WebUI 也可以运行提示的代码\n还有更多功能正在摸索中…\n",
-  "wordCount" : "446",
+  "articleBody": " 我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 Ollama 结合 qwen 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.\n搭建服务 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 services: ollama: image: ollama/ollama container_name: ollama ports: - \"11434:11434\" volumes: - ollama:/root/.ollama restart: unless-stopped open-webui: image: ghcr.io/open-webui/open-webui:main container_name: open-webui ports: - \"8080:8080\" volumes: - open-webui:/app/backend/data extra_hosts: - \"host.docker.internal:host-gateway\" restart: unless-stopped volumes: ollama: open-webui: 之后可以通过 docker compose up -d 命令启动服务, http://localhost:8080 可以看到Open-WebUI的服务,第一个注册的用户将会被自动赋予管理员的权限.接下来就可以选择左下角的菜单中的设置添加模型.\n添加模型 通过网页添加 所有可用的模型可以在 https://ollama.com/library 这里查看,在拉取模型那里输入名称就可以拉取下来.因为我的需求,我主要选择了 qwen 和 codeqwen ,版本自然比当前通义千问的官网的版本低一些,但对于我的需求来说够用了.\ndocker命令进入容器内部添加 或者,你也可以通过docker命令进入容器内部用如下命令抓取.\n1 2 docker exec -it ollama bash ollama pull qwen:latest 使用 除了基本的问答之外,Open-WebUI 也可以运行提示的代码\n还有更多功能正在摸索中…\n",
+  "wordCount" : "472",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-06-06T16:46:09+08:00",
   "dateModified": "2024-06-06T16:46:09+08:00",
@@ -171,6 +171,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -199,7 +220,35 @@
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
 <div class="src src-docker">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">services:<span class="err">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">services:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>  ollama:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>    image: ollama/ollama<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>    container_name: ollama<span class="err">
@@ -222,7 +271,9 @@
 </span></span></span><span class="line"><span class="cl"><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>volumes:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>  ollama:<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  open-webui:</span></span></code></pre></div>
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  open-webui:</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 之后可以通过 <code>docker compose up -d</code> 命令启动服务, <a href="http://localhost:8080">http://localhost:8080</a> 可以看到Open-WebUI的服务,第一个注册的用户将会被自动赋予管理员的权限.接下来就可以选择左下角的菜单中的设置添加模型.</p>
@@ -251,8 +302,16 @@ docker命令进入容器内部添加
 <p>
 或者,你也可以通过docker命令进入容器内部用如下命令抓取.</p>
 <div class="src src-bash">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  docker <span class="nb">exec</span> -it ollama bash
-</span></span><span class="line"><span class="cl">  ollama pull qwen:latest</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  docker <span class="nb">exec</span> -it ollama bash
+</span></span><span class="line"><span class="cl">  ollama pull qwen:latest</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -118,8 +118,8 @@
   "keywords": [
     "Python", "Jupyter"
   ],
-  "articleBody": "需要借助 IPython.dispaly.HTML 对象,在 Jupyterlab 安装的时候就已经可用了,具体用法如下:\nfrom IPython.display import HTML import plotly.graph_objects as go # 准备数据 x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] # 创建线形图 fig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y, mode=\"lines\")) fig.update_layout( title=\"Simple Line Plot\", xaxis_title=\"X\", yaxis_title=\"Y\", font=dict(family=\"Courier New, monospace\", size=18, color=\"#7f7f7f\"), ) # 显示图形 HTML(fig.to_html()) ",
-  "wordCount" : "86",
+  "articleBody": "需要借助 IPython.dispaly.HTML 对象,在 Jupyterlab 安装的时候就已经可用了,具体用法如下:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 from IPython.display import HTML import plotly.graph_objects as go # 准备数据 x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] # 创建线形图 fig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y, mode=\"lines\")) fig.update_layout( title=\"Simple Line Plot\", xaxis_title=\"X\", yaxis_title=\"Y\", font=dict(family=\"Courier New, monospace\", size=18, color=\"#7f7f7f\"), ) # 显示图形 HTML(fig.to_html()) ",
+  "wordCount" : "106",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-06-04T16:39:56+08:00",
   "dateModified": "2024-06-04T16:39:56+08:00",
@@ -171,6 +171,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -192,7 +213,31 @@
 
   <div class="post-content"><p>需要借助 <code>IPython.dispaly.HTML</code> 对象,在 <code>Jupyterlab</code> 安装的时候就已经可用了,具体用法如下:</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 </span></span><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># 准备数据</span>
@@ -211,7 +256,9 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1"># 显示图形</span>
-</span></span><span class="line"><span class="cl">  <span class="n">HTML</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">to_html</span><span class="p">())</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="n">HTML</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">to_html</span><span class="p">())</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p><img src="/images/2024-06-04_17-20-28_screenshot.png" alt="/images/2024-06-04_17-20-28_screenshot.png" title="/images/2024-06-04_17-20-28_screenshot.png" /></p>
 

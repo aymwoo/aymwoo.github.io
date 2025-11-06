@@ -127,6 +127,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -134,77 +155,142 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">如何快速旋转多个pdf
+    <h2 class="entry-hint-parent">Debian系安装ping
     </h2>
   </header>
   <div class="entry-content">
-    <p> 经常有单位同事找我帮忙旋转扫描的PDF文件，以前我都是用WPS一个一个打开、旋转然后保存，多做几次难免觉得不科学，于是找到了 pdfdtk 这样一个工具，试用了一下觉得挺方便。
+    <p> 很多Docker镜像基于Debian或者ubuntu的精简版本，进入容器需要 ping 的时候经常找不到 ping ，需要安装，安装的命令如下：
+1 apt install iputils-ping 有时候还需要查看自己的代理是否生效，可以使用下面的命令：
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-10-14 10:32:15 +0800 CST'>October 14, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to 如何快速旋转多个pdf" href="https://xf21.dev/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%97%8B%E8%BD%AC%E5%A4%9A%E4%B8%AApdf/"></a>
+  <footer class="entry-footer"><span title='2024-06-14 14:07:34 +0800 CST'>June 14, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Debian系安装ping" href="https://xf21.dev/posts/debian%E7%B3%BB%E5%AE%89%E8%A3%85ping/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">思维肥胖危机
+    <h2 class="entry-hint-parent">Python中的bytes对象以及UTF-8编码
     </h2>
   </header>
   <div class="entry-content">
-    <p> 一篇很有意思的文章，The Intellectual Obesity Crisis
-&#34;我们的大脑更容易受到暴饮暴食的伤害，而不是饥饿。&#34; –Petrarch
-伯克利研究人员2019年的一项研究发现，信息与食物一样作用于大脑产生多巴胺的奖励系统。简单地说，大脑将信息本身视为一种奖励；信息是否准确或有用并不重要，大脑仍然会渴望它，并在消费后感到满足，如果糖产生的效果一样。
+    <p> 看了 `bytes`: The Lesser-Known Python Built-In Sequence • And Understanding UTF-8 Encoding 之后自己尝试了一下中文,加深了对UTF-8的一点点理解.
+Python的bytes对象 bytes 是由单个字节构成的不可变整数序列。序列中的每个值的大小被限制为 0 &lt;= x &lt; 256 (如果违反此限制将引发 ValueError)。
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-29 10:04:17 +0800 CST'>June 29, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to 思维肥胖危机" href="https://xf21.dev/posts/%E6%99%BA%E5%8A%9B%E8%82%A5%E8%83%96%E5%8D%B1%E6%9C%BA/"></a>
+  <footer class="entry-footer"><span title='2024-06-07 10:59:46 +0800 CST'>June 7, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Python中的bytes对象以及UTF-8编码" href="https://xf21.dev/posts/python%E4%B8%AD%E7%9A%84bytes%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8Autf-8%E7%BC%96%E7%A0%81/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">50个成为优秀程序员的法则[11-20]
+    <h2 class="entry-hint-parent">用ollama和open-webui搭建本地LLM服务
     </h2>
   </header>
   <div class="entry-content">
-    <p>原文链接: 50 Coding Laws That Would Make You A Decent Programmer.
-11. 不要成为一个肮脏的程序员 这意味着你要写干净的代码，但什么才是干净的代码呢？干净的代码结构良好，排列良好。干净的代码不会隐藏错误。它向程序员公开了bug可以隐藏的任何地方，并可以无需完全重构就可以修复其中的bug。
+    <p> 我从事教育相关工作,我需要搭建一个本地的中文大语言模型推理服务,因为经费紧张,没有GPU,而 Ollama 结合 qwen 模型能够在CPU下提供比较不错的反应速度,所以我尝试了通过Docker Compose在本地的Debian服务器上搭建一个基于Ollama和Open-webui的服务.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-20 13:29:17 +0800 CST'>June 20, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Wu Xiangfeng</span></footer>
-  <a class="entry-link" aria-label="post link to 50个成为优秀程序员的法则[11-20]" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%9911-20/"></a>
+  <footer class="entry-footer"><span title='2024-06-06 16:46:09 +0800 CST'>June 6, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 用ollama和open-webui搭建本地LLM服务" href="https://xf21.dev/posts/%E7%94%A8ollama%E5%92%8Copen-webui%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0llm%E6%9C%8D%E5%8A%A1/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">FFMPEG合并多个视频文件
+    <h2 class="entry-hint-parent">50个成为优秀程序员的法则[1-10]
     </h2>
   </header>
   <div class="entry-content">
-    <p> 需求 合并多个mts文件 保存成H.264格式编码，视频格式为MP4格式。 视频码流率：2M/s-3M/s。 视频分辨率：高清16：9拍摄，请设定为1920×1080。 视频文件大小不超过2G 方法 使用神器 ffmpeg 来进行这个工作。
+    <p> 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.
+1. 不惜一切代价避免注释 开幕暴击，一直以来各种书籍文章或者资料大多建议要写注释，当然我也看到另一种说法不写注释写Wiki，仔细看完作者的观点之后觉得还是挺有道理，作者列举的理由如下:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-20 13:13:54 +0800 CST'>June 20, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to FFMPEG合并多个视频文件" href="https://xf21.dev/posts/ffmpeg%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/"></a>
+  <footer class="entry-footer"><span title='2024-06-05 10:44:03 +0800 CST'>June 5, 2024</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 50个成为优秀程序员的法则[1-10]" href="https://xf21.dev/posts/50%E4%B8%AA%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%B3%95%E5%88%991-10/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">通过lti1.3将jupyterhub添加到moodle中作为外部工具
+    <h2 class="entry-hint-parent">Jupyterlab中显示Plotly的图形
     </h2>
   </header>
   <div class="entry-content">
-    <p> 这些年一直想用Jupyterhub作为学习平台来尝试一些教学活动，但Jupyterhub用来进行学习管理方面的功能非常欠缺，好在有一个叫LTI（Learning Tools Interoperability，学习工具互操作性）的标准，可以方便的在各个教育技术系统之间无缝集成，所以尝试了一下通过LTI将Jupyterhub作为外部工具添加到Moodle中。
+    <p>需要借助 IPython.dispaly.HTML 对象,在 Jupyterlab 安装的时候就已经可用了,具体用法如下:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 from IPython.display import HTML import plotly.graph_objects as go # 准备数据 x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] # 创建线形图 fig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y, mode=&#34;lines&#34;)) fig.update_layout( title=&#34;Simple Line Plot&#34;, xaxis_title=&#34;X&#34;, yaxis_title=&#34;Y&#34;, font=dict(family=&#34;Courier New, monospace&#34;, size=18, color=&#34;#7f7f7f&#34;), ) # 显示图形 HTML(fig.to_html()) </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-04 16:39:56 +0800 CST'>June 4, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Jupyterlab中显示Plotly的图形" href="https://xf21.dev/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Emacs下easy-hugo键绑定和evil冲突的解决办法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 运行 easy-hugo 之后发现顶部导航的快捷键无法使用，应该是与 evil 的绑定冲突了，最简单的解决办法就是配置里面打开菜单的开关，这样在 buffer 的下面将会出现一个菜单，凑合用。
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-19 18:04:21 +0800 CST'>June 19, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
-  <a class="entry-link" aria-label="post link to 通过lti1.3将jupyterhub添加到moodle中作为外部工具" href="https://xf21.dev/posts/%E9%80%9A%E8%BF%87lti1.3%E5%B0%86jupyterhub%E6%B7%BB%E5%8A%A0%E5%88%B0moodle%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7/"></a>
+  <footer class="entry-footer"><span title='2024-06-03 15:46:49 +0800 CST'>June 3, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Emacs下easy-hugo键绑定和evil冲突的解决办法" href="https://xf21.dev/posts/emacs%E4%B8%8Beasy-hugo%E9%94%AE%E7%BB%91%E5%AE%9A%E5%92%8Cevil%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">GPT4All
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> GPT4All简介 GPT4All 是一个生态系统，用于训练和部署在消费级 CPU 上本地运行的强大且定制的大型语言模型。目标很简单——成为任何个人或企业都可以自由使用、分发和构建的最佳指令调整助理式语言模型。GPT4All 模型是一个 3GB - 8GB 文件，您可以下载该文件并将其插入 GPT4All 开源生态系统软件中。 Nomic AI 支持并维护这个软件生态系统，以加强质量和安全性，同时带头让任何个人或企业轻松训练和部署自己的边缘大型语言模型。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-26 15:32:19 +0800 CST'>October 26, 2023</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to GPT4All" href="https://xf21.dev/posts/gpt4all/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">使用Easy hugo部署到github
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>需要自己写一个 deploy.sh
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ##!/bin/bash # 将public目录中的所有文件提交到GitHub Pages的特定分支 # 清除并重新生成Hugo站点 hugo -d ./public # 进入public目录 cd ./public # 初始化一个Git仓库并提交更改 git init git add . git commit -m &#34;Deploying to GitHub Pages&#34; # 将更改推送到GitHub Pages的特定分支，例如&#34;gh-pages&#34; git push --force git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git master # 返回项目根目录 cd .. </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-03 13:16:41 +0800 CST'>October 3, 2023</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wu Xiangfeng</span></footer>
+  <a class="entry-link" aria-label="post link to 使用Easy hugo部署到github" href="https://xf21.dev/posts/%E4%BD%BF%E7%94%A8easy-hugo%E9%83%A8%E7%BD%B2%E5%88%B0github/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">新的开始
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 因为一些原因暂停了日常的记录,现在从nvim切换到了emacs,又准备重新来记录一下日常。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-03 13:08:50 +0800 CST'>October 3, 2023</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to 新的开始" href="https://xf21.dev/posts/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Fish Add Path
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>fish 添加路径到PATH 相对与bash,zsh来说更直观,比如要全局添加~/.local/bin到PATH中,就可以在你的fish的配置文件中加入下面的语句:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-01-15 10:48:21 +0800 CST'>January 15, 2022</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>wuxf</span></footer>
+  <a class="entry-link" aria-label="post link to Fish Add Path" href="https://xf21.dev/posts/fish-add-path/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://xf21.dev/">
-      «&nbsp;&nbsp;1/5
+      «&nbsp;&nbsp;1/3
     </a>
-    <a class="next" href="https://xf21.dev/page/3/">&nbsp;3/5&nbsp;»
+    <a class="next" href="https://xf21.dev/page/3/">&nbsp;3/3&nbsp;»
     </a>
   </nav>
 </footer>

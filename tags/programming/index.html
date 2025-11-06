@@ -113,6 +113,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -139,7 +160,7 @@
   <div class="entry-content">
     <p> 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.
 21. 避免魔法数字 魔法数字是一个硬编码的值，可能会在稍后阶段更改，但因此很难更新。
-# ❌ SELECT TOP 50 * FROM orders # ✅ NUM_OF_ORDERS = 50 SELECT TOP NUM_OF_ORDERS * FROM orders 22. 避免深度嵌套 # ❌ if x: if y: do_something() # ✅ if x and y: do_something() 23. 避免临时变量 # ❌ temp_result = calculate(x, y) final_result = temp_result * 2 # ✅ final_result = calculate(x, y) * 2 24. 避免使用神秘的缩写 # ❌ def calc(x, y): pass # ✅ def calculate_total_price(quantity, unit_price): pass 25. 避免硬编码Path # ❌ file_path = &#34;/path/to/file.txt&#34; # ✅ import os file_path = os.getenv(&#34;FILE_PATH&#34;) 26. 使用使用Try…Catch…Finally语句 在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。
+1 2 3 4 5 # ❌ SELECT TOP 50 * FROM orders # ✅ NUM_OF_ORDERS = 50 SELECT TOP NUM_OF_ORDERS * FROM orders 22. 避免深度嵌套 1 2 3 4 5 6 7 # ❌ if x: if y: do_something() # ✅ if x and y: do_something() 23. 避免临时变量 1 2 3 4 5 # ❌ temp_result = calculate(x, y) final_result = temp_result * 2 # ✅ final_result = calculate(x, y) * 2 24. 避免使用神秘的缩写 1 2 3 4 5 6 # ❌ def calc(x, y): pass # ✅ def calculate_total_price(quantity, unit_price): pass 25. 避免硬编码Path 1 2 3 4 5 # ❌ file_path = &#34;/path/to/file.txt&#34; # ✅ import os file_path = os.getenv(&#34;FILE_PATH&#34;) 26. 使用使用Try…Catch…Finally语句 在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2024-10-14 11:26:37 +0800 CST'>October 14, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>

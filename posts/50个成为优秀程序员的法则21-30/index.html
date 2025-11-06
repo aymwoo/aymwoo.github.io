@@ -118,8 +118,8 @@
   "keywords": [
     "python", "programming"
   ],
-  "articleBody": " 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.\n21. 避免魔法数字 魔法数字是一个硬编码的值，可能会在稍后阶段更改，但因此很难更新。\n# ❌ SELECT TOP 50 * FROM orders # ✅ NUM_OF_ORDERS = 50 SELECT TOP NUM_OF_ORDERS * FROM orders 22. 避免深度嵌套 # ❌ if x: if y: do_something() # ✅ if x and y: do_something() 23. 避免临时变量 # ❌ temp_result = calculate(x, y) final_result = temp_result * 2 # ✅ final_result = calculate(x, y) * 2 24. 避免使用神秘的缩写 # ❌ def calc(x, y): pass # ✅ def calculate_total_price(quantity, unit_price): pass 25. 避免硬编码Path # ❌ file_path = \"/path/to/file.txt\" # ✅ import os file_path = os.getenv(\"FILE_PATH\") 26. 使用使用Try…Catch…Finally语句 在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。\n27. 异常处理时提供Context 每当你捕获异常时，它应该为遇到它的任何人提供足够的Context来知道问题来自哪里并进行相应的调试。\n28. 避免使用多个异常类处理异常 作者认为如下的处理方式是极其虚假的，并且带走了它在错误处理中提供的额外帮助（在冗长、复杂性和维护方面）。\ntry: pass except ValueError: pass except TypeError: pass except IndexError: pass except KeyError: pass except FileNotFoundError: pass 他认为通常最好使用更通用的异常来捕获我们可能遇到的任何类型的错误。默认情况下，这种类型的异常包括我们得到的错误类型。\ntry: pass except Exception: pass 仅当您希望所有其他错误通过时，才具体说明您要捕获的错误类型。\n29. 函数要么执行副作用,要么返回值,但不应同时做这两件事 如果函数改变了传递的参数，我们只需要在该函数中执行此操作，而无需其他任何操作。\ndef changed(array): array.append('hello') 如果参数用于创建另一个变量，那么它不会被修改。例如，如果使用名为time的参数来计算距离，那么它不会变异，这意味着可以在该函数中返回距离。\ndef calculate_distance(time, speed): distance = speed * time return distance 但是有一种方法可以两全其美。您可以复制函数的参数并对其进行变异。这样我们就可以避免任何副作用。\ndef changed(array): array_copy = array[:] array_copy.append(4) return array_copy 30. 并非所有函数名称都应该是动词 所有的函数名都应该是动词，这通常是正确的，但是有时候函数名应该采取名词的形式。\n如果一个函数返回一些东西而不改变它的参数，那么这个函数的名字应该是一个名词。如果一个函数改变了参数并且没有返回任何参数，它应该是一个动词。\n这是Python本身内置的通用约定。排序和追加等方法是动词，因为它们改变了数据类型并返回无，而 sort 、 sum 、 product 等方法都是名词，因为它们不会改变传递的任何参数并返回数据的新副本。\n",
-  "wordCount" : "888",
+  "articleBody": " 原文链接: 50 Coding Laws That Would Make You A Decent Programmer.\n21. 避免魔法数字 魔法数字是一个硬编码的值，可能会在稍后阶段更改，但因此很难更新。\n1 2 3 4 5 # ❌ SELECT TOP 50 * FROM orders # ✅ NUM_OF_ORDERS = 50 SELECT TOP NUM_OF_ORDERS * FROM orders 22. 避免深度嵌套 1 2 3 4 5 6 7 # ❌ if x: if y: do_something() # ✅ if x and y: do_something() 23. 避免临时变量 1 2 3 4 5 # ❌ temp_result = calculate(x, y) final_result = temp_result * 2 # ✅ final_result = calculate(x, y) * 2 24. 避免使用神秘的缩写 1 2 3 4 5 6 # ❌ def calc(x, y): pass # ✅ def calculate_total_price(quantity, unit_price): pass 25. 避免硬编码Path 1 2 3 4 5 # ❌ file_path = \"/path/to/file.txt\" # ✅ import os file_path = os.getenv(\"FILE_PATH\") 26. 使用使用Try…Catch…Finally语句 在编写代码时，最好也包括错误处理。这有助于加快调试过程并提高代码的复杂性，同时保持干净和可管理。\n27. 异常处理时提供Context 每当你捕获异常时，它应该为遇到它的任何人提供足够的Context来知道问题来自哪里并进行相应的调试。\n28. 避免使用多个异常类处理异常 作者认为如下的处理方式是极其虚假的，并且带走了它在错误处理中提供的额外帮助（在冗长、复杂性和维护方面）。\n1 2 3 4 5 6 7 8 9 10 11 12 try: pass except ValueError: pass except TypeError: pass except IndexError: pass except KeyError: pass except FileNotFoundError: pass 他认为通常最好使用更通用的异常来捕获我们可能遇到的任何类型的错误。默认情况下，这种类型的异常包括我们得到的错误类型。\n1 2 3 4 try: pass except Exception: pass 仅当您希望所有其他错误通过时，才具体说明您要捕获的错误类型。\n29. 函数要么执行副作用,要么返回值,但不应同时做这两件事 如果函数改变了传递的参数，我们只需要在该函数中执行此操作，而无需其他任何操作。\n1 2 def changed(array): array.append('hello') 如果参数用于创建另一个变量，那么它不会被修改。例如，如果使用名为time的参数来计算距离，那么它不会变异，这意味着可以在该函数中返回距离。\n1 2 3 def calculate_distance(time, speed): distance = speed * time return distance 但是有一种方法可以两全其美。您可以复制函数的参数并对其进行变异。这样我们就可以避免任何副作用。\n1 2 3 4 def changed(array): array_copy = array[:] array_copy.append(4) return array_copy 30. 并非所有函数名称都应该是动词 所有的函数名都应该是动词，这通常是正确的，但是有时候函数名应该采取名词的形式。\n如果一个函数返回一些东西而不改变它的参数，那么这个函数的名字应该是一个名词。如果一个函数改变了参数并且没有返回任何参数，它应该是一个动词。\n这是Python本身内置的通用约定。排序和追加等方法是动词，因为它们改变了数据类型并返回无，而 sort 、 sum 、 product 等方法都是名词，因为它们不会改变传递的任何参数并返回数据的新副本。\n",
+  "wordCount" : "941",
   "inLanguage": "zh-cn",
   "image": "https://xf21.dev/images/papermod-cover.png","datePublished": "2024-10-14T11:26:37+08:00",
   "dateModified": "2024-10-14T11:26:37+08:00",
@@ -171,6 +171,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -201,11 +222,22 @@
 <p>
 魔法数字是一个硬编码的值，可能会在稍后阶段更改，但因此很难更新。</p>
 <div class="src src-sql">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">❌</span><span class="w">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">❌</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">✅</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">NUM_OF_ORDERS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="n">NUM_OF_ORDERS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span></span></span></code></pre></div>
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="n">NUM_OF_ORDERS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -215,13 +247,26 @@
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">y</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">do_something</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">do_something</span><span class="p">()</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">    <span class="n">do_something</span><span class="p">()</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -231,11 +276,22 @@
 </h2>
 <div id="outline-text-headline-3" class="outline-text-2">
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl"><span class="n">temp_result</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">final_result</span> <span class="o">=</span> <span class="n">temp_result</span> <span class="o">*</span> <span class="mi">2</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
-</span></span><span class="line"><span class="cl"><span class="n">final_result</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="n">final_result</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -245,12 +301,24 @@
 </h2>
 <div id="outline-text-headline-4" class="outline-text-2">
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">pass</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_total_price</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">unit_price</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -260,11 +328,22 @@
 </h2>
 <div id="outline-text-headline-5" class="outline-text-2">
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ❌</span>
 </span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&#34;/path/to/file.txt&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># ✅</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
-</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;FILE_PATH&#34;</span><span class="p">)</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;FILE_PATH&#34;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -293,7 +372,23 @@
 <p>
 作者认为如下的处理方式是极其虚假的，并且带走了它在错误处理中提供的额外帮助（在冗长、复杂性和维护方面）。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl"> <span class="k">pass</span>
 </span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl"> <span class="k">pass</span>
@@ -304,15 +399,27 @@
 </span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl"> <span class="k">pass</span>
 </span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl"> <span class="k">pass</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"> <span class="k">pass</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 他认为通常最好使用更通用的异常来捕获我们可能遇到的任何类型的错误。默认情况下，这种类型的异常包括我们得到的错误类型。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl"> <span class="k">pass</span>
 </span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl"> <span class="k">pass</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"> <span class="k">pass</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 仅当您希望所有其他错误通过时，才具体说明您要捕获的错误类型。</p>
@@ -326,22 +433,49 @@
 <p>
 如果函数改变了传递的参数，我们只需要在该函数中执行此操作，而无需其他任何操作。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">changed</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">changed</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>如果参数用于创建另一个变量，那么它不会被修改。例如，如果使用名为time的参数来计算距离，那么它不会变异，这意味着可以在该函数中返回距离。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_distance</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_distance</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="n">distance</span> <span class="o">=</span> <span class="n">speed</span> <span class="o">*</span> <span class="n">time</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">distance</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">distance</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 但是有一种方法可以两全其美。您可以复制函数的参数并对其进行变异。这样我们就可以避免任何副作用。</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">changed</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">changed</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="n">array_copy</span> <span class="o">=</span> <span class="n">array</span><span class="p">[:]</span>
 </span></span><span class="line"><span class="cl">    <span class="n">array_copy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">array_copy</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">array_copy</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>

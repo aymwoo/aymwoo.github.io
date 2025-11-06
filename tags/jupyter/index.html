@@ -113,6 +113,27 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://xf21.dev/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xf21.dev/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org" title="example.org">
+                    <span>example.org</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -138,7 +159,7 @@
   </header>
   <div class="entry-content">
     <p>需要借助 IPython.dispaly.HTML 对象,在 Jupyterlab 安装的时候就已经可用了,具体用法如下:
-from IPython.display import HTML import plotly.graph_objects as go # 准备数据 x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] # 创建线形图 fig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y, mode=&#34;lines&#34;)) fig.update_layout( title=&#34;Simple Line Plot&#34;, xaxis_title=&#34;X&#34;, yaxis_title=&#34;Y&#34;, font=dict(family=&#34;Courier New, monospace&#34;, size=18, color=&#34;#7f7f7f&#34;), ) # 显示图形 HTML(fig.to_html()) </p>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 from IPython.display import HTML import plotly.graph_objects as go # 准备数据 x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] # 创建线形图 fig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y, mode=&#34;lines&#34;)) fig.update_layout( title=&#34;Simple Line Plot&#34;, xaxis_title=&#34;X&#34;, yaxis_title=&#34;Y&#34;, font=dict(family=&#34;Courier New, monospace&#34;, size=18, color=&#34;#7f7f7f&#34;), ) # 显示图形 HTML(fig.to_html()) </p>
   </div>
   <footer class="entry-footer"><span title='2024-06-04 16:39:56 +0800 CST'>June 4, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Wuxf</span></footer>
   <a class="entry-link" aria-label="post link to Jupyterlab中显示Plotly的图形" href="https://xf21.dev/posts/jupyterlab%E4%B8%AD%E6%98%BE%E7%A4%BAplotly%E7%9A%84%E5%9B%BE%E5%BD%A2/"></a>
